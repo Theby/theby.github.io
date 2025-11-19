@@ -1,0 +1,29 @@
+- title: Game Title 1
+  description: Short description of the game. What it is, platform, genre, your role.
+  image: assets/images/game1.jpg
+  url: https://example.com/game1
+  reverse: false
+
+- title: Game Title 2
+  description: Short description of the game. What you did, why it stands out.
+  image: assets/images/game2.jpg
+  url: https://example.com/game2
+  reverse: true
+
+- title: Game Title 3
+  description: Short description of the game. Mention something technical or unique.
+  image: assets/images/game3.jpg
+  url: https://example.com/game3
+  reverse: false
+
+- title: Game Title 4
+  description: Short description of the game. Highlight your contribution.
+  image: assets/images/game4.jpg
+  url: https://example.com/game4
+  reverse: true
+
+- title: Game Title 5
+  description: Short description of the game. Highlight your contribution.
+  image: assets/images/game5.jpg
+  url: https://example.com/game5
+  reverse: false
