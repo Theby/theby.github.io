@@ -88,6 +88,10 @@ title: Home
   flex: 1;
 }
 
+.project-text p {
+  text-align: justify;
+}
+
 
 /* ----------------
    RESPONSIVE RULES
@@ -113,6 +117,72 @@ title: Home
     width: 100%;
   }
 }
+
+/* -------------------------
+   PLATFORM ICON BADGES
+   ------------------------- */
+
+.platform-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin-top: 10px;
+}
+
+.platform-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0,0,0,0.06);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.platform-badge img {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* Meta info row (tags + release date) */
+.project-meta {
+  font-size: 0.85rem;
+  color: rgba(0,0,0,0.7);
+  margin: 4px 0 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: center;
+}
+
+.project-tag {
+  background: rgba(0,0,0,0.06);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+/* Title row: title on left, release on right */
+.project-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.project-title-row h3 {
+  margin: 0;
+}
+
+.project-title-release {
+  font-size: 0.85rem;
+  color: rgba(0,0,0,0.7);
+  white-space: nowrap;
+}
+
 
 </style>
 
@@ -143,11 +213,34 @@ document.addEventListener("DOMContentLoaded", () => {
 			 	<img src="{{ p.image }}" alt="{{ p.title }}">
 			</a>
 			<div class="project-text">
-			 	<h3>{{ p.title }}</h3>
+			 	<div class="project-title-row">
+				  <h3>{{ p.title }}</h3>
+				  {% if p.release %}
+				    <span class="project-title-release">{{ p.release }}</span>
+				  {% endif %}
+				</div>
+			 	<div class="project-meta">
+				  {% if p.tags %}
+				    {% for tag in p.tags %}
+				      <span class="project-tag">{{ tag }}</span>
+				    {% endfor %}
+				  {% endif %}
+				</div>
 			 	<p>{{ p.description }}</p>
+			 	<div class="project-meta">
+				    {% if p.platforms %}
+					  <div class="platform-badges">
+					    {% for plat in p.platforms %}
+					      <div class="platform-badge">
+					        <img src="assets/icons/platforms/{{ plat }}.svg" alt="{{ plat }} icon">
+					        {{ plat | capitalize }}
+					      </div>
+					    {% endfor %}
+					  </div>
+					{% endif %}
+				</div>
 			</div>
 	  </div>
 </div>
 {% endfor %}
-
 

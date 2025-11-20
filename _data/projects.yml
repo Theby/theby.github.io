@@ -1,29 +1,70 @@
-- title: Game Title 1
-  description: Short description of the game. What it is, platform, genre, your role.
-  image: assets/images/game1.jpg
-  url: https://example.com/game1
+- title: Linked Mask
+  description: Led full development from concept to release. Built core gameplay, combat, and platforming systems in Unity. Created custom editor tools and a reusable framework, and coordinated a 6–12 person team across disciplines.
+  image: assets/images/p_linkedmask.gif
+  url: https://store.steampowered.com/app/1111590/Linked_Mask/
   reverse: false
+  release: Sep 2022
+  tags:
+    - 2D
+    - Action-Adventure
+    - Platformer
+  platforms:
+    - steam
 
-- title: Game Title 2
-  description: Short description of the game. What you did, why it stands out.
-  image: assets/images/game2.jpg
-  url: https://example.com/game2
+- title: What Lies in the Multiverse
+  description: Ported the full game from GameMaker 1 to GameMaker 2, upgrading core systems for stability, larger levels, and multi-platform support. Enhanced scripting and cinematic tools, cutting implementation time by ~50%.
+  image: assets/images/p_multiverse.gif
+  url: https://store.steampowered.com/app/1721170/What_Lies_in_the_Multiverse/
   reverse: true
+  release: Mar 2022
+  tags:
+    - 2D
+    - Puzzle-Platformer
+  platforms:
+    - steam
+    - playstation
+    - xbox
+    - switch
 
-- title: Game Title 3
-  description: Short description of the game. Mention something technical or unique.
-  image: assets/images/game3.jpg
-  url: https://example.com/game3
+- title: NBA Clash
+  description: Integrated SDKs and analytics to cut build time from 7 days to 2. Debugged multiplayer systems to improve match stability and sync. Coordinated cross-team workflows between Chile and US engineering groups.
+  image: assets/images/p_nbaclash.gif
+  url: https://www.youtube.com/watch?v=eKohkv9YPKY
   reverse: false
+  release: Nov 2022
+  tags:
+    - F2P
+    - Deck Builder
+    - Sports Game
+  platforms:
+    - ios
+    - android
 
-- title: Game Title 4
-  description: Short description of the game. Highlight your contribution.
-  image: assets/images/game4.jpg
-  url: https://example.com/game4
+- title: Garden Joy
+  description: Delivered 25+ live updates for a 1M+ install mobile title. Integrated new content, backend data, and UI features while maintaining strong performance. Supported a 20+ person team and a 4.8/5 App Store rating.
+  image: assets/images/p_gardenjoy.gif
+  url: https://www.gardenjoygame.com
   reverse: true
+  release: Jan 2022
+  tags:
+    - F2P
+    - Garden Design
+    - Simulation Game
+  platforms:
+    - ios
+    - android
 
-- title: Game Title 5
-  description: Short description of the game. Highlight your contribution.
-  image: assets/images/game5.jpg
-  url: https://example.com/game5
+- title: The Eightfold Path
+  description: Improved Switch/PC performance by 50%+ via profiling and optimization. Built tools that auto-ported 100% of Construct 3 content into Unity, reducing setup time by ~80%. Implemented streaming for seamless world traversal.
+  image: assets/images/p_eightfoldpath.gif
+  url: https://store.steampowered.com/app/1736620/The_Eightfold_Path
   reverse: false
+  release: Aug 2024
+  tags:
+    - 2D
+    - Open World
+    - Puzzle Adventure
+  platforms:
+    - steam
+    - xbox
+    - switch
