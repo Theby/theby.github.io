@@ -186,10 +186,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px 14px;
+  gap: 6px 8px;
   margin-top: 10px;
 }
 
+/* Base pill */
 .platform-badge {
   display: inline-flex;
   align-items: center;
@@ -198,23 +199,38 @@
   border: 1px solid #00ff00;
   border-radius: 4px;
   background: transparent;
-  color: #f8f8f2; /* light text, readable */
+  color: #f8f8f2;
   font-size: 0.8rem;
-  margin-right: 6px;
-  margin-bottom: 6px;
+  margin-right: 2px;
+  margin-bottom: 2px;
   white-space: nowrap;
-  text-decoration: none; /* remove underline */
+  text-decoration: none;
+
+  /* Hover transitions */
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
+/* Hover glow + lift */
 .platform-badge:hover {
+  border-color: #00ff00;
+  box-shadow:
+    0 0 4px rgba(0, 255, 0, 0.5),
+    0 0 8px rgba(0, 255, 0, 0.3),
+    0 0 12px rgba(0, 255, 0, 0.15);
+  transform: translateY(-2px);
   opacity: 0.85;
 }
 
+/* Icon inside */
 .platform-badge img {
   width: 18px;
   height: 18px;
   display: block;
-  filter: brightness(1.2); /* looks sharper on dark background */
+  filter: brightness(1.2);
 }
 
 /* Meta info row (tags + release date) */
