@@ -11,7 +11,7 @@ title: Home
 {% for p in site.data.projects %}
 <div class="project-row {% if p.reverse %}reverse{% endif %}">
 	  <div class="project-inner">
-	  		<a href="{{ p.url }}" target="_blank">
+	  		<a class="project-image-link" href="{{ p.url }}" target="_blank">
 			 	<img src="{{ p.image }}" alt="{{ p.title }}">
 			</a>
 			<div class="project-text">
@@ -33,10 +33,13 @@ title: Home
 				    {% if p.platforms %}
 					  <div class="platform-badges">
 					    {% for plat in p.platforms %}
-					      <div class="platform-badge">
-					        <img src="assets/icons/platforms/{{ plat }}.svg" alt="{{ plat }} icon">
-					        {{ plat | capitalize }}
-					      </div>
+					      <a class="platform-badge"
+								   href="{{ site.data.platforms[plat].url }}"
+								   target="_blank"
+								   rel="noopener noreferrer">
+								  <img src="assets/icons/platforms/{{ plat }}.svg" alt="{{ plat }} icon">
+								  {{ site.data.platforms[plat].name }}
+								</a>
 					    {% endfor %}
 					  </div>
 					{% endif %}

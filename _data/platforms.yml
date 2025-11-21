@@ -1,0 +1,21 @@
+steam:
+  name: Steam
+  url: #
+playstation:
+  name: PlayStation
+  url: #
+xbox:
+  name: Xbox
+  url: #
+switch:
+  name: Switch
+  url: #
+ios:
+  name: iOS
+  url: #
+android:
+  name: Android
+  url: #
+itchio:
+  name: Itch.io
+  url: #
