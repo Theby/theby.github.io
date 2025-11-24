@@ -13,7 +13,7 @@ title: Home
     </a>
     <div class="project-text">
       <div class="project-title-row">
-        <h3>{{ p.title }}</h3>
+        <h2>{{ p.title }}</h2>
         {% if p.release %}
           <span class="project-title-release">{{ p.release }}</span>
         {% endif %}

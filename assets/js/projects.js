@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { threshold: 0.1 }
   );
 
-  document.querySelectorAll(".page-content h2").forEach(h2 => {
-    observer.observe(h2);
+  document.querySelectorAll(".page-content h1").forEach(h1 => {
+    observer.observe(h1);
   });
 });
