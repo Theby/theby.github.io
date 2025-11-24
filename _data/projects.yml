@@ -1,3 +1,37 @@
+- title: The Eightfold Path
+  description: Improved Switch/PC performance by 50%+ via profiling and optimization. Built tools that auto-ported 100% of Construct 3 content into Unity, reducing setup time by ~80%. Implemented streaming for seamless world traversal.
+  image: assets/images/p_eightfoldpath.gif
+  url: https://store.steampowered.com/app/1736620/The_Eightfold_Path
+  reverse: false
+  release: Aug 2024
+  tags:
+    - 2D
+    - Open World
+    - Puzzle Adventure
+  platforms:
+    - id: steam
+      url: https://store.steampowered.com/app/1736620/The_Eightfold_Path/
+    - id: xbox
+      url: https://www.xbox.com/es-CL/games/store/the-eightfold-path/9pk5njsvtnht
+    - id: switch
+      url: https://www.nintendo.com/us/store/products/the-eightfold-path-switch
+
+- title: NBA Clash
+  description: Integrated SDKs and analytics to cut build time from 7 days to 2. Debugged multiplayer systems to improve match stability and sync. Coordinated cross-team workflows between Chile and US engineering groups.
+  image: assets/images/p_nbaclash.gif
+  url: https://www.youtube.com/watch?v=eKohkv9YPKY
+  reverse: false
+  release: Nov 2022
+  tags:
+    - F2P
+    - Deck Builder
+    - Sports Game
+  platforms:
+    - id: ios
+      url: httpsapps.apple.com/us/app/nbaclash
+    - id: android
+      url: https://play.google.com/store/apps/details?id=com.niftygames.nbaclash
+
 - title: Linked Mask
   description: Led full development from concept to release. Built core gameplay, combat, and platforming systems in Unity. Created custom editor tools and a reusable framework, and coordinated a 6–12 person team across disciplines.
   image: assets/images/p_linkedmask.gif
@@ -31,22 +65,6 @@
     - id: switch
       url: https://www.nintendo.com/us/store/products/what-lies-in-the-multiverse-switch
 
-- title: NBA Clash
-  description: Integrated SDKs and analytics to cut build time from 7 days to 2. Debugged multiplayer systems to improve match stability and sync. Coordinated cross-team workflows between Chile and US engineering groups.
-  image: assets/images/p_nbaclash.gif
-  url: https://www.youtube.com/watch?v=eKohkv9YPKY
-  reverse: false
-  release: Nov 2022
-  tags:
-    - F2P
-    - Deck Builder
-    - Sports Game
-  platforms:
-    - id: ios
-      url: https://apps.apple.com/us/app/nbaclash
-    - id: android
-      url: https://play.google.com/store/apps/details?id=com.niftygames.nbaclash
-
 - title: Garden Joy
   description: Delivered 25+ live updates for a 1M+ install mobile title. Integrated new content, backend data, and UI features while maintaining strong performance. Supported a 20+ person team and a 4.8/5 App Store rating.
   image: assets/images/p_gardenjoy.gif
@@ -62,21 +80,3 @@
       url: https://apps.apple.com/us/app/garden-joy-design-game/id1618284064
     - id: android
       url: https://play.google.com/store/apps/details?id=com.scopely.gardenjoy
-
-- title: The Eightfold Path
-  description: Improved Switch/PC performance by 50%+ via profiling and optimization. Built tools that auto-ported 100% of Construct 3 content into Unity, reducing setup time by ~80%. Implemented streaming for seamless world traversal.
-  image: assets/images/p_eightfoldpath.gif
-  url: https://store.steampowered.com/app/1736620/The_Eightfold_Path
-  reverse: false
-  release: Aug 2024
-  tags:
-    - 2D
-    - Open World
-    - Puzzle Adventure
-  platforms:
-    - id: steam
-      url: https://store.steampowered.com/app/1736620/The_Eightfold_Path/
-    - id: xbox
-      url: https://www.xbox.com/es-CL/games/store/the-eightfold-path/9pk5njsvtnht
-    - id: switch
-      url: https://www.nintendo.com/us/store/products/the-eightfold-path-switch
