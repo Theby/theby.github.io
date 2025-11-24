@@ -3,7 +3,7 @@
   description: Improved Switch/PC performance by 50%+ via profiling and optimization. Built tools that auto-ported 100% of Construct 3 content into Unity, reducing setup time by ~80%. Implemented streaming for seamless world traversal. 
   image: assets/images/p_eightfoldpath.gif
   url: https://store.steampowered.com/app/1736620/The_Eightfold_Path
-  release: Aug 2024
+  release: Friendly Llama - Aug 2024
   tags: [2D, Open World, Puzzle Adventure]
   platforms:
     - id: steam
@@ -18,11 +18,8 @@
   description: Integrated SDKs and analytics to cut build time from 7 days to 2. Debugged multiplayer systems to improve match stability and sync. Coordinated cross-team workflows between Chile and US engineering groups.
   image: assets/images/p_nbaclash.gif
   url: https://www.youtube.com/watch?v=eKohkv9YPKY
-  release: Nov 2022
-  tags:
-    - F2P
-    - Deck Builder
-    - Sports Game
+  release: Globant -Nov 2022
+  tags: [F2P, Deck Builder, Online Multiplayer]
   platforms:
     - id: ios
       url: httpsapps.apple.com/us/app/nbaclash
@@ -34,11 +31,8 @@
   description: Led full development from concept to release. Built core gameplay, combat, and platforming systems in Unity. Created custom editor tools and a reusable framework, and coordinated a 6–12 person team across disciplines.
   image: assets/images/p_linkedmask.gif
   url: https://store.steampowered.com/app/1111590/Linked_Mask/
-  release: Sep 2022
-  tags:
-    - 2D
-    - Action-Adventure
-    - Platformer
+  release: Spoonman Games - Sep 2022
+  tags: [2D, Action-Adventure, Platformer]
   platforms:
     - id: steam
       url: https://store.steampowered.com/app/1111590/Linked_Mask/
@@ -48,10 +42,8 @@
   description: Ported the full game from GameMaker 1 to GameMaker 2, upgrading core systems for stability, larger levels, and multi-platform support. Enhanced scripting and cinematic tools, cutting implementation time by ~50%.
   image: assets/images/p_multiverse.gif
   url: https://store.steampowered.com/app/1721170/What_Lies_in_the_Multiverse/
-  release: Mar 2022
-  tags:
-    - 2D
-    - Puzzle-Platformer
+  release: IguanaBee - Mar 2022
+  tags: [2D, Puzzle-Platformer]
   platforms:
     - id: steam
       url: https://store.steampowered.com/app/1721170/What_Lies_in_the_Multiverse/
@@ -67,11 +59,8 @@
   description: Delivered 25+ live updates for a 1M+ install mobile title. Integrated new content, backend data, and UI features while maintaining strong performance. Supported a 20+ person team and a 4.8/5 App Store rating.
   image: assets/images/p_gardenjoy.gif
   url: https://www.gardenjoygame.com
-  release: Jan 2022
-  tags:
-    - F2P
-    - Garden Design
-    - Simulation Game
+  release: Burlingames Studios - Jan 2022
+  tags: [F2P, Garden Design, Simulation Game]
   platforms:
     - id: ios
       url: https://apps.apple.com/us/app/garden-joy-design-game/id1618284064
