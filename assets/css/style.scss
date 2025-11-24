@@ -2,10 +2,13 @@
 ---
 
 $conifer: #b5e853;
+$footer: $conifer;
 
 @import "{{ site.theme }}";
 
-$footer: $conifer;
+.container {
+  max-width: 1200px;
+}
 
 footer {
   background: rgba(0, 0, 0, 0.1);
