@@ -331,3 +331,36 @@
   filter: brightness(0) invert(1) drop-shadow(0 0 6px #00ff00);
   transform: translateY(-2px);
 }
+
+.site-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+  opacity: 0.65;
+  font-size: 0.85rem;
+}
+
+.site-footer .footer-text {
+  margin: 0;
+}
+
+/* Footer "links that don't look like links" */
+.footer-text .footer-link {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.9;
+  display: inline-block;       /* required for transform to work */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-text .footer-link:hover {
+  opacity: 1;
+  transform: translateY(-2px); /* subtle lift on hover */
+  text-decoration: none;    /* keep clean even on hover */
+}
+
+
+
+
+

@@ -1,13 +1,16 @@
 remote_theme: pages-themes/hacker@v0.2.0
 plugins:
   - jekyll-remote-theme
-title: Esteban's Fifth Corner
+title: The Fifth Corner - Portfolio & Devlog by Esteban Gaete
 description: Portfolio and personal blog about programming, video games and design!
 google_analytics: G-M7HRV5WG9L
 show_downloads: false
 
 # Profile
-author: Esteban Gaete Flores
+author: 
+  name: Esteban Gaete Flores
+  title: Senior Unity Game Developer
+  description: Gameplay & Tools Engineer with 10+ years building fast, clean, extensible systems. I create responsive gameplay, efficient workflows, and powerful tools that make teams faster and games tighter.
 socials:
   - name: cv
     url: https://docs.google.com/document/d/17ror9scPDFVUMK6okj4Yf7gdI_MyANjwWboukXwG8pc/edit?usp=sharing
