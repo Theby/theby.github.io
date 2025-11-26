@@ -1,0 +1,183 @@
+- title: Loop Boxes
+  project_description: To do later
+  description: 2D Sokoban-style puzzle game. Developed for the GMTK Game Jam 2025 as a solo developer. Done with Unity 6 and C#. Art assets are free resources slightly edited for the game, on the other hand, the level design, sound effects, music and code is done by me.
+  image: assets/images/p_loopboxes.gif
+  url: https://tebifestival.itch.io/loop-boxes
+  release: Aug 2025
+  tags: [2D, Sokoban]
+  platforms:
+    - id: itchio
+      url: https://tebifestival.itch.io/loop-boxes
+
+- title: Mariana Strange
+  project_description: To do later
+  description: Mystery exploration game created for the Game Jam +- Santiago. I worked as the Lead Programmer.
+  image: assets/images/p_marianastrange.gif
+  url: https://gamejolt.com/games/MarianaStrange/430773
+  release: Aug 2019
+  tags: [Mystery, Exploration]
+  platforms:
+    - id: gamejolt
+      url: https://gamejolt.com/games/MarianaStrange/430773
+
+- title: FOR THEM
+  project_description: To do later
+  description: Survival adventure game developed for the Global Game Jam 2019. I worked as the Lead Programmer.
+  image: assets/images/p_forthem.gif
+  url: https://v3.globalgamejam.org/2019/games/them
+  release: Jan 2019
+  tags: [Survival, Adventure]
+  platforms:
+    - id: globalgamejam
+      url: https://v3.globalgamejam.org/2019/games/them
+
+- title: Super Oso
+  project_description: To do later
+  description: Advergame for Falabella’s 2018 Technology Fair. I directed the project, programmed features, and implemented provided art.
+  image: assets/images/p_superoso.gif
+  url: https://apps.apple.com/us/app/agente-oso/id1434320450
+  release: Jun 2018
+  tags: [Advergame, Arcade]
+  platforms:
+    - id: ios
+      url: https://apps.apple.com/us/app/agente-oso/id1434320450
+
+- title: Byted Noise
+  project_description: To do later
+  description: Arcade open-world game created for the Global Game Jam 2018. I worked as the Lead Programmer.
+  image: assets/images/p_bytednoise.gif
+  url: https://v3.globalgamejam.org/2018/games/byted-noise
+  release: Jan 2018
+  tags: [Arcade, Open-World]
+  platforms:
+    - id: globalgamejam
+      url: https://v3.globalgamejam.org/2018/games/byted-noise
+
+- title: Touchdown Champ
+  project_description: To do later
+  description: American-football arcade autorunner. I worked on data systems and architecture programming.
+  image: assets/images/p_touchdownchamp.gif
+  url: https://play.google.com/store/apps/details?id=com.tapsense.touchdownchampion
+  release: Jun 2017
+  tags: [Arcade, Autorunner]
+  platforms:
+    - id: android
+      url: https://play.google.com/store/apps/details?id=com.tapsense.touchdownchampion
+
+- title: Sketch Rally
+  project_description: To do later
+  description: Car-themed advergame autorunner. I worked on UI design and tools implementation.
+  image: assets/images/p_sketchrally.gif
+  url: https://play.google.com/store/apps/details?id=com.tapsense.sketchrally
+  release: Jun 2017
+  tags: [Arcade, Autorunner]
+  platforms:
+    - id: android
+      url: https://play.google.com/store/apps/details?id=com.tapsense.sketchrally
+
+- title: Caiam Piter and the Mushroom Kingdom
+  project_description: To do later
+  description: >
+    Roguelike, Adventure, RPG. Developed at Spoonman Games for PC and Nintendo Switch. 
+    I worked as a Director, Lead programming and Designer.
+    IndieDB Year in Review 2018: Best of Q4
+    https://www.indiedb.com/articles/2018-indie-games-year-in-review
+    IndieDB Indie of the Year Awards 2018: Top 100
+    https://www.indiedb.com/groups/2018-indie-of-the-year-awards/top100
+    Digital Dragons Indie Showcase 2019: Finalist
+    https://x.com/CaiamPiterCPMK/status/1120753853744287744
+  image: assets/images/p_caiampiter.gif
+  url: https://x.com/caiampitercpmk
+  release: May 2017
+  tags: [Roguelike, 2D, Pixel Art, Top-Down]
+  platforms:
+    - id: x
+      url: https://x.com/caiampitercpmk
+
+- title: Father.IO
+  project_description: To do later
+  description: Mobile RTS with AR and FPS elements. I worked as an intern for three months developing RTS systems as part of Gamelogic.
+  image: assets/images/p_fatherio.gif
+  url: https://father.io
+  release: Jan 2017
+  tags: [RTS, AR, Mobile]
+  platforms:
+    - id: website
+      url: https://father.io
+
+- title: Empathy
+  project_description: To do later
+  description: FPS puzzle game developed in Italy during the Global Game Jam 2017. I worked as the Lead Programmer.
+  image: assets/images/p_empathy.gif
+  url: https://v3.globalgamejam.org/2017/games/empathy-game-about-depression
+  release: Jan 2017
+  tags: [FPS, Puzzle]
+  platforms:
+    - id: globalgamejam
+      url: https://v3.globalgamejam.org/2017/games/empathy-game-about-depression
+
+- title: New Flame
+  project_description: To do later
+  description: Platformer adventure game created for the Global Game Jam 2016. I worked as the Lead Programmer and Game Designer.
+  image: assets/images/p_newflame.gif
+  url: https://v3.globalgamejam.org/2016/games/new-flame
+  release: Feb 2016
+  tags: [Platformer, Adventure]
+  platforms:
+    - id: globalgamejam
+      url: https://v3.globalgamejam.org/2016/games/new-flame
+
+- title: Descend Into Heaven (Full Version)
+  project_description: To do later
+  description: Platformer action-adventure game. I worked as Project Manager and Lead Programmer.
+  image: assets/images/p_descendintoheaven.gif
+  url: https://spoonmangames.itch.io/descendintoheaven
+  release: Sep 2015
+  tags: [Platformer, Action-Adventure]
+  platforms:
+    - id: itchio
+      url: https://spoonmangames.itch.io/descendintoheaven
+
+- title: Sunset Roboto
+  project_description: To do later
+  description: Auto Runner robot go for the sunset.
+  image: assets/images/p_sunsetroboto.gif
+  url: https://bitbucket.org/Theby/sunsetroboto/src/master
+  release: Sept 2015
+  tags: [Auto runner]
+  platforms:
+    - id: bitbucket
+      url: https://bitbucket.org/Theby/sunsetroboto/src/master
+
+- title: King K. A Goblin Defense Game
+  project_description: To do later
+  description: Tower defense RTS created for the Impulsa Games Jam. I designed, directed, and programmed the game in XNA C# for PC.
+  image: assets/images/p_kingk.gif
+  url: https://gamejolt.com/games/king-k-a-goblin-defense-game/82821
+  release: Aug 2015
+  tags: [Tower-Defense, RTS]
+  platforms:
+    - id: gamejolt
+      url: https://gamejolt.com/games/king-k-a-goblin-defense-game/82821
+
+- title: The Legend of Zelda Remade
+  project_description: To do later
+  description: Personal fan remake of the original Legend of Zelda using SNES A Link to the Past graphics, built with BennuGD.
+  image: assets/images/p_zelda.gif
+  release: Jul 2015
+  url: https://github.com/SpoonmanGames/ZeldaRemade
+  tags: [Fan-Game, Action-Adventure]
+  platforms:
+    - id: githib
+      url: https://github.com/SpoonmanGames/ZeldaRemade
+
+- title: Bomber-Chan
+  project_description: To do later
+  description: Recreation of Super Bomberman 5 Gold for SNES using BennuGD, adding expanded controller support and tournament options.
+  image: assets/images/p_bomberchan.gif
+  url: https://github.com/SpoonmanGames/BomberChan
+  release: May 2011
+  tags: [Arcade, Retro]
+  platforms:
+    - id: github
+      url: https://github.com/SpoonmanGames/BomberChan
