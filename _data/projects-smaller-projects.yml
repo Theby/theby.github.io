@@ -9,6 +9,17 @@
     - id: itchio
       url: https://tebifestival.itch.io/loop-boxes
 
+- title: Amor a Primera Vista
+  project_description: To do later
+  description: Visual Novel
+  image: assets/images/p_firstsightlove.gif
+  url: https://globalgamejam.org/games/2024/amor-primera-vista-love-first-sight-7
+  release: Jan 2024
+  tags: [Visual Novel]
+  platforms:
+    - id: globalgamejam
+      url: https://globalgamejam.org/games/2024/amor-primera-vista-love-first-sight-7
+
 - title: Mariana Strange
   project_description: To do later
   description: Mystery exploration game created for the Game Jam +- Santiago. I worked as the Lead Programmer.
@@ -30,17 +41,6 @@
   platforms:
     - id: globalgamejam
       url: https://v3.globalgamejam.org/2019/games/them
-
-- title: Super Oso
-  project_description: To do later
-  description: Advergame for Falabella’s 2018 Technology Fair. I directed the project, programmed features, and implemented provided art.
-  image: assets/images/p_superoso.gif
-  url: https://apps.apple.com/us/app/agente-oso/id1434320450
-  release: Jun 2018
-  tags: [Advergame, Arcade]
-  platforms:
-    - id: ios
-      url: https://apps.apple.com/us/app/agente-oso/id1434320450
 
 - title: Byted Noise
   project_description: To do later
@@ -94,17 +94,6 @@
     - id: x
       url: https://x.com/caiampitercpmk
 
-- title: Father.IO
-  project_description: To do later
-  description: Mobile RTS with AR and FPS elements. I worked as an intern for three months developing RTS systems as part of Gamelogic.
-  image: assets/images/p_fatherio.gif
-  url: https://father.io
-  release: Jan 2017
-  tags: [RTS, AR, Mobile]
-  platforms:
-    - id: website
-      url: https://father.io
-
 - title: Empathy
   project_description: To do later
   description: FPS puzzle game developed in Italy during the Global Game Jam 2017. I worked as the Lead Programmer.
@@ -137,17 +126,6 @@
   platforms:
     - id: itchio
       url: https://spoonmangames.itch.io/descendintoheaven
-
-- title: Sunset Roboto
-  project_description: To do later
-  description: Auto Runner robot go for the sunset.
-  image: assets/images/p_sunsetroboto.gif
-  url: https://bitbucket.org/Theby/sunsetroboto/src/master
-  release: Sept 2015
-  tags: [Auto runner]
-  platforms:
-    - id: bitbucket
-      url: https://bitbucket.org/Theby/sunsetroboto/src/master
 
 - title: King K. A Goblin Defense Game
   project_description: To do later
