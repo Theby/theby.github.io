@@ -1,28 +1,28 @@
 - title: Loop Boxes
-  project_description: You are trapped between three levels that keep repeating, actions in the past are permanent. Plan ahead or get stuck!
-  description: 2D Sokoban-style puzzle game. Developed for the GMTK Game Jam 2025 as a solo developer. Done with Unity 6 and C#. Art assets are free resources slightly edited for the game, on the other hand, the level design, sound effects, music and code is done by me.
+  project_description: Three looping stages. Actions in the past are permanent. Plan ahead or get stuck!
+  description: Solo-developed during GMTK 2025 using Unity 6. I built all core systems, level design, SFX, and music, and adapted free art assets to fit the game. Focused on rapid prototyping, puzzle iteration, and polish under a tight deadline.
   image: assets/images/p_loopboxes.gif
   url: https://tebifestival.itch.io/loop-boxes
   release: Aug 2025
-  tags: [2D, Sokoban]
+  tags: [2D, Sokoban, Puzzle]
   platforms:
     - id: itchio
       url: https://tebifestival.itch.io/loop-boxes
 
 - title: Amor a Primera Vista
-  project_description: To do later
-  description: Visual Novel
+  project_description: You just said yes to everthing in a dating App. Now you are dating an Angel?!
+  description: Developed for Global Game Jam 2024 with a small team. I led all Unity implementation, defining scene architecture, dialogue flow, and system scripting. Ensured smooth narrative delivery, efficient asset integration, and polished UI under tight deadlines.
   image: assets/images/p_firstsightlove.gif
   url: https://globalgamejam.org/games/2024/amor-primera-vista-love-first-sight-7
   release: Jan 2024
-  tags: [Visual Novel]
+  tags: [Visual Novel, Dating, Narrative]
   platforms:
     - id: ggj
       url: https://globalgamejam.org/games/2024/amor-primera-vista-love-first-sight-7
 
 - title: Mariana Strange
-  project_description: To do later
-  description: Mystery exploration game created for the Game Jam +- Santiago. I worked as the Lead Programmer.
+  project_description: Your brother is missing. Search for him in the depths of the ocean.
+  description: Created for Game Jam +- Santiago, where I served as Lead Programmer. I defined the project’s technical architecture, implemented core systems, and ensured smooth integration of gameplay, narrative, and art under a rapid production cycle.
   image: assets/images/p_marianastrange.gif
   url: https://gamejolt.com/games/MarianaStrange/430773
   release: Aug 2019
@@ -32,8 +32,8 @@
       url: https://gamejolt.com/games/MarianaStrange/430773
 
 - title: FOR THEM
-  project_description: To do later
-  description: Survival adventure game developed for the Global Game Jam 2019. I worked as the Lead Programmer.
+  project_description: Feed and protect your cubs from the dangers of the forest. They depend on you.
+  description: As Lead Programmer for FOR THEM (Global Game Jam 2019), I architected the core survival/adventure systems, managed asset integration, and implemented gameplay logic. I ensured stability, performance, and a cohesive experience during the tight jam schedule.
   image: assets/images/p_forthem.gif
   url: https://v3.globalgamejam.org/2019/games/them
   release: Jan 2019
@@ -55,8 +55,8 @@
       url: https://apps.apple.com/us/app/agente-oso/id1434320450
 
 - title: Byted Noise
-  project_description: To do later
-  description: Arcade open-world game created for the Global Game Jam 2018. I worked as the Lead Programmer.
+  project_description: It's a zombie apocalypse! Use your radio to find survivors on the streets.
+  description: Built as Lead Programmer during Global Game Jam 2018. I defined the project architecture, coded survival and open-world systems, integrated user interactions and audio/visual assets, and delivered a stable arcade-style zombie-apocalypse prototype.
   image: assets/images/p_bytednoise.gif
   url: https://v3.globalgamejam.org/2018/games/byted-noise
   release: Jan 2018
@@ -89,17 +89,14 @@
     - id: android
       url: https://play.google.com/store/apps/details?id=com.tapsense.sketchrally
 
-- title: Caiam Piter and the Mushroom Kingdom
-  project_description: To do later
+- title: Caiam Piter (CPMK)
+  project_description: Your mother fungus needs you to explore the world and find the virgin lands.
   description: >
-    Roguelike, Adventure, RPG. Developed at Spoonman Games for PC and Nintendo Switch. 
-    I worked as a Director, Lead programming and Designer.
-    IndieDB Year in Review 2018: Best of Q4
-    https://www.indiedb.com/articles/2018-indie-games-year-in-review
-    IndieDB Indie of the Year Awards 2018: Top 100
-    https://www.indiedb.com/groups/2018-indie-of-the-year-awards/top100
-    Digital Dragons Indie Showcase 2019: Finalist
-    https://x.com/CaiamPiterCPMK/status/1120753853744287744
+    As Director, Lead Programmer, and Designer of Caiam Piter and the Mushroom Kingdom,
+    I oversaw full development for PC and Switch, defined core systems and design vision,
+    and drove the project to recognition 
+    (<a href="https://www.indiedb.com/groups/2018-indie-of-the-year-awards/top100">top-100 IndieDB 2018</a>, 
+    <a href="https://x.com/CaiamPiterCPMK/status/1120753853744287744">Indie Showcase finalist</a>).
   image: assets/images/p_caiampiter.gif
   url: https://x.com/caiampitercpmk
   release: May 2017
@@ -121,19 +118,19 @@
       url: https://father.io
 
 - title: Empathy
-  project_description: To do later
-  description: FPS puzzle game developed in Italy during the Global Game Jam 2017. I worked as the Lead Programmer.
+  project_description: People in the mental hospital need a helping hand to find happiness.
+  description: Created during Global Game Jam 2017. As Lead Programmer, I defined the core systems, implemented first-person puzzle mechanics, and coordinated asset and narrative integration to deliver a cohesive and polished prototype under tight constraints.
   image: assets/images/p_empathy.gif
   url: https://v3.globalgamejam.org/2017/games/empathy-game-about-depression
   release: Jan 2017
-  tags: [FPS, Puzzle]
+  tags: [First-Person, Puzzle]
   platforms:
     - id: ggj
       url: https://v3.globalgamejam.org/2017/games/empathy-game-about-depression
 
 - title: New Flame
-  project_description: To do later
-  description: Platformer adventure game created for the Global Game Jam 2016. I worked as the Lead Programmer and Game Designer.
+  project_description: You lost the flame and broke the ritual. Bring it back to the hill and end the curse!
+  description: Created during Global Game Jam 2016. As Lead Programmer and Game Designer, I defined the core platforming systems, built interaction and traversal mechanics, and guided overall gameplay flow while coordinating asset integration under tight constraints.
   image: assets/images/p_newflame.gif
   url: https://v3.globalgamejam.org/2016/games/new-flame
   release: Feb 2016
@@ -142,9 +139,9 @@
     - id: ggj
       url: https://v3.globalgamejam.org/2016/games/new-flame
 
-- title: Descend Into Heaven (Full Version)
-  project_description: To do later
-  description: Platformer action-adventure game. I worked as Project Manager and Lead Programmer.
+- title: Descend Into Heaven
+  project_description: Descend in search of what was taken from you. Do not let them stop you!
+  description: As Project Manager and Lead Programmer, I directed development, defined the technical architecture, and implemented core platforming and combat systems. I coordinated design, art, and code workflows to deliver a cohesive action-adventure experience.
   image: assets/images/p_descendintoheaven.gif
   url: https://spoonmangames.itch.io/descendintoheaven
   release: Sep 2015
@@ -178,19 +175,19 @@
       url: https://gamejolt.com/games/king-k-a-goblin-defense-game/82821
 
 - title: The Legend of Zelda Remade
-  project_description: To do later
-  description: Personal fan remake of the original Legend of Zelda using SNES A Link to the Past graphics, built with BennuGD.
+  project_description: Explore a classic game with a fresh visual style. Only exploration is available in this demo.
+  description: A personal fan remake built with BennuGD, where I implemented core exploration systems, map logic, and engine adaptations to recreate the feel of classic Zelda with SNES-style visuals. Focused on clean architecture and faithful gameplay flow.
   image: assets/images/p_zelda.gif
-  release: Jul 2015
+  release: Jul 2011
   url: https://github.com/SpoonmanGames/ZeldaRemade
-  tags: [Fan-Game, Action-Adventure]
+  tags: [Exploration, Action-Adventure]
   platforms:
     - id: github
       url: https://github.com/SpoonmanGames/ZeldaRemade
 
 - title: Bomber-Chan
-  project_description: To do later
-  description: Recreation of Super Bomberman 5 Gold for SNES using BennuGD, adding expanded controller support and tournament options.
+  project_description: The same explosive gameplay as always. Tech demo showcasing BennuGD capabilities.
+  description: A BennuGD tech-demo where I recreated Super Bomberman 5 Gold mechanics, implementing grid-based logic, bomb and multiplayer, expanded controller support, and custom tournament features to push the engine’s capabilities.
   image: assets/images/p_bomberchan.gif
   url: https://github.com/SpoonmanGames/BomberChan
   release: May 2011

@@ -372,6 +372,14 @@
   margin-right: auto;
 }
 
+.smaller-project-image-link {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
 .smaller-project-card .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -379,10 +387,6 @@
   justify-content: center;
 }
 
-.smaller-project-image-link {
-  display: block;
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  text-decoration: none;
+.smaller-project-card .project-description {
+  text-align: justify;
 }
