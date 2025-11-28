@@ -58,6 +58,10 @@
   animation: cvShimmer 2.4s ease-in-out infinite;
 }
 
+.intro-icon.cv:hover img {
+  animation: none;
+}
+
 /* Shimmer animation */
 @keyframes cvShimmer {
   0% {
