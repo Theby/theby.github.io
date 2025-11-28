@@ -263,9 +263,126 @@
   margin: 0;
 }
 
-.project-title-release {
+.project-release {
   color: var(--green);
   opacity: 0.9;
   font-size: 0.85rem;
   white-space: nowrap;
+}
+
+/* --------------------------------------------- */
+/* Smaller Projects Section                      */
+/* --------------------------------------------- */
+
+.smaller-projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 24px;
+  align-items: stretch;    
+  box-sizing: border-box;
+}
+
+.smaller-project-card {
+  box-sizing: border-box;
+  /* Default: 3 per row */
+  flex: 0 0 calc((100% - 48px) / 3); /* 48px = 2 * gap (24px) */
+  max-width: calc((100% - 48px) / 3);
+  min-width: 220px;
+}
+
+/* Medium screens → 2 per row */
+@media (max-width: 900px) {
+  .smaller-project-card {
+    flex: 0 0 calc((100% - 24px) / 2); /* 24px = 1 * gap */
+    max-width: calc((100% - 24px) / 2);
+  }
+}
+
+/* Small screens → 1 per row */
+@media (max-width: 600px) {
+  .smaller-project-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.smaller-project-card {
+  box-sizing: border-box;
+  background: var(--black-alpha-40);
+  border: 1px solid var(--green-alpha-35);
+  border-radius: 6px;
+  padding: 15px;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  position: relative;
+}
+
+/* Visible state (added by IntersectionObserver) */
+.smaller-project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.smaller-project-card:hover {
+  position: relative;
+  transform: translateY(-4px);
+  border-color: var(--green);
+  box-shadow:
+    0 0 8px var(--green-alpha-45),
+    0 0 16px var(--green-alpha-25),
+    0 0 24px var(--green-alpha-12);
+}
+
+.smaller-project-card:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--green-alpha-05) 0px,
+    var(--green-alpha-05) 1px,
+    transparent 2px
+  );
+}
+
+.smaller-project-card .project-release {
+  display: block;
+  text-align: center;
+  margin: 4px 0 8px;
+  white-space: nowrap;
+}
+
+.smaller-project-card h2,
+.smaller-project-card .project-tags,
+.smaller-project-card .project-game-description {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.smaller-project-card .project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.smaller-project-image-link {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
 }

@@ -17,7 +17,7 @@
   release: Jan 2024
   tags: [Visual Novel]
   platforms:
-    - id: globalgamejam
+    - id: ggj
       url: https://globalgamejam.org/games/2024/amor-primera-vista-love-first-sight-7
 
 - title: Mariana Strange
@@ -39,8 +39,20 @@
   release: Jan 2019
   tags: [Survival, Adventure]
   platforms:
-    - id: globalgamejam
+    - id: ggj
       url: https://v3.globalgamejam.org/2019/games/them
+
+- title: Super Oso
+  hidden: true
+  project_description: To do later
+  description: Advergame for Falabella’s 2018 Technology Fair. I directed the project, programmed features, and implemented provided art.
+  image: assets/images/p_superoso.gif
+  url: https://apps.apple.com/us/app/agente-oso/id1434320450
+  release: Jun 2018
+  tags: [Advergame, Arcade]
+  platforms:
+    - id: ios
+      url: https://apps.apple.com/us/app/agente-oso/id1434320450
 
 - title: Byted Noise
   project_description: To do later
@@ -50,10 +62,11 @@
   release: Jan 2018
   tags: [Arcade, Open-World]
   platforms:
-    - id: globalgamejam
+    - id: ggj
       url: https://v3.globalgamejam.org/2018/games/byted-noise
 
 - title: Touchdown Champ
+  hidden: true
   project_description: To do later
   description: American-football arcade autorunner. I worked on data systems and architecture programming.
   image: assets/images/p_touchdownchamp.gif
@@ -65,6 +78,7 @@
       url: https://play.google.com/store/apps/details?id=com.tapsense.touchdownchampion
 
 - title: Sketch Rally
+  hidden: true
   project_description: To do later
   description: Car-themed advergame autorunner. I worked on UI design and tools implementation.
   image: assets/images/p_sketchrally.gif
@@ -94,6 +108,18 @@
     - id: x
       url: https://x.com/caiampitercpmk
 
+- title: Father.IO
+  hidden: true
+  project_description: To do later
+  description: Mobile RTS with AR and FPS elements. I worked as an intern for three months developing RTS systems as part of Gamelogic.
+  image: assets/images/p_fatherio.gif
+  url: https://father.io
+  release: Jan 2017
+  tags: [RTS, AR, Mobile]
+  platforms:
+    - id: website
+      url: https://father.io
+
 - title: Empathy
   project_description: To do later
   description: FPS puzzle game developed in Italy during the Global Game Jam 2017. I worked as the Lead Programmer.
@@ -102,7 +128,7 @@
   release: Jan 2017
   tags: [FPS, Puzzle]
   platforms:
-    - id: globalgamejam
+    - id: ggj
       url: https://v3.globalgamejam.org/2017/games/empathy-game-about-depression
 
 - title: New Flame
@@ -113,7 +139,7 @@
   release: Feb 2016
   tags: [Platformer, Adventure]
   platforms:
-    - id: globalgamejam
+    - id: ggj
       url: https://v3.globalgamejam.org/2016/games/new-flame
 
 - title: Descend Into Heaven (Full Version)
@@ -127,7 +153,20 @@
     - id: itchio
       url: https://spoonmangames.itch.io/descendintoheaven
 
+- title: Sunset Roboto
+  hidden: true
+  project_description: To do later
+  description: Auto Runner robot go for the sunset.
+  image: assets/images/p_sunsetroboto.gif
+  url: https://bitbucket.org/Theby/sunsetroboto/src/master
+  release: Sept 2015
+  tags: [Auto runner]
+  platforms:
+    - id: bitbucket
+      url: https://bitbucket.org/Theby/sunsetroboto/src/master
+
 - title: King K. A Goblin Defense Game
+  hidden: true
   project_description: To do later
   description: Tower defense RTS created for the Impulsa Games Jam. I designed, directed, and programmed the game in XNA C# for PC.
   image: assets/images/p_kingk.gif
@@ -146,7 +185,7 @@
   url: https://github.com/SpoonmanGames/ZeldaRemade
   tags: [Fan-Game, Action-Adventure]
   platforms:
-    - id: githib
+    - id: github
       url: https://github.com/SpoonmanGames/ZeldaRemade
 
 - title: Bomber-Chan
