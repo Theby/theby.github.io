@@ -27,9 +27,9 @@
         </p>
         <div class="intro-links">
           {% for social in site.socials %}
-            <a href="{{ social.url }}" target="_blank" class="intro-icon {{ social.name }}">
-            <img src="/assets/icons/socials/s_{{ social.name }}.svg">
-          </a>
+            <a href="{{ social.url }}" {% unless social.inTab %} target="_blank" {% endunless %} class="intro-icon {{ social.name }}">
+              <img src="/assets/icons/socials/s_{{ social.name }}.svg">
+            </a>
           {% endfor %}
         </div>
       </div>

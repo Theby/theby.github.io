@@ -18,7 +18,8 @@ author:
   description: Gameplay & Tools Engineer with 10+ years creating fast, clean systems, responsive gameplay, and tools that boost team efficiency.
 socials:
   - name: cv
-    url: https://docs.google.com/document/d/17ror9scPDFVUMK6okj4Yf7gdI_MyANjwWboukXwG8pc/edit?usp=sharing
+    url: /resume
+    inTab: true
   - name: linkedin
     url: https://www.linkedin.com/in/estebangaeteflores
   - name: github
