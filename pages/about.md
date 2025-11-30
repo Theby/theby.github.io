@@ -9,7 +9,7 @@ permalink: /about
     display: flex;
     gap: 32px;
     align-items: flex-start;
-    margin-top: 20px; /* lets the layout breathe under the H1 */
+    margin-top: 20px;
   }
 
   .about-text {
@@ -26,44 +26,108 @@ permalink: /about
     display: block;
     max-width: 220px;
     width: 100%;
-    border-radius: 4px; /* rectangle with rounded corners */
-    border: 1px solid #b5e853; /* Hacker theme green */
+    border-radius: 4px;
+    border: 1px solid var(--green);
     box-shadow: 0 0 10px rgba(181, 232, 83, 0.25);
   }
 
   @media (max-width: 800px) {
     .about-layout {
       flex-direction: column;
+      align-items: stretch;
     }
 
     .about-photo {
       margin-top: 16px;
+      justify-content: center;
+      width: 100%;
     }
 
     .about-photo img {
       max-width: 180px;
+      width: 100%;
+      margin: 0 auto;
     }
+  }
+
+  .closing-links {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .closing-links a {
+    display: inline-flex;
+    padding: 5px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--green);
+    color: var(--green);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition:
+      box-shadow 0.25s ease,
+      border-color 0.25s ease,
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
+
+  .closing-links a:hover {
+    border-color: var(--green);
+    box-shadow:
+      0 0 4px var(--green-alpha-45),
+      0 0 8px var(--green-alpha-30),
+      0 0 12px var(--green-alpha-12);
+    transform: translateY(-1px);
+    opacity: 0.9;
   }
 </style>
 
 <section>
-  <h1>About</h1>
+  <h1>About Me</h1>
 
   <div class="about-layout">
     <div class="about-text">
       <p>
-        I’m Esteban, a senior Unity game developer focused on creating polished,
-        performant experiences and supporting teams with tools, pipelines, and
-        mentoring. Over the last decade I’ve worked on mobile, console and PC
-        projects, helping studios ship and grow their games.
+        I’m Esteban Gaete Flores, a senior Unity game developer with 10+ years of experience
+        building games and tools for console, PC, and mobile. I specialize in
+        gameplay programming, performance optimization, and editor tooling that
+        help teams ship smoother, more responsive experiences.
       </p>
       <p>
-        I enjoy bridging tech and design, collaborating closely with artists,
-        producers, and marketing to turn ideas into stable, scalable features.
+        I’ve contributed to commercial projects like <em>Garden Joy</em>,
+        <em>The Eightfold Path</em>, <em>Linked Mask</em>, <em>What Lies in the
+        Multiverse</em>, and <em>NBA Clash</em>, often joining teams in the messy
+        middle to improve performance, streamline pipelines, and keep features
+        moving. I enjoy translating design goals into robust systems, connecting
+        backend data to UI, and building tools that reduce repetitive work for the
+        rest of the team.
       </p>
+      <p>
+        Outside of studio work, I co-organize GameDev Planet, the largest Chilean
+        game dev community, where we’ve hosted dozens of events, talks, and
+        showcases to help local developers connect and grow. I’m especially
+        passionate about platformers, metroidvanias, and gameplay-driven projects,
+        and I’m happiest when I’m iterating on feel, helping teammates be more
+        effective, and supporting strong, collaborative teams.
+      </p>
+      <p>
+        If you’re interested in my work and would like to hire me, explore a collaboration,
+        discuss consulting, or just nerd out about Unity and game dev, feel free to reach out.
+      </p>
+      <div class="closing-links">
+        <a href="/resume/">Resume</a>
+        {% assign linkedin = site.socials | where: "name", "linkedin" | first %}
+        <a href="{{ linkedin.url }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:estebanagf@gmail.com">Email me</a>
+      </div>
     </div>
     <div class="about-photo">
-      <img src="/assets/images/default-preview-image.png" loading="lazy">
+      <img
+        src="/assets/images/default-preview-image.png"
+        alt="Portrait of Esteban Gaete Flores"
+        loading="lazy"
+      >
     </div>
   </div>
 </section>

@@ -2,8 +2,8 @@ navigation:
   - label: Portfolio
     url: /
   - label: Blog
-    url: /blog/
+    url: /blog
   - label: About
-    url: /about/
+    url: /about
   - label: Contact
-    url: /contact/
+    url: /contact
