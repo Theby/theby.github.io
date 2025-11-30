@@ -191,3 +191,18 @@ pageType: projects
     </div>
   {% endfor %}
 </div>
+
+# What’s Next?
+
+<div class="closing-section">
+  <p>
+    Thank you for reading all the way to the end. If you’re interested in my work and would like to hire me, explore a collaboration, discuss consulting, or just nerd out about Unity and game dev, feel free to reach out.
+  </p>
+
+  <div class="closing-links">
+    <a href="/resume/">Resume</a>
+    {% assign linkedin = site.socials | where: "name", "linkedin" | first %}
+    <a href="{{ linkedin.url }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="mailto:estebanagf@gmail.com">Email me</a>
+  </div>
+</div>
