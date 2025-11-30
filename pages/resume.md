@@ -40,6 +40,12 @@ permalink: /resume
   width: 100%;
 }
 
+.pdf-text {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .btn-download .icon {
   opacity: 0.6;
   background: url("{{ site.url }}{{ site.baseurl }}/assets/images/btn-download.png") no-repeat 0 0;
@@ -87,25 +93,6 @@ permalink: /resume
 	  width="1000"
 	  height="1000"
 	  type="application/pdf">
-		<p>Your browser can't display the PDF. Please Download instead.</p>
+		<p class="pdf-text">Your browser can't display the PDF. Please reload the page or Download instead.</p>
 	</object>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in-view");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  document.querySelectorAll(".page-content h1").forEach(h1 => {
-    observer.observe(h1);
-  });
-});
-</script>

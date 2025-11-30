@@ -1,0 +1,49 @@
+/* ------------------------------------------
+   SCROLL TO TOP BUTTON
+------------------------------------------ */
+
+.scroll-top-btn {
+  cursor: pointer;
+  font-size: 13px;
+  padding: 8px 18px;
+  border: 1px solid var(--green);
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--text-light);
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.scroll-top-wrapper {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.scroll-top-wrapper.floating {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 999;
+  margin: 0;
+}
+
+#scrollTopBtn {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scrollTopBtn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  border-color: var(--green);
+  box-shadow: 0 0 6px var(--green), 0 0 12px var(--green);
+}
+
+#scrollTopBtn:hover {
+  transform: translateY(-2px);
+}
