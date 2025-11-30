@@ -1,4 +1,85 @@
 /* ------------------------------------------
+   HEADER NAVIGATION
+------------------------------------------ */
+.site-nav {
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 24px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 14px;
+  opacity: 0.8;
+  letter-spacing: 0.4px;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.site-nav a:hover {
+  opacity: 1;
+  color: var(--green);
+}
+
+.site-nav a.active {
+  color: var(--green);
+  opacity: 1;
+  position: relative;
+}
+
+.site-nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 2px;
+  background: var(--green);
+  border-radius: 2px;
+}
+
+/* ------------------------------------------
+   RESPONSIVE HEADER NAVIGATION
+------------------------------------------ */
+@media (max-width: 600px) {
+  .site-nav {
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .site-nav li {
+    width: 100%;
+  }
+
+  .site-nav a {
+    display: inline-block;
+    padding: 6px 0;
+  }
+
+  .site-nav a.active::after {
+    bottom: -2px;
+  }
+}
+
+
+/* ------------------------------------------
    SCROLL TO TOP BUTTON
 ------------------------------------------ */
 
