@@ -1,5 +1,19 @@
-- title: MOTIONS USACH see link in roberto email too, maybe add projecto de titulo
+- title: "MOTIONS: Exploring Human-Information Interactions Beyond Clicks"
   description: >
-    Tool for research in the HCIR (Human-Computer Information Retrieval) area. Makes use of VR and different peripheries to work in a virtual environment.
-  url: https://www.researchgate.net/publication/346924448_MOTIONS_Exploring_Human-Information_Interactions_Beyond_Clicks
+    We introduce a system for evaluating how people interact with digital 
+    information across various interfaces. Our studies show that while advanced 
+    technologies like VR and AR are attractive, they’re not always the most 
+    effective or efficient for users.
+  url: https://ieeexplore.ieee.org/document/9281256
+  authors: R. González-Ibáñez, J. Köhler, E. Gaete-Flores, F. Estay-Cabello, A. Pollmann-Stocker and J. Catalán-Álvarez
+  release: Nov 2020
+
+- title: "VORTICES: Ambiente de realidad virtual para apoyar la evaluación de interacciones con objetos de información digital"
+  description: >
+    Undergraduate Thesis. We present a virtual reality environment designed to evaluate emerging 
+    interaction technologies and study how users engage with digital information. 
+    A pilot study comparing multiple VR-based interfaces showed improvements in 
+    precision, immersion, and overall user experience.
+  url: https://repositorio.usach.cl/permalink/56USACH_INST/avqbj0/alma991885718106116
+  authors: E. Gaete-Flores, R. González-Ibáñez
   release: Mar 2016

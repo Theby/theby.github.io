@@ -1,48 +1,63 @@
-- title: Encuentro B2B VG Chile 2025
+- title: A decade of games, growing and community
   description: >
-    Talk about "A decade of games, growing and community". The talk is in Spanish.
+    Talk on the story and evolution of GameDev Planet, covering its projects,
+    growth, and community-building efforts. Presented at "Encuentro B2B VG Chile 2025".
   url: https://www.instagram.com/p/DQFLPX3Efp8
   release: Oct 2025
 
-- title: Webinar for CFT San Augistin
+- title: Business models in the video game industry
   description: >
-    Talk about "Business models in the video game industry". The talk is in Spanish.
+    Webinar on different business models in the games industry and how to match
+    them to your company and projects. Delivered for "CFT San Augistin".
   url: https://drive.google.com/file/d/1DSUo5I96X4rl9a2_H5F7Z4AQ_BhQwNFl/view
   release: Aug 2020
 
-- title: Webinar for VideoGame Atacama Planeas
+- title: Developing with the support of an international publisher
   description: >
-    Talk about "Developing with the support of an international publisher". The talk is in Spanish.
+    Webinar sharing my experience at Spoonman Games developing a title with the
+    backing of an international publisher, including processes, challenges, and
+    lessons learned. Hosted by "VideoGame Atacama Planeas".
   url: https://web.facebook.com/watch/live/?v=2943457182430359&_rdc=1&_rdr
   release: Jun 2020
 
-- title: top 10 ANIME DE LA DÉCADA!!! // Podcast Checkpoint
+- title: Top 10 Anime of the Decade
   description: >
-    Kaipi Checkpoint
+    Friendly podcast discussion on our picks for the best anime series of the
+    decade, including personal highlights and recommendations. Recorded for
+    "Kaipi Checkpoint".
   url: https://www.youtube.com/watch?v=GgYtFsputsc
+  authors: Margarita Pino, Esteban Gaete Flores
   release: Dic 2019
 
-- title: PODCAST Checkpoint * Anime y Series*
+- title: Anime, Manga and Japan
   description: >
-    Kaipi Checkpoint
+    Podcast conversation about anime, manga, and Japanese culture, sharing
+    favorite series, influences, and experiences. Recorded for "Kaipi Checkpoint".
   url: https://www.youtube.com/watch?v=HZ1Y6chS9k0
+  authors: Margarita Pino, Esteban Gaete Flores
   release: Nov 2019
 
-- title: checkpoint 2 / Spoonman Games / Podcast
+- title: Spoonman Games podcast interview
   description: >
-    Kaipi Checkpoint
+    Podcast interview on the origins, funding, and day-to-day work at Spoonman
+    Games, including stories from development and studio life. Recorded for
+    "Kaipi Checkpoint".
   url: https://www.youtube.com/watch?v=MVvhunie3VU
+  authors: Margarita Pino, Esteban Gaete Flores
   release: Jun 2019
 
-- title: Talk in Unity Developer Day Chile
+- title: Scriptable Objects and procedural generation
   description: >
-    Gave a talk about "Scriptable Objects and procedural generation". The talk is in Spanish.
+    Talk on using Scriptable Objects to define rules and biases for procedural
+    generation of items and enemies, with practical examples in Unity. Presented
+    at "Unity Developer Day Chile 2017".
   url: https://www.youtube.com/watch?v=Q8dMXdiIYHA
   release: Nov 2017
 
-- title: Un café con Spoonman Games
+- title: A coffe with Spoonman Games
   description: >
-    GameDev Cafe
+    Interview with Walter Veneros about what Spoonman Games does, its projects,
+    and future plans for the studio. Recorded for "GameDev Cafe".
   url: https://www.youtube.com/watch?v=zw_mbrvyjH4
+  authors: Walter Veneros, Victor Gaete, Esteban Gaete Flores
   release: Jul 2016
-

@@ -139,3 +139,49 @@ pageType: projects
   {% endif %}
   {% endfor %}
 </div>
+
+# Public Speaking & Interviews
+
+<div class="talks-list">
+  {% for item in site.data.projects-talks %}
+    <div class="talk-entry">
+      <div class="talk-header">
+        <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+        {% if item.release %}
+          <span class="talk-release">{{ item.release }}</span>
+        {% endif %}
+      </div>
+      {% if item.description %}
+        <p class="talk-description">{{ item.description }}</p>
+      {% endif %}
+      {% if item.authors %}
+        <p class="talk-authors">
+          <strong>By:</strong> {{ item.authors }}
+        </p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+# Publications
+
+<div class="talks-list">
+  {% for item in site.data.projects-papers %}
+    <div class="talk-entry">
+      <div class="talk-header">
+        <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+        {% if item.release %}
+          <span class="talk-release">{{ item.release }}</span>
+        {% endif %}
+      </div>
+      {% if item.description %}
+        <p class="talk-description">{{ item.description }}</p>
+      {% endif %}
+      {% if item.authors %}
+        <p class="talk-authors">
+          <strong>Authors:</strong> {{ item.authors }}
+        </p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
