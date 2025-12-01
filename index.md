@@ -200,9 +200,9 @@ pageType: projects
   </p>
 
   <div class="closing-links">
-    <a href="/resume/">Resume</a>
+    <a href="/resume">Resume</a>
     {% assign linkedin = site.socials | where: "name", "linkedin" | first %}
     <a href="{{ linkedin.url }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="mailto:estebanagf@gmail.com">Email me</a>
+    <a href="/contact">Contact me</a>
   </div>
 </div>

@@ -7,8 +7,15 @@ permalink: /contact
 <style>
   .contact-form {
     max-width: 480px;
-    margin-top: 24px;
-    padding-right: 12px;
+    margin: 24px auto;
+    padding: 0 12px;
+  }
+
+  .contact-intro {
+    max-width: 480px;
+    margin: 0 auto 12px;
+    padding: 0 12px;
+    font-size: 14px;
   }
 
   .contact-form label {
@@ -47,6 +54,10 @@ permalink: /contact
 
 
 <h1>Contact me</h1>
+
+<p class="contact-intro">
+  Prefer email? Write to: <a href="mailto:estebanagf@gmail.com">estebanagf@gmail.com</a>
+</p>
 
 <form
   action="https://formspree.io/f/mkgdbnba"
