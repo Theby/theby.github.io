@@ -8,6 +8,7 @@ permalink: /contact
   .contact-form {
     max-width: 480px;
     margin-top: 24px;
+    padding-right: 12px;
   }
 
   .contact-form label {
@@ -21,6 +22,7 @@ permalink: /contact
   .contact-form textarea {
     display: block;
     width: 100%;
+    box-sizing: border-box;
     margin-top: 4px;
     padding: 8px 10px;
     border-radius: 4px;
@@ -42,6 +44,7 @@ permalink: /contact
     margin-top: 8px;
   }
 </style>
+
 
 <h1>Contact me</h1>
 
@@ -67,7 +70,7 @@ permalink: /contact
 
   <div style="display:none;">
     <label>
-      Your favorite videogame is:
+      Your favorite videogame is
       <input type="text" name="_gotcha">
     </label>
   </div>
