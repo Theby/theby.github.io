@@ -29,7 +29,7 @@ socials:
 
 # Contact
 chat_platforms:
-    - name: X
+    - name: x
       url: https://x.com/TebiFestival
       handler: TebiFestival
     - name: bluesky
