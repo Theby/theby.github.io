@@ -140,6 +140,30 @@
   line-height: 1.4;
 }
 
+/* Center text blocks for header and footer inside the sidebar */
+.blog-sidebar header,
+.blog-sidebar > footer {
+  text-align: center;
+}
+
+/* Make the inner containers sit centered instead of full-width */
+.blog-sidebar .intro-section.container,
+.blog-sidebar .site-footer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center the social icons row */
+.blog-sidebar .intro-links {
+  justify-content: center;
+}
+
+/* If the nav uses flex, this will center the nav items in the blog sidebar */
+.blog-sidebar .site-nav ul {
+  justify-content: center;
+}
+
+
 /* ===========================
    Responsive behavior
    =========================== */

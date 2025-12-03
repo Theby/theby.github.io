@@ -46,10 +46,10 @@
           </header>
 
           <nav class="blog-tools">
+            <a class="blog-tool" href="{{ site.feed_url | default: '/feed.xml' | relative_url }}">RSS Feed</a>
             <a class="blog-tool" href="{{ '/blog/categories/' | relative_url }}">Categories</a>
             <a class="blog-tool" href="{{ '/blog/tags/' | relative_url }}">Tags</a>
             <a class="blog-tool" href="{{ '/blog/archive/' | relative_url }}">Archive</a>
-            <a class="blog-tool" href="{{ site.feed_url | default: '/feed.xml' | relative_url }}">RSS Feed</a>
           </nav>
         </div>
 
