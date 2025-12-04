@@ -146,7 +146,7 @@
   align-items: center;
   gap: 6px;
   text-decoration: none;
-  color: var(--text-light, #e0e0e0);
+  color: var(--green, #e0e0e0);
 }
 
 .blog-rss-link:hover {
@@ -272,6 +272,7 @@
 
 .blog-rss {
   padding-top: 12px;
+  padding-bottom: 12px;
   border-top: 1px dashed var(--green);
   font-size: 12px;
 }
@@ -330,12 +331,12 @@
    =========================== */
 
 .blog-subscribe {
-  margin-top: 12px;
-  padding-top: 0;
+  margin-top: 2px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--green);
   font-size: 12px;
   margin-bottom: 0;
 }
-
 
 .blog-subscribe-title {
   font-size: 12px;
