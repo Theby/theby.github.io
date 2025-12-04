@@ -161,11 +161,6 @@
   border-left: 1px dashed rgba(181, 232, 83, 0.5);
 }
 
-.blog-dropdown ul li {
-  list-style: none;
-  list-style-image: none;
-}
-
 /* When group is open, show its dropdown */
 .blog-tool-group.is-open .blog-dropdown {
   display: block;
@@ -179,12 +174,11 @@
 }
 
 .blog-dropdown-item {
-  /*display: flex;*/
-  /*justify-content: space-between;*/
-  /*align-items: baseline;*/
   padding: 3px 0;
   font-size: 12px;
   line-height: 1.4;
+  list-style: none;
+  list-style-image: none;
 }
 
 .blog-dropdown-link {
