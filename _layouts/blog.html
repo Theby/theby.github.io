@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/assets/css/footer.css">
     <link rel="stylesheet" href="/assets/css/blog.css">
     {% include head-custom.html %}
+    {% feed_meta %}
   </head>
 
   <body>
@@ -49,7 +50,7 @@
             <!-- RSS: stays a button, first item -->
             <a
               class="blog-tool blog-tool-rss"
-              href="{{ site.feed_url | default: '/feed.xml' | relative_url }}"
+              href="{{ site.feed.path | default: '/feed.xml' | relative_url }}"
               target="_blank"
             >
               RSS Feed
@@ -69,13 +70,24 @@
 
               <div class="blog-dropdown" id="blog-dropdown-categories">
                 {% if site.categories %}
-                  {%- capture cats_with_counts -%}
+                  {% capture cats_with_counts %}
                     {% for cat in site.categories %}
-                      {{ cat[1].size | plus: 1000 }}#{{ cat[0] }}#{{ cat[1].size }}|
+                      {% assign cat_name = cat[0] %}
+                      {% assign cat_size = cat[1].size %}
+                      {% assign inv = 1000 | minus: cat_size %}
+                      {% if inv < 10 %}
+                        000{{ inv }}
+                      {% elsif inv < 100 %}
+                        00{{ inv }}
+                      {% elsif inv < 1000 %}
+                        0{{ inv }}
+                      {% else %}
+                        {{ inv }}
+                      {% endif %},{{ cat_name }}@
                     {% endfor %}
-                  {%- endcapture -%}
+                  {% endcapture %}
 
-                  {%- assign cats_array = cats_with_counts | split: '|' | sort | reverse -%}
+                  {% assign cats_array = cats_with_counts | split: '@' | sort %}
 
                   <ul class="blog-dropdown-list">
                     {% for cat_entry in cats_array %}
@@ -83,9 +95,15 @@
                         {% continue %}
                       {% endif %}
 
-                      {% assign parts = cat_entry | split: '#' %}
-                      {% assign cat_name  = parts[1] %}
-                      {% assign cat_count = parts[2] %}
+                      {% assign parts    = cat_entry | split: ',' %}
+                      {% assign cat_name = parts[1] | strip %}
+                      {% if cat_name == '' %}
+                        {% continue %}
+                      {% endif %}
+
+                      {% assign inv_str   = parts[0] | strip %}
+                      {% assign inv       = inv_str | plus: 0 %}
+                      {% assign cat_count = 1000 | minus: inv %}
 
                       <li class="blog-dropdown-item">
                         <a
@@ -98,10 +116,12 @@
                       </li>
                     {% endfor %}
                   </ul>
+
                 {% else %}
                   <p class="blog-dropdown-empty">No categories yet.</p>
                 {% endif %}
               </div>
+
             </div>
 
             <!-- Tags dropdown -->
@@ -118,8 +138,25 @@
 
               <div class="blog-dropdown" id="blog-dropdown-tags">
                 {% if site.tags %}
-                  {% capture tags_with_counts %}{% for tag in site.tags %}{% assign tag_name = tag[0] %}{% assign tag_size = tag[1].size %}{% if tag_size < 10 %}0{{ tag_size }}{% else %}{{ tag_size }}{% endif %},{{ tag_name }}@{% endfor %}{% endcapture %}
-                  {% assign tags_array = tags_with_counts | split: '@' | sort | reverse %}
+                  {% capture tags_with_counts %}
+                    {% for tag in site.tags %}
+                      {% assign tag_name = tag[0] %}
+                      {% assign tag_size = tag[1].size %}
+
+                      {% assign inv = 1000 | minus: tag_size %}
+                      {% if inv < 10 %}
+                        000{{ inv }}
+                      {% elsif inv < 100 %}
+                        00{{ inv }}
+                      {% elsif inv < 1000 %}
+                        0{{ inv }}
+                      {% else %}
+                        {{ inv }}
+                      {% endif %},{{ tag_name }}@
+                    {% endfor %}
+                  {% endcapture %}
+
+                  {% assign tags_array = tags_with_counts | split: '@' | sort %}
 
                   <ul class="blog-dropdown-list">
                     {% for tag_entry in tags_array %}
@@ -127,9 +164,15 @@
                         {% continue %}
                       {% endif %}
 
-                      {% assign parts     = tag_entry | split: ',' %}
-                      {% assign tag_count = parts[0] | plus: 0 %}
-                      {% assign tag_name  = parts[1] %}
+                      {% assign parts    = tag_entry | split: ',' %}
+                      {% assign tag_name = parts[1] | strip %}
+                      {% if tag_name == '' %}
+                        {% continue %}
+                      {% endif %}
+
+                      {% assign inv_str   = parts[0] | strip %}
+                      {% assign inv       = inv_str | plus: 0 %}
+                      {% assign tag_count = 1000 | minus: inv %}
 
                       <li class="blog-dropdown-item">
                         <a
@@ -142,12 +185,12 @@
                       </li>
                     {% endfor %}
                   </ul>
+
                 {% else %}
                   <p class="blog-dropdown-empty">No tags yet.</p>
                 {% endif %}
               </div>
             </div>
-
 
             <!-- Archive dropdown -->
             <div class="blog-tool-group" data-dropdown="archive">
