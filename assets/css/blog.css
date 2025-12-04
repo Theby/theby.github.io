@@ -272,9 +272,10 @@
 
 .blog-rss {
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 0;
   border-top: 1px dashed var(--green);
   font-size: 12px;
+  margin-bottom: 12px;
 }
 
 
