@@ -32,9 +32,8 @@
   display: flex;
   flex-direction: column;
   border-right: 1px dashed var(--green);
-  justify-content: space-between;
   padding-right: 16px;
-  min-height: calc(100vh - 72px); /* feels like a full-height column */
+  min-height: calc(100vh - 72px);
 }
 
 /* Condensed header inside sidebar */
@@ -85,6 +84,12 @@
 .blog-sidebar .site-nav ul {
   justify-content: center;
   gap: 16px;
+}
+
+.blog-sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto; /* fill available height above the footer */
 }
 
 /* ===========================
@@ -300,7 +305,7 @@
    =========================== */
 
 .blog-subscribe {
-  margin-top: 16px;
+  margin-top: auto;             /* push this block to the bottom */
   padding-top: 12px;
   border-top: 1px dashed var(--green);
   font-size: 12px;
