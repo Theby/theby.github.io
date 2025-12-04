@@ -9,7 +9,6 @@ baseurl: ""
 remote_theme: pages-themes/hacker@v0.2.0
 plugins:
   - jekyll-remote-theme
-Gems:
   - jekyll-feed
 google_analytics: G-M7HRV5WG9L
 show_downloads: false
