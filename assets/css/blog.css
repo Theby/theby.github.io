@@ -519,5 +519,11 @@
   white-space: nowrap;
 }
 
+.blink {
+  animation: blink 1s steps(2, start) infinite;
+}
 
+@keyframes blink {
+  50% { opacity: 0; }
+}
 

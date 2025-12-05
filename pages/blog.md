@@ -43,6 +43,7 @@ permalink: /blog
       <a class="post-list-read-more" href="{{ post.url | relative_url }}">
         <span class="post-read-more-prefix">$</span>
         <span class="post-read-more-command">open entry</span>
+        <span class="blink">█</span>
       </a>
     </li>
   {% endfor %}
