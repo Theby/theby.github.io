@@ -1,4 +1,4 @@
- /* ===========================
+/* ===========================
    Blog layout shell (2 columns)
    =========================== */
 
@@ -11,15 +11,12 @@
   gap: 32px;
 }
 
-/* Right column: override container defaults inside blog shell */
 .blog-shell > .page-content {
-  /* neutralize default .container layout so grid controls the width */
   margin: 0;
   max-width: none;
   padding: 0;
 }
 
-/* Keep content width comfortable */
 .blog-shell #main_content {
   max-width: 720px;
 }
@@ -36,7 +33,12 @@
   min-height: calc(100vh - 72px);
 }
 
-/* Condensed header inside sidebar */
+.blog-sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
 .blog-sidebar header {
   text-align: center;
   margin-bottom: 24px;
@@ -46,7 +48,6 @@
   padding-bottom: 0;
 }
 
-/* Tighten the intro section inside the sidebar */
 .blog-sidebar .intro-section.container {
   padding-left: 0;
   padding-right: 0;
@@ -56,7 +57,6 @@
   margin-right: auto;
 }
 
-/* Smaller title/subtitle for blog view */
 .blog-sidebar .intro-title {
   font-size: 20px;
   margin-bottom: 4px;
@@ -87,12 +87,6 @@
   gap: 16px;
 }
 
-.blog-sidebar-inner {
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 auto; /* fill available height above the footer */
-}
-
 /* ===========================
    Blog tools
    =========================== */
@@ -101,7 +95,7 @@
   margin: 0;
   padding: 0 0 8px;
   display: flex;
-  flex-direction: column;      /* vertical stack */
+  flex-direction: column;
   align-items: flex-start;
   gap: 6px;
 }
@@ -113,12 +107,10 @@
   margin: 0 0 4px;
 }
 
-/* Wrapper for each dropdown group (Categories, Tags, Archive) */
 .blog-tool-group {
   width: 100%;
 }
 
-/* Base style for both links and toggles: link-like, not pills */
 .blog-tool {
   display: inline-flex;
   align-items: center;
@@ -135,10 +127,72 @@
   white-space: nowrap;
 }
 
-/* Hover: subtle underline + color accent */
 .blog-tool:hover {
   color: var(--green, #b5e853);
   text-decoration: underline;
+}
+
+.blog-tool-toggle {
+  text-align: left;
+}
+
+.blog-tool-caret {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.blog-dropdown {
+  display: none;
+  margin-top: 4px;
+  padding-left: 10px;
+  border-left: 1px dashed rgba(181, 232, 83, 0.5);
+}
+
+.blog-tool-group.is-open .blog-dropdown {
+  display: block;
+}
+
+.blog-dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-dropdown-item {
+  padding: 3px 0;
+  font-size: 12px;
+  line-height: 1.4;
+  list-style: none;
+  list-style-image: none;
+}
+
+.blog-dropdown-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-dropdown-link:hover .blog-label {
+  text-decoration: underline;
+  color: var(--green, #b5e853);
+}
+
+.blog-label {
+  margin-right: 8px;
+}
+
+.blog-count {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.blog-dropdown-empty {
+  margin: 0;
+  padding: 2px 0 4px;
+  font-size: 11px;
+  opacity: 0.8;
 }
 
 .blog-rss-title {
@@ -167,88 +221,6 @@
   display: inline-block;
 }
 
-
-/* Toggle links (Categories / Tags / Archive) */
-.blog-tool-toggle {
-  text-align: left;
-}
-
-/* Small caret icon */
-.blog-tool-caret {
-  font-size: 10px;
-  opacity: 0.8;
-}
-
-/* Dropdown panel: now in normal flow, pushes content down */
-.blog-dropdown {
-  display: none;
-  margin-top: 4px;
-  padding-left: 10px;
-  border-left: 1px dashed rgba(181, 232, 83, 0.5);
-}
-
-/* When group is open, show its dropdown */
-.blog-tool-group.is-open .blog-dropdown {
-  display: block;
-}
-
-/* Dropdown list */
-.blog-dropdown-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.blog-dropdown-item {
-  padding: 3px 0;
-  font-size: 12px;
-  line-height: 1.4;
-  list-style: none;
-  list-style-image: none;
-}
-
-.blog-dropdown-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  text-decoration: none;
-  color: inherit;
-}
-
-.blog-dropdown-link:hover .blog-label {
-  text-decoration: underline;
-  color: var(--green, #b5e853);
-}
-
-
-.blog-label {
-  margin-right: 8px;
-}
-
-.blog-count {
-  font-size: 11px;
-  opacity: 0.7;
-}
-
-/* Empty states */
-.blog-dropdown-empty {
-  margin: 0;
-  padding: 2px 0 4px;
-  font-size: 11px;
-  opacity: 0.8;
-}
-
-/* Mobile tweaks (optional but consistent) */
-@media (max-width: 600px) {
-  .blog-tool {
-    font-size: 10px;
-  }
-
-  .blog-tools {
-    gap: 4px;
-  }
-}
-
 /* ===========================
    Sidebar footer
    =========================== */
@@ -274,7 +246,7 @@
 }
 
 .blog-bottom {
-  margin-top: auto;  /* push RSS + Subscribe down */
+  margin-top: auto;
 }
 
 .blog-rss {
@@ -284,7 +256,6 @@
   font-size: 12px;
   margin-bottom: 12px;
 }
-
 
 /* ===========================
    Grouped lists
@@ -414,7 +385,6 @@
   margin-top: 2px;
 }
 
-
 /* ===========================
    Responsive behavior
    =========================== */
@@ -453,3 +423,16 @@
     gap: 6px;
   }
 }
+
+@media (max-width: 480px) {
+  .blog-subscribe-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .blog-subscribe-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+

@@ -50,11 +50,11 @@
             <h2 class="blog-tools-title">Explore</h2>
 
             <!-- Categories dropdown -->
-            <div class="blog-tool-group" data-dropdown="categories">
+            <div class="blog-tool-group {% if page.url contains '/blog/categories' %}is-open{% endif %}" data-dropdown="categories">
               <button
                 class="blog-tool blog-tool-toggle"
                 type="button"
-                aria-expanded="false"
+                aria-expanded="{% if page.url contains '/blog/categories' %}true{% else %}false{% endif %}"
                 aria-controls="blog-dropdown-categories"
               >
                 Categories
@@ -117,11 +117,11 @@
             </div>
 
             <!-- Tags dropdown -->
-            <div class="blog-tool-group" data-dropdown="tags">
+            <div class="blog-tool-group {% if page.url contains '/blog/tags' %}is-open{% endif %}" data-dropdown="tags">
               <button
                 class="blog-tool blog-tool-toggle"
                 type="button"
-                aria-expanded="false"
+                aria-expanded="{% if page.url contains '/blog/tags' %}true{% else %}false{% endif %}"
                 aria-controls="blog-dropdown-tags"
               >
                 Tags
@@ -185,11 +185,11 @@
             </div>
 
             <!-- Archive dropdown -->
-            <div class="blog-tool-group" data-dropdown="archive">
+            <div class="blog-tool-group {% if page.url contains '/blog/archive' %}is-open{% endif %}" data-dropdown="archive">
               <button
                 class="blog-tool blog-tool-toggle"
                 type="button"
-                aria-expanded="false"
+                aria-expanded="{% if page.url contains '/blog/archive' %}true{% else %}false{% endif %}"
                 aria-controls="blog-dropdown-archive"
               >
                 Archive
