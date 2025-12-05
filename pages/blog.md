@@ -41,7 +41,8 @@ permalink: /blog
         </p>
       {% endif %}
       <a class="post-list-read-more" href="{{ post.url | relative_url }}">
-        Read More
+        <span class="post-read-more-prefix">$</span>
+        <span class="post-read-more-command">open entry</span>
       </a>
     </li>
   {% endfor %}

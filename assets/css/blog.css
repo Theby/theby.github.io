@@ -490,13 +490,34 @@
 }
 
 .post-list-read-more {
-  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-size: 12px;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(181, 232, 83, 0.35);
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--text-light, #e0e0e0);
   text-decoration: none;
 }
 
 .post-list-read-more:hover {
-  text-decoration: underline;
+  border-color: var(--green, #b5e853);
+  box-shadow: 0 0 6px rgba(181, 232, 83, 0.35);
+  transform: translateY(-1px);
+}
+
+/* pieces of the “command” */
+.post-read-more-prefix {
   color: var(--green, #b5e853);
 }
+
+.post-read-more-command {
+  white-space: nowrap;
+}
+
 
 
