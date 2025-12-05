@@ -9,24 +9,45 @@ permalink: /blog
 <ul class="post-list">
   {% for post in site.posts %}
     <li class="post-list-item">
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <h2 class="post-list-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
       <div class="post-list-meta">
         {% if post.categories and post.categories != empty %}
           <span class="post-list-category">
-            [{{ post.categories | join: ", " }}]
+            [
+            {% for category in post.categories %}
+              <a
+                href="{{ '/blog/categories' | relative_url }}#category-{{ category | slugify }}"
+                class="post-meta-link"
+              >
+                {{ category }}
+              </a>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+            ]
           </span>
         {% endif %}
         {% if post.tags and post.tags != empty %}
           <span class="post-list-tags">
-            | 
+            |
             {% for tag in post.tags %}
-              {{ tag }}{% unless forloop.last %}, {% endunless %}
+              <a
+                href="{{ '/blog/tags' | relative_url }}#tag-{{ tag | slugify }}"
+                class="post-meta-link"
+              >
+                {{ tag }}
+              </a>{% unless forloop.last %}, {% endunless %}
             {% endfor %}
           </span>
         {% endif %}
         <span class="post-list-date">
-          | 
-          {{ post.date | date: "%b %d, %Y" }}
+          |
+          <a
+            href="{{ '/blog/archive' | relative_url }}#archive-{{ post.date | date: '%Y-%m' }}"
+            class="post-meta-link"
+          >
+            {{ post.date | date: "%b %d, %Y" }}
+          </a>
         </span>
       </div>
       {% if post.excerpt %}
