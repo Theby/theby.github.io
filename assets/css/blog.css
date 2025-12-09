@@ -93,11 +93,12 @@
 
 .blog-tools {
   margin: 0;
-  padding: 0 0 8px;
+  padding: 12px 0 12px 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
+  border-top: 1px dashed var(--green);
 }
 
 .blog-tools-title {
@@ -227,7 +228,6 @@
 
 .blog-sidebar > footer {
   text-align: center;
-  margin-top: 24px;
   padding-top: 0px;
   background: none;
   border-top: none;
@@ -311,7 +311,7 @@
 
 .blog-subscribe {
   margin-top: 2px;
-  padding-top: 10px;
+  padding-top: 12px;
   border-top: 1px dashed var(--green);
   font-size: 12px;
   margin-bottom: 0;
@@ -625,10 +625,6 @@
   margin-top: 32px;
   padding-top: 12px;
   border-top: 1px dashed var(--green);
-}
-
-.post-related-title {
-  margin: 0 0 8px;
 }
 
 .post-related-list {
