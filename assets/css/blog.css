@@ -548,7 +548,7 @@
   font-size: 11px;
   font-style: italic;
   margin: 0 0 2px;
-  color: var(--text-light, #e0e0e0);
+  color: var(--text-light);
 }
 
 .post-meta-line-bottom {
@@ -563,7 +563,6 @@
 .post-nav-wrapper {
   margin-top: 32px;
   padding-top: 12px;
-  border-top: 1px dashed var(--green);
   display: flex;
   justify-content: center;
 }
@@ -593,22 +592,22 @@
 }
 
 .post-nav-arrow {
-  font-size: 11px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   text-decoration: none;
-  color: var(--text-light, #e0e0e0);
+  color: var(--green);
   opacity: 0.85;
 }
 
 .post-nav-title {
   font-size: 13px;
   text-decoration: none;
-  color: var(--text-light, #e0e0e0);
+  color: var(--text-light);
 }
 
 .post-nav-title:hover {
-  color: var(--green, #b5e853);
+  color: var(--green);
   text-decoration: underline;
 }
 
@@ -629,9 +628,6 @@
 }
 
 .post-related-title {
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   margin: 0 0 8px;
 }
 
@@ -647,24 +643,32 @@
 .post-related-item {
   margin: 0;
   flex: 1 1 220px;
+  list-style: none;
+  list-style-image: none;
 }
 
 .post-related-link {
   display: block;
   font-size: 15px;
   text-decoration: none;
-  color: var(--text-light, #e0e0e0);
+  color: var(--text-light);
   margin-bottom: 2px;
 }
 
 .post-related-link:hover {
   text-decoration: underline;
-  color: var(--green, #b5e853);
+  color: var(--green);
 }
 
 .post-related-meta {
   font-size: 11px;
   opacity: 0.85;
+}
+
+@media (max-width: 900px) and (min-width: 601px) {
+  .post-related-list {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 600px) {
