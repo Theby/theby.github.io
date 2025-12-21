@@ -1,6 +1,4 @@
-.gist .gist-file,
-.gist .gist-data,
-.gist .gist-meta {
+.gist {
   filter: invert(1) hue-rotate(180deg) brightness(110%);
 }
 
@@ -19,6 +17,8 @@
 }
 
 .gist-copy-btn {
+  filter: invert(1) hue-rotate(180deg);
+
   position: absolute;
   top: 10px;
   right: 10px;
