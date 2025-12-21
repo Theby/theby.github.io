@@ -20,6 +20,7 @@ code, pre, kbd, samp {
 .gist .blob-code, 
 .gist .blob-num {
   font-family: "IBM Plex Mono", "Fira Code", Consolas, "Lucida Console", monospace !important;
+  font-size: 16px !important;
 }
 
 .gist .gist-meta {

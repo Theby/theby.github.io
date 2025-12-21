@@ -24,7 +24,7 @@ They work like a charm and are very simple to integrate into your code. However,
 
 To open the device gallery in order to select a file, the NativeGallery plugin gives you this handy method:
 
-``` C#
+```csharp
 public delegate void MediaPickCallback(string path);
 
 public static void GetImageFromGallery(MediaPickCallback callback, /* some optional config params */) { ... }
@@ -32,7 +32,7 @@ public static void GetImageFromGallery(MediaPickCallback callback, /* some optio
 
 You can use it by calling `NativeGallery.GetImageFromGallery()` and passing a delegate callback. You might be tempted, as you should, to wrap this plugin in a controller class so you have a layer of separation in case you need to change the plugin or add extra safeguards and logic when using it. In my case, the controller class for NativeGallery has the following method to use this functionality:
 
-``` C#
+```csharp
 public static void GetImagePathFromGallery(Action<string> onComplete)
 {
     try
@@ -49,7 +49,7 @@ public static void GetImagePathFromGallery(Action<string> onComplete)
 
 All good and simple here, but if you notice, this is returning a `string` and not a `Texture2D` for the image. When you browse and select an image from the gallery, NativeGallery gives you the path to it, not the image itself, which means you need to use another handy method to load the texture:
 
-```C#
+```csharp
 public static Texture2D LoadImageAtPath(string imagePath, /* some optional config params */) { ... }
 
 // or
@@ -59,7 +59,7 @@ public static async Task<Texture2D> LoadImageAtPathAsync(string imagePath, /* so
 
 For our case we want `LoadImageAtPathAsync()`, because it performs the disk I/O asynchronously under the hood (using Unity's web/file APIs on mobile). But now we have a weird mix. We call a method that uses a callback, and then, inside that callback, we want to call an async method. This results in something like this:
 
-``` C#
+```csharp
 public static void GetImageFromGallery(Action<Texture2D> onComplete = null)
 {
     GetImagePathFromGallery(path =>
@@ -103,7 +103,7 @@ We need a way to have these two operations work in a more unified system, so we 
 
 You might know that you can wait for a `Task` from a Unity coroutine by polling its completion, which might tempt you to transform `GetImageFromGallery()` and `GetImageFromPath()` into coroutines like this:
 
-```C#
+```csharp
 public static IEnumerator GetImageFromGallery(Action<Texture2D> onComplete = null)
 {
     bool isPathReady = false;
@@ -143,7 +143,7 @@ While looking for a solution that would keep the async flow in place, I stumbled
 
 The way this works is pretty straightforward. You create a `TaskCompletionSource<T>`, which gives you a `Task<T>`. You can then wait for that task to finish, but in order for it to complete you need to call `SetResult(T result)` (or `SetException` / `SetCanceled` for error cases). Any value assigned through `SetResult()` will mark the `Task` as completed. Here is a quick example:
 
-```C#
+```csharp
 public static async Task WaitingExampleAsync(string animationName)
 {
     await PlayAnimationAsync(animationName);
@@ -166,7 +166,7 @@ In this example, `WaitingExampleAsync()` will wait until the callback-based oper
 
 To update our code to make use of this, we need to update `GetImagePathFromGallery()`. Let me show you the original code and how it would look with `TaskCompletionSource`:
 
-``` C#
+```csharp
 // Our old synchronous call with an onComplete callback
 public static void GetImagePathFromGallery(Action<string> onComplete)
 {
@@ -202,7 +202,7 @@ public static Task<string> GetImagePathFromGalleryAsync()
 
 In the async version we still have a proper `try/catch`, there is no `onComplete` callback anymore, and we can treat this API call as a regular `Task<string>`. This means we can update our `GetImageFromGallery()` to just a couple of lines and turn `GetImageFromPathAsync()` into a proper async call without a callback:
 
-``` C#
+```csharp
 public async Task<Texture2D> GetImageFromGalleryAsync()
 {
     var path = await GetImagePathFromGalleryAsync();
@@ -249,22 +249,14 @@ When you strive for simplicity in your code, keeping a single mental model and a
 Here are a couple of extra details I skipped earlier to keep the explanation of the core solution cleaner:
 
 - When using `TaskCompletionSource` and calling `SetResult()` (or `SetException` / `SetCanceled`), the continuations of that `Task` are, by default, allowed to run inline on the same thread that calls `SetResult()`. In some scenarios, especially when you combine this with blocking waits or certain synchronization contexts, this can lead to deadlocks or surprising re-entrancy. To avoid this, it is often recommended to create a `TaskCompletionSource` like this: `new TaskCompletionSource<T>(TaskCreationOptions.RunContinuationsAsynchronously);`, which ensures continuations run asynchronously.
-- In my application I need to use the pattern I just showed you in a few different places, and creating `TaskCompletionSource` instances everywhere felt like a lot of copy-paste. So I created this small helper class. Below you can see how `GetImagePathFromGalleryAsync()` would change to use it.
+- In my application I need to use the pattern I just showed you in a few different places, and creating `TaskCompletionSource` instances everywhere felt like a lot of copy-paste. So I created this small helper class:
 
-``` C#
-public static class TaskAsyncExtensions
-{
-    public static Task<T> MakeAsync<T>(Action<Action<T>> syncAction)
-    {
-        var taskCompletion = new TaskCompletionSource<T>(TaskCreationOptions.RunContinuationsAsynchronously);
-        
-        syncAction.Invoke(taskCompletion.SetResult);
-        
-        return taskCompletion.Task;
-    }
-}
+Gist for: *TaskAsyncExtensions.cs*
+{% gist 1fb77671f2e6e6d0d0b586b080404206 %}
 
-// Usage example
+And here you can see how `GetImagePathFromGalleryAsync()` would change to use it:
+
+```csharp
 public static async Task<string> GetImagePathFromGalleryAsync()
 {
     string path = string.Empty;
