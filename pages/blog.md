@@ -46,10 +46,12 @@ permalink: /blog
           {{ minutes }} min read
         </span>
       </div>
-      {% if post.excerpt %}
-        <p class="post-list-excerpt">
-          {{ post.excerpt | strip_html | truncate: 160 }}
-        </p>
+      {% assign summary_clean = post.summary | strip_html | strip %}
+      {% assign excerpt_clean = post.excerpt | strip_html | strip %}
+      {% if summary_clean != "" %}
+        <p class="post-list-excerpt">{{ summary_clean | truncate: 200 }}</p>
+      {% elsif excerpt_clean != "" %}
+        <p class="post-list-excerpt">{{ excerpt_clean | truncate: 200 }}</p>
       {% endif %}
       <a class="post-list-read-more" href="{{ post.url | relative_url }}">
         <span class="post-read-more-prefix">$</span>
