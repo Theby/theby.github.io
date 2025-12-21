@@ -141,7 +141,7 @@ This seems like a good approach at first, since using a callback inside a corout
 
 While looking for a solution that would keep the async flow in place, I stumbled upon [`TaskCompletionSource<T>`](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.taskcompletionsource-1?view=net-10.0). The important thing about this class is that it lets you manually create and complete a `Task<T>`, which is perfect for bringing callback-based APIs into the async/await world.
 
-The way this works is pretty straightforward. You create a `TaskCompletionSource<T>`, which gives you a `Task<T>`. You can then wait for that task to finish, but in order for it to complete you need to call `SetResult(T result)` (or `SetException` / `SetCanceled` for error cases). Any value assigned through `SetResult()` will mark the `Task` as completed. Here is a quick example:
+The way this works is pretty straightforward. You create a `TaskCompletionSource<T>`, which gives you a `Task<T>`. You can then wait for that `Task` to finish, but in order for it to complete you need to call `SetResult(T result)` (or `SetException` / `SetCanceled` for error cases). Any value assigned through `SetResult()` will mark the `Task` as completed. Here is a quick example:
 
 ```csharp
 public static async Task WaitingExampleAsync(string animationName)
@@ -234,7 +234,7 @@ Doesn't this look much cleaner now?
 
 Everything is speaking the same async language now, and the code is much simpler to read and follow. You can treat the whole operation as a single asynchronous call. It is easy to add new steps to `GetImageFromGalleryAsync()`, and, when calling it, it is pretty obvious what you can expect from it.
 
-You might already be thinking about the call we are wrapping: `NativeGallery.GetImageFromGallery(taskCompletion.SetResult);`. If this were completely synchronous, it would call `taskCompletion.SetResult()` immediately, before we even get to `await` the resulting `Task`. That is actually fine: it would just mean the Task is already completed when awaited. However, in this particular API, `NativeGallery.GetImageFromGallery()` makes a call to the native mobile code and opens the file browser for the user to look up an image, select it, and confirm it. Ultimately the callback is triggered later by the native code on Android or iOS.
+You might already be thinking about the call we are wrapping: `NativeGallery.GetImageFromGallery(taskCompletion.SetResult);`. If this were completely synchronous, it would call `taskCompletion.SetResult()` immediately, before we even get to `await` the resulting `Task`. That is actually fine: it would just mean the `Task` is already completed when awaited. However, in this particular API, `NativeGallery.GetImageFromGallery()` makes a call to the native mobile code and opens the file browser for the user to look up an image, select it, and confirm it. Ultimately the callback is triggered later by the native code on Android or iOS.
 
 This means that if you have a completely synchronous operation, wrapping it with `TaskCompletionSource` will only make the call *look* async; all the work will still run in one go. That can still be useful for consistency of your APIs, but it will not magically make the work non-blocking, so keep that in mind before you start wrapping everything.
 
@@ -242,7 +242,7 @@ It is also important to note that when you start using async and `Task` operatio
 
 ## Bottom Line
 
-Using `TaskCompletionSource` to wrap callback-based operations like the ones from the NativeGallery API produces cleaner and easier-to-read code. The way these methods work and compose becomes much clearer as you read through them, and you do not need to reconcile two different async systems like we had in the coroutine and Task naive approach.
+Using `TaskCompletionSource` to wrap callback-based operations like the ones from the NativeGallery API produces cleaner and easier-to-read code. The way these methods work and compose becomes much clearer as you read through them, and you do not need to reconcile two different async systems like we had in the coroutine and `Task` naive approach.
 
 When you strive for simplicity in your code, keeping a single mental model and a single async system is very helpful in the long run, both for your sanity and for the maintainability of the code. Clean wrapper methods like this can help you get there.
 
@@ -285,6 +285,6 @@ I hope you found this entry useful or insightful. To keep the conversation focus
 - Loading `Addressables` or `AssetBundle` assets with the `Addressables.LoadAssetAsync<T>()` and subscribing to the `Completed` callback of the returned `AsyncOperationHandle<T>`.
 - Some UI flows that rely on completion events such as: `onOpen`, `onClose`, `onSendRequest`, etc.
 - Long-running gameplay actions that you might want to write linearly instead of nested in `onComplete` callbacks, like `Move to Target`, `Open Chest`, `Play Dialog`, etc.
-- Other APIs and SDKs like Ads, In-App Purchases, Back-end communication, Clouds, Auth, Save, Leaderboards, etc.
+- Other APIs and SDKs like Ads, In-App Purchases, Backend communication, Clouds, Auth, Save, Leaderboards, etc.
 
 Let me know in the comments below if you have used anything like this, how you handle it, or if you know of other solutions to the same problem. I am really interested in knowing more!
