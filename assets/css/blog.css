@@ -559,6 +559,14 @@
   padding: 0 4px;
 }
 
+.post-content {
+    font-family: system-ui, "IBM Plex Sans", "Segoe UI", Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+}
+
+code, pre, kbd, samp {
+    font-family: "IBM Plex Mono", "Fira Code", Consolas, "Lucida Console", monospace;
+}
+
 .post-nav-wrapper {
   margin-top: 32px;
   padding-top: 12px;

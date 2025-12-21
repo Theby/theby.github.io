@@ -1,0 +1,13 @@
+.gist {
+  filter: invert(100%) hue-rotate(180deg) brightness(110%);
+}
+
+.gist .blob-code, 
+.gist .blob-num {
+  font-family: "IBM Plex Mono", "Fira Code", Consolas, "Lucida Console", monospace !important;
+  font-size: 16px !important;
+}
+
+.gist .gist-meta {
+  font-family: system-ui, "IBM Plex Sans", "Segoe UI", Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace !important;
+}

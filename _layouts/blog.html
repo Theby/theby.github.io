@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
     <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/gist.css">
+    <link rel="stylesheet" href="/assets/css/code-block-copy.css">
     {% include head-custom.html %}
     <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ site.feed.path | default: '/blog/feed.xml' | relative_url }}">
   </head>
@@ -335,5 +337,6 @@
     </script>
 
     {% include script-custom.html %}
+    <script src="/assets/js/code-copy.js"></script>
   </body>
 </html>

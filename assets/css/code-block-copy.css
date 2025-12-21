@@ -1,0 +1,45 @@
+.highlighter-rouge {
+  position: relative;
+}
+
+.code-copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+
+  font-size: 12px;
+  line-height: 1;
+  padding: 6px 10px;
+
+  border: 1px solid var(--green);
+  border-radius: 4px;
+
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--text-light);
+
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.code-copy-btn:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.code-copy-btn:disabled {
+  cursor: default;
+  opacity: 0.6;
+  transform: none;
+}
+
+.highlighter-rouge .code-copy-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.highlighter-rouge:hover .code-copy-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
