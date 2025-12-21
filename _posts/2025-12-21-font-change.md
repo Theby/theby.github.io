@@ -6,9 +6,9 @@ category: blog
 
 ## Title
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at mattis dui. Sed sed metus nec nisl cursus vulputate. In tristique ex a nisi facilisis, id tristique lacus luctus. Suspendisse sodales elementum sodales. Cras varius facilisis congue. Cras ullamcorper iaculis fermentum. Suspendisse nec ligula arcu. Praesent commodo tellus non eleifend ultricies. Aliquam id neque suscipit, eleifend ipsum quis, ullamcorper massa. Nunc ac diam enim. Mauris mollis maximus massa a vulputate. Maecenas elementum luctus neque, sit amet tempus erat. Sed nec arcu non sapien aliquet sollicitudin. Sed id porta eros, at viverra augue. Nunc id placerat lacus.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at mattis dui. Sed sed metus nec nisl cursus vulputate. In tristique ex a nisi facilisis, id tristique lacus luctus. Suspendisse sodales elementum sodales. *Cras varius facilisis congue*. Cras ullamcorper iaculis fermentum. Suspendisse nec ligula arcu. Praesent commodo **tellus non eleifend** ultricies. Aliquam id neque suscipit, eleifend ipsum quis, ullamcorper massa. Nunc ac diam enim. Mauris mollis maximus massa a vulputate. ***Maecenas elementum luctus neque***, sit amet tempus erat. Sed nec arcu non sapien aliquet sollicitudin. Sed id porta eros, at viverra augue. Nunc id placerat lacus.
 
-```csharp
+{% highlight csharp linenos %}
 public static async Task WaitingExampleAsync(string animationName)
 {
     await PlayAnimationAsync(animationName);
@@ -25,7 +25,7 @@ public static Task<bool> PlayAnimationAsync(string name)
     
     return taskCompletion.Task;
 }
-```
+{% endhighlight %}
 
 Nulla elementum imperdiet felis ac commodo. Suspendisse porta orci in elementum porta. Cras vehicula eleifend mi. Sed et consectetur ipsum. Donec eu mauris vel tortor pulvinar rutrum a id nisi. Duis nulla odio, cursus vel viverra ut, dignissim fringilla arcu. Phasellus dignissim augue eu augue molestie venenatis. Donec at libero nisi. Vivamus id urna a mi aliquam egestas vitae cursus diam. Morbi venenatis volutpat lorem eget ornare. Morbi blandit, risus at vehicula posuere, nulla tellus dignissim augue, quis ornare enim tellus eget leo. Sed eu suscipit massa. Nunc commodo eu felis nec ultrices. Ut id neque vel leo dictum lobortis. Suspendisse ut elementum justo. Nam mollis sem at massa volutpat, ornare posuere nibh iaculis.
 
@@ -35,7 +35,7 @@ Nulla elementum imperdiet felis ac commodo. Suspendisse porta orci in elementum 
 - Praesent auctor sapien non magna bibendum venenatis.
 - Maecenas a odio ornare, dignissim dolor sit amet, sollicitudin lacus.
 
-``` C#
+```c#
 public delegate void MediaPickCallback(string path);
 
 public static void GetImageFromGallery(MediaPickCallback callback, /* some optional config params */) { ... }
