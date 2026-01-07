@@ -1,7 +1,7 @@
-record
-string intern
-SQLite simple implementation
-stack vs heap, C# nullability vs Unity
-returning Array.Empty or similar instead of creating a new one
-MVP design patter for Unity UI
-TaskCompletionSource in C# for making async a sync method, also Coroutine Yield a Task and what happens with nested Tasks
+SQLite simple implementation 				# Guide
+stack vs heap, C# nullability vs Unity		# Study / Learning 
+MVP design patter for Unity Unity			# Guide
+
+Ten simple optimizations / random tips
+- string intern
+- returning Array.Empty or similar instead of creating a new one
