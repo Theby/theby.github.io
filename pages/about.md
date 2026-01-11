@@ -95,9 +95,9 @@ permalink: /about
         help teams ship smoother, more responsive experiences.
       </p>
       <p>
-        I’ve contributed to commercial projects like <em>Garden Joy</em>,
-        <em>The Eightfold Path</em>, <em>Linked Mask</em>, <em>What Lies in the
-        Multiverse</em>, and <em>NBA Clash</em>, often joining teams in the messy
+        I’ve contributed to commercial projects like <a href="https://apps.apple.com/us/app/garden-joy-exterior-designer/id1618284064">Garden Joy</a>,
+        <a href="https://store.steampowered.com/app/1736620/The_Eightfold_Path/">The Eightfold Path</a>, <a href="https://store.steampowered.com/app/1111590/Linked_Mask/">Linked Mask</a>, <a href="https://store.steampowered.com/app/1721170/What_Lies_in_the_Multiverse/">What Lies in the
+        Multiverse</a>, and <a href="https://www.youtube.com/shorts/xTE-vbB2ylE">NBA Clash</a>, often joining teams in the messy
         middle to improve performance, streamline pipelines, and keep features
         moving. I enjoy translating design goals into robust systems, connecting
         backend data to UI, and building tools that reduce repetitive work for the
