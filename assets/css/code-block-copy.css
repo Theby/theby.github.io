@@ -43,3 +43,12 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+@media (max-width: 600px) {
+  .code-copy-btn {
+    padding: 4px 8px;
+    font-size: 11px;
+    top: 6px;
+    right: 6px;
+  }
+}

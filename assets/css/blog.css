@@ -413,6 +413,20 @@
   }
 }
 
+@media (max-width: 768px) {
+  .post-list {
+    padding-left: 20px;
+  }
+
+  .post-meta-line {
+    padding-left: 24px;
+  }
+
+  .post-list-title {
+    font-size: 19px;
+  }
+}
+
 @media (max-width: 600px) {
   .blog-tool {
     font-size: 10px;
@@ -421,6 +435,22 @@
 
   .blog-tools {
     gap: 6px;
+  }
+
+  .post-list {
+    padding-left: 16px;
+  }
+
+  .post-meta-line {
+    padding-left: 16px;
+  }
+
+  .post-list-title {
+    font-size: 18px;
+  }
+
+  .post-title {
+    font-size: 1.4em;
   }
 }
 
@@ -433,6 +463,14 @@
   .blog-subscribe-button {
     width: 100%;
     text-align: center;
+  }
+
+  .post-list-title {
+    font-size: 16px;
+  }
+
+  .post-title {
+    font-size: 1.25em;
   }
 }
 
@@ -565,6 +603,19 @@
 
 code, pre, kbd, samp {
     font-family: "IBM Plex Mono", "Fira Code", Consolas, "Lucida Console", monospace;
+}
+
+pre {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+code {
+    word-break: break-word;
+}
+
+pre code {
+    word-break: normal;
 }
 
 .post-nav-wrapper {

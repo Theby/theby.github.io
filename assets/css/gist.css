@@ -59,3 +59,24 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+@media (max-width: 600px) {
+  .gist .blob-code,
+  .gist .blob-num {
+    font-size: 13px !important;
+  }
+
+  .gist-copy-btn {
+    padding: 4px 8px;
+    font-size: 11px;
+    top: 6px;
+    right: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .gist .blob-code,
+  .gist .blob-num {
+    font-size: 12px !important;
+  }
+}
