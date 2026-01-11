@@ -6,7 +6,7 @@ pageType: projects
 
 # New Blog Entries
 
-<div class="texts-list">
+<div class="texts-list texts-list--compact">
   {% for post in site.posts limit:3 %}
     <div class="text-entry">
       <div class="text-header">
