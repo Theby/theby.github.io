@@ -4,6 +4,19 @@ title: Home
 pageType: projects
 ---
 
+# New Blog Entries
+
+<div class="texts-list">
+  {% for post in site.posts limit:3 %}
+    <div class="text-entry">
+      <div class="text-header">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="text-release">{{ post.date | date: "%b %Y" }}</span>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
 # Published Games
 
 {% for item in site.data.projects %}
@@ -142,23 +155,23 @@ pageType: projects
 
 # Public Speaking & Interviews
 
-<div class="talks-list">
+<div class="texts-list">
   {% for item in site.data.projects-talks %}
     {% if item.hidden %}
       {% continue %}
     {% endif %}
-    <div class="talk-entry">
-      <div class="talk-header">
+    <div class="text-entry">
+      <div class="text-header">
         <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
         {% if item.release %}
-          <span class="talk-release">{{ item.release }}</span>
+          <span class="text-release">{{ item.release }}</span>
         {% endif %}
       </div>
       {% if item.description %}
-        <p class="talk-description">{{ item.description }}</p>
+        <p class="text-description">{{ item.description }}</p>
       {% endif %}
       {% if item.authors %}
-        <p class="talk-authors">
+        <p class="text-authors">
           <strong>By:</strong> {{ item.authors }}
         </p>
       {% endif %}
@@ -168,23 +181,23 @@ pageType: projects
 
 # Publications
 
-<div class="talks-list">
+<div class="texts-list">
   {% for item in site.data.projects-papers %}
     {% if item.hidden %}
       {% continue %}
     {% endif %}
-    <div class="talk-entry">
-      <div class="talk-header">
+    <div class="text-entry">
+      <div class="text-header">
         <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
         {% if item.release %}
-          <span class="talk-release">{{ item.release }}</span>
+          <span class="text-release">{{ item.release }}</span>
         {% endif %}
       </div>
       {% if item.description %}
-        <p class="talk-description">{{ item.description }}</p>
+        <p class="text-description">{{ item.description }}</p>
       {% endif %}
       {% if item.authors %}
-        <p class="talk-authors">
+        <p class="text-authors">
           <strong>Authors:</strong> {{ item.authors }}
         </p>
       {% endif %}

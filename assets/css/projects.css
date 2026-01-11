@@ -449,7 +449,7 @@
 /* Public Speaking & Interviews Section          */
 /* --------------------------------------------- */
 
-.talks-list {
+.texts-list {
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -459,11 +459,11 @@
   margin-right: auto;
 }
 
-.talk-entry {
+.text-entry {
   padding: 4px 0;
 }
 
-.talk-header {
+.text-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -471,25 +471,25 @@
   gap: 120px;
 }
 
-.talk-header a {
+.text-header a {
   color: var(--green);
   text-decoration: none;
   font-size: 1.05rem;
   font-weight: 600;
 }
 
-.talk-header a:hover {
+.text-header a:hover {
   text-decoration: underline;
 }
 
-.talk-release {
+.text-release {
   color: var(--green);
   opacity: 0.85;
   font-size: 0.9rem;
   white-space: nowrap;
 }
 
-.talk-description {
+.text-description {
   margin: 0;
   color: var(--text-color);
   opacity: 0.9;
@@ -498,7 +498,7 @@
   text-align: justify;
 }
 
-.talk-authors {
+.text-authors {
   margin-top: 4px;
   font-size: 0.85rem;
   color: var(--text-muted);
@@ -507,17 +507,17 @@
 }
 
 @media (max-width: 700px) {
-  .talks-list {
+  .texts-list {
     padding: 0 16px;
   }
 
-  .talk-header {
+  .text-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 2px;
   }
 
-  .talk-release {
+  .text-release {
     font-size: 0.85rem;
   }
 }
