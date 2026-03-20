@@ -28,7 +28,7 @@
     cross-team workflows between Chile and US engineering groups.
   image: assets/images/p_nbaclash.gif
   url: https://www.youtube.com/watch?v=eKohkv9YPKY
-  release: Globant -Nov 2022
+  release: Globant - Nov 2022
   tags: [F2P, Deck Builder, Online Multiplayer]
   platforms:
     - id: ios
@@ -68,7 +68,7 @@
     - id: steam
       url: https://store.steampowered.com/app/1721170/What_Lies_in_the_Multiverse/
     - id: playstation
-      url: httpsstore.playstation.com/es-cl/concept/10003943
+      url: https://store.playstation.com/es-cl/concept/10003943
     - id: xbox
       url: https://www.xbox.com/es-cl/games/store/what-lies-in-the-multiverse/9pn0r2dgzkmr
     - id: switch

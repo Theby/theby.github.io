@@ -1,3 +1,24 @@
+- title: Bubblegum Galaxy
+  project_description: >
+    A cozy narrative building game about rebuilding the galaxy tile by tile.
+  description: >
+    Stabilized and cleaned up the codebase during early development. Migrated
+    the dialogue system to Yarn Spinner 2.4 and integrated Unity Localization
+    to support the game's full branching narrative.
+  image: assets/images/p_bubblegumgalaxy.gif
+  url: https://store.steampowered.com/app/1989120/Bubblegum_Galaxy/
+  release: Mar 2026
+  tags: [City Builder, Puzzle, Strategy, Narrative]
+  platforms:
+    - id: steam
+      url: https://store.steampowered.com/app/1989120/Bubblegum_Galaxy/
+    - id: playstation
+      url: https://store.playstation.com/concept/10015790/
+    - id: xbox
+      url: www.xbox.com/games/store/bubblegum-galaxy/9PLGVLXXLXVB
+    - id: switch
+      url: www.nintendo.com/store/products/bubblegum-galaxy-switch/
+
 - title: Loop Boxes
   project_description: >
     Three looping stages. Your past actions stay forever, so plan carefully!
@@ -157,7 +178,6 @@
       url: https://x.com/caiampitercpmk
 
 - title: Father.IO
-  hidden: true
   project_description: >
     To do later
   description: >
@@ -282,7 +302,6 @@
       url: https://bitbucket.org/Theby/sunsetroboto/src/master
 
 - title: King K. A Goblin Defense Game
-  hidden: true
   project_description: >
     To do later
   description: >

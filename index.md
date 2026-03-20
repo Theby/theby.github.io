@@ -109,7 +109,7 @@ pageType: projects
 </div>
 {% endfor %}
 
-# Smaller Projects
+# Additional Projects
 
 <div class="smaller-projects-grid">
   {% for item in site.data.projects-smaller-projects %}
