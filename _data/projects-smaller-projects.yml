@@ -8,7 +8,7 @@
   image: assets/images/p_bubblegumgalaxy.gif
   url: https://store.steampowered.com/app/1989120/Bubblegum_Galaxy/
   release: Mar 2026
-  tags: [City Builder, Puzzle, Strategy, Narrative]
+  tags: [City Builder, Puzzle, Strategy]
   platforms:
     - id: steam
       url: https://store.steampowered.com/app/1989120/Bubblegum_Galaxy/
