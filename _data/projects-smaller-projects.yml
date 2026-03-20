@@ -179,7 +179,7 @@
 
 - title: Father.IO
   project_description: >
-    To do later
+    Experience the adrenaline, tactics and strategies of gaming in your everyday life.
   description: >
     Mobile RTS with AR and FPS elements. I worked as an intern for three months
     developing RTS systems as part of Gamelogic.
@@ -188,8 +188,10 @@
   release: Jan 2017
   tags: [RTS, AR, Mobile]
   platforms:
-    - id: website
-      url: https://father.io
+    - id: android
+      url: https://play.google.com/store/apps/details?id=com.proxy42.father.io
+    - id: ios
+      url: https://apps.apple.com/us/app/father-io-ar/id1312788590
 
 - title: Empathy
   project_description: >
