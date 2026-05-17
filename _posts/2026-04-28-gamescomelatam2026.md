@@ -3,6 +3,8 @@ title: "Gamescom Latam 2026: Connecting, Learning, and Looking Ahead"
 tags: [ update, gamescom, gamescomlatam, gamescomlatam2026 ]
 category: blog
 excerpt_separator: "<!--more-->"
+permalink: /blog/gamescomlatam2026/
+redirect_from: /blog/gamescomelatam2026/
 ---
 
 ## The biggest Game Conference of Latin America
