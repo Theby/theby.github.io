@@ -42,7 +42,7 @@ As always, feel free to contact me for any extra information you need about the 
 
 ## Wednesday
 
-![Unity x Google Play Developer Day]({{ '/assets/images/2026/gamescomlatam/wednesday01.jpg' | relative_url }} "Unity x Google Play Developer Day")
+![Unity x Google Play Developer Day]({{ '/assets/images/2026/gamescomlatam/wednesday.jpg' | relative_url }} "Unity x Google Play Developer Day")
 
 This was a pre-event day. You could go to the Gamescom Latam venue to explore the place before it opened to the public on Thursday. I was invited to a private Unity x Google Play event, though, and spent the whole day there. It was mostly focused on mobile development, which I don't do much of besides porting, but a lot of cool things were still pretty interesting.
 
