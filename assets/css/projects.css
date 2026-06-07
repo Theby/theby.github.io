@@ -568,6 +568,10 @@
   .text-release {
     font-size: 0.85rem;
   }
+
+  .texts-list--compact .text-header a {
+    width: 100%;
+  }
 }
 
 /* --------------------------------------------- */
