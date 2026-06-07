@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const h1TriggerMap = new Map();
   const pairedH1s = new Set();
 
-  const pageContent = document.querySelector('.page-content');
+  const pageContent = document.querySelector('#main_content');
   if (pageContent) {
     let currentH1 = null;
     let sectionHasCards = false;
