@@ -530,49 +530,6 @@
   margin: 0 0 2px;
 }
 
-.post-list-read-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin: 0;
-  font-size: 12px;
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  padding: 4px 8px;
-  border-radius: 4px;
-  border: 1px solid rgba(181, 232, 83, 0.35);
-  background: rgba(0, 0, 0, 0.6);
-  color: var(--text-light);
-  text-decoration: none;
-}
-
-.post-list-read-more:hover {
-  border-color: var(--green);
-  box-shadow: 0 0 6px rgba(181, 232, 83, 0.35);
-  transform: translateY(-1px);
-}
-
-.post-read-more-prefix {
-  color: var(--green);
-}
-
-.post-read-more-command {
-  white-space: nowrap;
-}
-
-.post-list-read-more--small {
-  font-size: 10px;
-  padding: 3px 6px;
-  flex-shrink: 0;
-}
-
-.blink {
-  animation: blink 1s steps(2, start) infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
 /* ===========================
    Single post
    =========================== */
