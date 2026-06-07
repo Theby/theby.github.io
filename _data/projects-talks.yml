@@ -1,72 +1,84 @@
 - title: "How to Use Unity for Game Jams: Tools, Assets and Features"
+  event: Global Game Jam 2026
   description: >
     Talk on what Unity offers for rapid prototyping and development, 
     exploring only built-in features and packages.
-  url: https://www.instagram.com/p/DT1h6ZqjNCD/?img_index=5&igsh=MXdtYWgyM3JwaWNodA==
+  url: https://www.instagram.com/p/DT1h6ZqjNCD/?img_index=6&igsh=MXdtYWgyM3JwaWNodA==
   release: January 2026
 
 - title: A decade of games, growing and community
+  event: VG B2B Chile
   description: >
     Talk on the story and evolution of GameDev Planet, covering its projects,
-    growth, and community-building efforts. Presented at "Encuentro B2B VG Chile 2025".
+    growth, and community-building efforts.
   url: https://www.instagram.com/p/DQFLPX3Efp8
   release: Oct 2025
 
+- title: Una guía personal para empezar en la Industria del Videojuego
+  event: DUOC
+  description: >
+    Talk on the different ways you can work in the Video Game Industry
+    and what options you have to learn and dedicate to.
+  url: https://docs.google.com/presentation/d/168aCX00Z7XoBzcUjWHWibCD6aaVNwPF2AtKEaM915vw/edit?usp=sharing
+  release: May 2022
+
 - title: Business models in the video game industry
+  event: CFT San Agustín
   description: >
     Webinar on different business models in the games industry and how to match
-    them to your company and projects. Delivered for "CFT San Augistin".
-  url: https://drive.google.com/file/d/1DSUo5I96X4rl9a2_H5F7Z4AQ_BhQwNFl/view
+    them to your company and projects.
+  url: https://www.cftsanagustin.cl/estudiantes-del-cft-san-agustin-participaron-en-charlas-virtuales-con-desarrolladores-de-videojuegos/
   release: Aug 2020
 
 - title: Developing with the support of an international publisher
+  event: VideoGame Atacama Planeas
   description: >
     Webinar sharing my experience at Spoonman Games developing a title with the
     backing of an international publisher, including processes, challenges, and
-    lessons learned. Hosted by "VideoGame Atacama Planeas".
+    lessons learned.
   url: https://web.facebook.com/watch/live/?v=2943457182430359&_rdc=1&_rdr
   release: Jun 2020
 
 - title: Top 10 Anime of the Decade
-  hidden: true
+  event: Kaipi Checkpoint
   description: >
     Friendly podcast discussion on our picks for the best anime series of the
-    decade, including personal highlights and recommendations. Recorded for
-    "Kaipi Checkpoint".
+    decade, including personal highlights and recommendations.
   url: https://www.youtube.com/watch?v=GgYtFsputsc
   authors: Margarita Pino, Esteban Gaete Flores
   release: Dic 2019
 
 - title: Anime, Manga and Japan
-  hidden: true
+  event: Kaipi Checkpoint
   description: >
     Podcast conversation about anime, manga, and Japanese culture, sharing
-    favorite series, influences, and experiences. Recorded for "Kaipi Checkpoint".
+    favorite series, influences, and experiences.
   url: https://www.youtube.com/watch?v=HZ1Y6chS9k0
   authors: Margarita Pino, Esteban Gaete Flores
   release: Nov 2019
 
 - title: Spoonman Games podcast interview
+  event: Kaipi Checkpoint
   description: >
     Podcast interview on the origins, funding, and day-to-day work at Spoonman
-    Games, including stories from development and studio life. Recorded for
-    "Kaipi Checkpoint".
+    Games, including stories from development and studio life.
   url: https://www.youtube.com/watch?v=MVvhunie3VU
   authors: Margarita Pino, Esteban Gaete Flores
   release: Jun 2019
 
 - title: Scriptable Objects and procedural generation
+  event: Unity Developer Day Chile 2017
   description: >
     Talk on using Scriptable Objects to define rules and biases for procedural
-    generation of items and enemies, with practical examples in Unity. Presented
-    at "Unity Developer Day Chile 2017".
+    generation of items and enemies, with practical examples in Unity.
   url: https://www.youtube.com/watch?v=Q8dMXdiIYHA
   release: Nov 2017
 
 - title: A coffe with Spoonman Games
+  event: GameDev Cafe
   description: >
     Interview with Walter Veneros about what Spoonman Games does, its projects,
-    and future plans for the studio. Recorded for "GameDev Cafe".
+    and future plans for the studio.
   url: https://www.youtube.com/watch?v=zw_mbrvyjH4
   authors: Walter Veneros, Victor Gaete, Esteban Gaete Flores
   release: Jul 2016
