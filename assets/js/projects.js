@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
-  }, { threshold: 0, rootMargin: "0px 0px -15% 0px" });
+  }, { threshold: 0, rootMargin: "0px 0px 50px 0px" });
 
   document.querySelectorAll('#main_content h1').forEach(h1 => h1Observer.observe(h1));
 });
