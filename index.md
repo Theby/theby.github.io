@@ -23,6 +23,14 @@ pageType: projects
   {% endfor %}
 </div>
 
+<div class="blog-more-wrapper">
+  <a class="post-list-read-more" href="/blog">
+    <span class="post-read-more-prefix">$</span>
+    <span class="post-read-more-command">open devlog</span>
+    <span class="blink">█</span>
+  </a>
+</div>
+
 # Published Games
 
 {% for item in site.data.projects %}
