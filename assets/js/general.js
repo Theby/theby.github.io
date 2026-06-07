@@ -2,28 +2,31 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================
   // Heading intersection effect
   // ==========================
-  try {
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("in-view");
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
+  const hasProjectCards = !!document.querySelector('.project-inner, .smaller-project-card');
+  if (!hasProjectCards) {
+    try {
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
 
-      const headings = document.querySelectorAll(".page-content h1");
-      if (headings && headings.length > 0) {
-        headings.forEach((h1) => observer.observe(h1));
+        const headings = document.querySelectorAll(".page-content h1");
+        if (headings && headings.length > 0) {
+          headings.forEach((h1) => observer.observe(h1));
+        }
+      } else {
+        console.warn("IntersectionObserver not supported; skipping heading animations.");
       }
-    } else {
-      console.warn("IntersectionObserver not supported; skipping heading animations.");
+    } catch (err) {
+      console.warn("Error setting up heading IntersectionObserver:", err);
     }
-  } catch (err) {
-    console.warn("Error setting up heading IntersectionObserver:", err);
   }
 
   // ==========================
