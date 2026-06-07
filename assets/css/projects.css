@@ -475,13 +475,13 @@
   padding: 4px 0;
 }
 
-.text-entry--blog {
+.blog-entry-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-.text-entry--blog .text-header {
+.blog-entry-row .text-entry {
   flex: 1;
   min-width: 0;
 }
