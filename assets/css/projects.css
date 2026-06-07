@@ -475,6 +475,17 @@
   padding: 4px 0;
 }
 
+.text-entry--blog {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-entry--blog .text-header {
+  flex: 1;
+  min-width: 0;
+}
+
 .text-header {
   display: flex;
   justify-content: space-between;

@@ -559,6 +559,12 @@
   white-space: nowrap;
 }
 
+.post-list-read-more--small {
+  font-size: 10px;
+  padding: 3px 6px;
+  flex-shrink: 0;
+}
+
 .blink {
   animation: blink 1s steps(2, start) infinite;
 }
