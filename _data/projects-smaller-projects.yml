@@ -15,9 +15,9 @@
     - id: playstation
       url: https://store.playstation.com/concept/10015790/
     - id: xbox
-      url: www.xbox.com/games/store/bubblegum-galaxy/9PLGVLXXLXVB
+      url: https://www.xbox.com/es-CL/games/store/bubblegum-galaxy/9PLGVLXXLXVB
     - id: switch
-      url: www.nintendo.com/store/products/bubblegum-galaxy-switch/
+      url: https://www.nintendo.com/us/store/products/bubblegum-galaxy-switch/
 
 - title: Loop Boxes
   project_description: >
