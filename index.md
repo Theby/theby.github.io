@@ -8,16 +8,10 @@ pageType: projects
 
 <div class="texts-list texts-list--compact">
   {% for post in site.posts limit:3 %}
-    <div class="blog-entry-row">
-      <a class="post-list-read-more post-list-read-more--small" href="{{ post.url }}">
-        <span class="post-read-more-prefix">$</span>
-        <span class="blink">█</span>
-      </a>
-      <div class="text-entry">
-        <div class="text-header">
-          <a href="{{ post.url }}">{{ post.title }}</a>
-          <span class="text-release">{{ post.date | date: "%b %Y" }}</span>
-        </div>
+    <div class="text-entry">
+      <div class="text-header">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="text-release">{{ post.date | date: "%b %Y" }}</span>
       </div>
     </div>
   {% endfor %}
