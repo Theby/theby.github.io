@@ -167,6 +167,9 @@ pageType: projects
           <span class="text-release">{{ item.release }}</span>
         {% endif %}
       </div>
+      {% if item.event %}
+        <p class="text-event">{{ item.event }}</p>
+      {% endif %}
       {% if item.description %}
         <p class="text-description">{{ item.description }}</p>
       {% endif %}
