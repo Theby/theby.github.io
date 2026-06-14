@@ -88,17 +88,6 @@
    SCROLL TO TOP BUTTON
 ------------------------------------------ */
 
-.scroll-top-btn {
-  cursor: pointer;
-  font-size: 13px;
-  padding: 8px 18px;
-  border: 1px solid var(--green);
-  background: rgba(0, 0, 0, 0.35);
-  color: var(--text-light);
-  border-radius: 4px;
-  transition: all 0.25s ease;
-}
-
 .scroll-top-wrapper {
   text-align: center;
   margin: 40px 0;
@@ -113,6 +102,7 @@
 }
 
 #scrollTopBtn {
+  cursor: pointer;
   opacity: 0;
   pointer-events: none;
   transform: translateY(6px);
@@ -123,11 +113,6 @@
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
-}
-
-.scroll-top-btn:hover {
-  border-color: var(--green);
-  box-shadow: 0 0 6px var(--green), 0 0 12px var(--green);
 }
 
 #scrollTopBtn:hover {
