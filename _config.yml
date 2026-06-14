@@ -24,8 +24,8 @@ defaults:
 feed:
   posts_limit: 10
   path: /blog/feed.xml
-  icon: /images/favicon/website-icon-32x32.png
-  logo: /images/favicon/website-icon-32x32.png
+  icon: /assets/images/favicons/website-icon-32x32.png
+  logo: /assets/images/favicons/website-icon-32x32.png
 
 
 # Profile
