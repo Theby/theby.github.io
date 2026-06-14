@@ -2,3 +2,8 @@
 ---
 
 @import "{{ site.theme }}";
+
+body                          { font-family: var(--font-body); }
+header h1                     { font-family: var(--font-header-title); }
+h1, h2, h3, h4, h5, h6        { font-family: var(--font-heading); }
+.btn                          { font-family: var(--font-button); }

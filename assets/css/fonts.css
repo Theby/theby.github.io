@@ -11,4 +11,10 @@
   --font-code: "IBM Plex Mono", "Fira Code", Consolas, "Lucida Console", monospace;
   --font-error-terminal: monospace;
   --font-support-me-button: Arial;
+
+  /* Theme overrides */
+  --font-body: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  --font-header-title: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  --font-heading: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  --font-button: Helvetica, Arial, sans-serif;
 }
