@@ -16,8 +16,8 @@
   --font-support-me-button: Arial;
 
   /* Theme overrides */
-  --font-body: Monaco, "Bitstream Vera Sans Mono", "JetBrains Mono", "Fira Mono", "Source Code Pro" "Lucida Console", Terminal, monospace;
-  --font-header-title: Monaco, "Bitstream Vera Sans Mono", "JetBrains Mono", "Fira Mono", "Source Code Pro" "Lucida Console", Terminal, monospace;
-  --font-heading: Monaco, "JetBrains Mono", "Fira Mono", "Source Code Pro" "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  --font-body: Monaco, "Bitstream Vera Sans Mono", "JetBrains Mono", "Fira Mono", "Source Code Pro", "Lucida Console", Terminal, monospace;
+  --font-header-title: Monaco, "Bitstream Vera Sans Mono", "JetBrains Mono", "Fira Mono", "Source Code Pro", "Lucida Console", Terminal, monospace;
+  --font-heading: Monaco, "Bitstream Vera Sans Mono", "JetBrains Mono", "Fira Mono", "Source Code Pro", "Lucida Console", Terminal, monospace;
   --font-button: Helvetica, Arial, sans-serif;
 }
