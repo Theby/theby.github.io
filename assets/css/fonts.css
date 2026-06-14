@@ -1,0 +1,14 @@
+/* ------------------------------------------
+   FONTS
+------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=IBM+Plex+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
+:root {
+  --font-prose: system-ui, "IBM Plex Sans", "Segoe UI", Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  --font-code: "IBM Plex Mono", "Fira Code", Consolas, "Lucida Console", monospace;
+  --font-error-terminal: monospace;
+  --font-support-me-button: Arial;
+}

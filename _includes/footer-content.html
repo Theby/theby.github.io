@@ -3,7 +3,7 @@
     <p class="footer-text">
       © {{ "now" | date: "%Y" }} {{ site.author.name }} <br>
       <div>
-          <style>.made-with-love{font-size: 12px;margin: 0px;}.heart{font-style: normal;font-weight: 500;color: #C0392B;}.support-me {background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%); background-color:#ffec64;border-radius:4px;border:1px solid #ffaa22;display:inline-block;cursor:pointer;color:#333333 !important;font-family:Arial;font-size:12px;line-height:1em;font-weight:bold;padding:6px 10px;text-decoration:none;text-shadow:0px 1px 0px #ffee66;}.support-me:hover {text-decoration:none;}.support-me:active {opacity: .8;}</style>
+          <style>.made-with-love{font-size: 12px;margin: 0px;}.heart{font-style: normal;font-weight: 500;color: #C0392B;}.support-me {background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%); background-color:#ffec64;border-radius:4px;border:1px solid #ffaa22;display:inline-block;cursor:pointer;color:#333333 !important;font-family:var(--font-support-me-button);font-size:12px;line-height:1em;font-weight:bold;padding:6px 10px;text-decoration:none;text-shadow:0px 1px 0px #ffee66;}.support-me:hover {text-decoration:none;}.support-me:active {opacity: .8;}</style>
           <p class="made-with-love">Made with <i class="heart" aria-label="love">&#10084;</i> by <a href="{{ '/about' | relative_url }}">{{ site.author.nickname }}</a> {% if site.support_me.show %}<a class="support-me" href="{{ site.support_me.url }}">{{ site.support_me.name }}</a>{% endif %}</p>
       </div>
       Built with 
