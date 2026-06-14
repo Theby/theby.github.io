@@ -80,7 +80,7 @@
 }
 
 .blog-sidebar .container .site-nav {
-  margin-top: -35px;
+  margin-top: 12px;
 }
 
 .blog-sidebar .site-nav ul {
@@ -491,6 +491,7 @@
 }
 
 .post-list-title a {
+  color: var(--green);
   text-decoration: none;
 }
 
