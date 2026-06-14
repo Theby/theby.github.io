@@ -102,7 +102,6 @@
 }
 
 #scrollTopBtn {
-  cursor: pointer;
   opacity: 0;
   pointer-events: none;
   transform: translateY(6px);
@@ -121,15 +120,15 @@
 
 
 /* ------------------------------------------
-   TERMINAL READ-MORE WIDGET
-   Used on blog index and homepage
+   TERMINAL BUTTON WIDGET
 ------------------------------------------ */
 
-.post-list-read-more {
+.terminal-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   margin: 0;
+  cursor: pointer;
   font-size: 12px;
   font-family: var(--font-code);
   padding: 4px 8px;
@@ -140,21 +139,21 @@
   text-decoration: none;
 }
 
-.post-list-read-more:hover {
+.terminal-btn:hover {
   border-color: var(--green);
   box-shadow: 0 0 6px rgba(181, 232, 83, 0.35);
   transform: translateY(-1px);
 }
 
-.post-read-more-prefix {
+.terminal-btn-prefix {
   color: var(--green);
 }
 
-.post-read-more-command {
+.terminal-btn-command {
   white-space: nowrap;
 }
 
-.post-list-read-more--small {
+.terminal-btn--small {
   font-size: 10px;
   padding: 3px 6px;
   flex-shrink: 0;

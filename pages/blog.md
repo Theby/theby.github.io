@@ -53,9 +53,9 @@ permalink: /blog
       {% elsif excerpt_clean != "" %}
         <p class="post-list-excerpt">{{ excerpt_clean | truncate: 200 }}</p>
       {% endif %}
-      <a class="post-list-read-more" href="{{ post.url | relative_url }}">
-        <span class="post-read-more-prefix">$</span>
-        <span class="post-read-more-command">open entry</span>
+      <a class="terminal-btn" href="{{ post.url | relative_url }}">
+        <span class="terminal-btn-prefix">$</span>
+        <span class="terminal-btn-command">open entry</span>
         <span class="blink">█</span>
       </a>
     </li>

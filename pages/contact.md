@@ -46,7 +46,7 @@ permalink: /contact
     box-shadow: 0 0 0 1px var(--green);
   }
 
-  .contact-form .btn {
+  .contact-form .terminal-btn {
     margin-top: 8px;
   }
 
@@ -136,7 +136,11 @@ permalink: /contact
       </label>
     </div>
     <input type="hidden" name="_subject" value="New message from portfolio site">
-    <button type="submit" class="btn">Send</button>
+    <button type="submit" class="terminal-btn">
+      <span class="terminal-btn-prefix">$</span>
+      <span class="terminal-btn-command">send message</span>
+      <span class="blink">█</span>
+    </button>
   </form>
 
   <aside class="contact-meta">

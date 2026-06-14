@@ -46,15 +46,6 @@ permalink: /resume
   margin-right: auto;
 }
 
-.btn-download .icon {
-  opacity: 0.6;
-  background: url("{{ site.url }}{{ site.baseurl }}/assets/images/btn-download.png") no-repeat 0 0;
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  background-size: contain;
-}
-
 .download-wrapper {
   text-align: center;
   margin-bottom: 20px;
@@ -84,7 +75,11 @@ permalink: /resume
 # Resume
 
 <div class="download-wrapper">
-  <a href="{{ site.url }}{{ site.baseurl }}/assets/pdfs/Esteban%20Gaete%20Flores%20-%20Senior%20Unity%20Developer.pdf" class="btn btn-download" download><span class="icon"></span>Download PDF</a>
+  <a href="{{ site.url }}{{ site.baseurl }}/assets/pdfs/Esteban%20Gaete%20Flores%20-%20Senior%20Unity%20Developer.pdf" class="terminal-btn" download>
+    <span class="terminal-btn-prefix">$</span>
+    <span class="terminal-btn-command">download pdf</span>
+    <span class="blink">█</span>
+  </a>
 </div>
 
 <div class="pdf-wrapper">
