@@ -47,13 +47,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       a.addEventListener('click', e => {
         e.preventDefault();
-        if (i === 0) {
+        if (i === 0 && window.matchMedia('(min-width: 801px)').matches) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
           h1.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-        sectionIndex.classList.remove('is-open');
-        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        if (!window.matchMedia('(min-width: 801px)').matches) {
+          sectionIndex.classList.remove('is-open');
+          if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        }
       });
     });
 
@@ -85,6 +87,10 @@ document.addEventListener("DOMContentLoaded", () => {
           if (h1.getBoundingClientRect().top <= line) currentId = h1.id;
           else break;
         }
+        const atBottom =
+          window.innerHeight + window.scrollY >=
+          document.documentElement.scrollHeight - 2;
+        if (atBottom) currentId = sectionH1s[sectionH1s.length - 1].id;
         setActive(currentId);
       };
 
