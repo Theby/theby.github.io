@@ -2,7 +2,7 @@
 title: "Gamescom Latam 2026: Connecting, Learning, and Looking Ahead"
 tags: [ update, gamescom, gamescomlatam, gamescomlatam2026 ]
 category: blog
-excerpt_separator: "<!--more-->"
+summary: "I'm thrilled to share that Game Conference MX ran a prize for free tickets to Gamescom Latam 2026, and I was selected among all the participants, the only one going from Chile. I can't thank Game Conference MX enough for making this possible. This is my first time attending the event and my first time in Brazil, so there is a lot to look forward to!"
 permalink: /blog/gamescomlatam2026/
 redirect_from: /blog/gamescomelatam2026/
 ---
@@ -10,8 +10,6 @@ redirect_from: /blog/gamescomelatam2026/
 ## The biggest Game Conference of Latin America
 
 I'm thrilled to share that [Game Conference MX](https://www.gameconferencemx.com) ran a prize for free tickets to Gamescom Latam 2026, and I was selected among all the participants, the only one going from Chile. I can't thank Game Conference MX enough for making this possible. This is my first time attending the event and my first time in Brazil, so there is a lot to look forward to!
-
-<!--more-->
 
 For those unfamiliar, the BIG Festival has been running in São Paulo since 2012 as the world's largest indie games competition. In 2024 it became part of the newly launched Gamescom Latam, turning the event into the biggest game conference in Latin America. It's open to the public, but also includes a dedicated business track with meetings, talks, and networking; so if you're part of the industry you get to enjoy the event as a consumer while also making the most of the professional side.
 

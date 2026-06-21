@@ -2,14 +2,12 @@
 title: "Latin America's growing video game industry at Gamescom Latam 2026"
 tags: [ update, gamescom, gamescomlatam, gamescomlatam2026, unity, mobile-optimization, game-publishing, unity-ai, gamedev ]
 category: blog
-excerpt_separator: "<!--more-->"
+summary: "It has been a big event, full of amazing games, both local and from around the world, from indie to AAA. And the general public was really full of energy! This was my first time visiting and it was better than expected, and I cannot wait to go again next year."
 ---
 
 # A big motivation and inspiration
 
 It has been a big event, full of amazing games, both local and from around the world, from indie to AAA. And the general public was really full of energy! This was my first time visiting and it was better than expected, and I cannot wait to go again next year.
-
-<!--more-->
 
 Gamescom Latam took place from April 29 to May 3, with over 154,000 visitors, more than 13,000 business meetings held and companies from 59 countries in the business area. You can see more of these statistics in their [official press release](https://www.gamescom.global/en/gamescom-latam-2026-wraps-up-with-record-breaking-results).
 
