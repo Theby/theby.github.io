@@ -10,6 +10,8 @@ remote_theme: pages-themes/hacker@v0.2.0
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 google_analytics: G-M7HRV5WG9L
 show_downloads: false
 show_navigation: true
@@ -21,6 +23,8 @@ defaults:
     values:
       layout: post
       category: blog
+      seo:
+        type: BlogPosting
 feed:
   posts_limit: 10
   path: /blog/feed.xml
@@ -42,6 +46,14 @@ socials:
     url: https://www.linkedin.com/in/estebangaeteflores
   - name: github
     url: https://github.com/Theby
+# jekyll-seo-tag
+social:
+  name: Esteban Gaete Flores
+  links:
+    - https://www.linkedin.com/in/estebangaeteflores
+    - https://github.com/Theby
+    - https://x.com/TebiFestival
+    - https://bsky.app/profile/tebisight.bsky.social
 support_me:
   name: Buy me a Coffe! ☕︎
   url: https://buymeacoffe.com
