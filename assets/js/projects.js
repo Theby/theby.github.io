@@ -63,6 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
 
+      if (window.matchMedia('(min-width: 801px)').matches) {
+        sectionIndex.classList.add('is-open');
+        if (toggle) toggle.setAttribute('aria-expanded', 'true');
+      }
+
       const setActive = id => {
         linkById.forEach((link, key) => link.classList.toggle('active', key === id));
       };
