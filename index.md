@@ -41,7 +41,7 @@ pageType: projects
 <div class="project-row {% if indexMod == 1 %}reverse{% endif %}">
   <div class="project-inner">
     <a class="project-image-link" href="{{ item.url }}" target="_blank">
-      <img src="{{ item.image }}" alt="{{ item.title }}">
+      <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
     </a>
     <div class="project-text">
       <div class="project-title-row">
@@ -87,7 +87,7 @@ pageType: projects
 <div class="project-row {% if indexMod == 1 %}reverse{% endif %}">
   <div class="project-inner">
     <a class="project-image-link" href="{{ item.url }}" target="_blank">
-      <img src="{{ item.image }}" alt="{{ item.title }}">
+      <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
     </a>
     <div class="project-text">
       <div class="project-title-row">
@@ -135,7 +135,7 @@ pageType: projects
     {% endif %}
     <div class="smaller-project-card">
         <a class="smaller-project-image-link" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
-          <img src="{{ item.image }}" alt="{{ item.title }}">
+          <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
         </a>
       <h2>{{ item.title }}</h2>
       {% if item.release %}
