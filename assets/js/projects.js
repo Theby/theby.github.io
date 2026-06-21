@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const linkById = new Map();
     const sectionH1s = Array.from(mainContent.querySelectorAll('h1')).filter(h1 => h1.id);
 
-    sectionH1s.forEach(h1 => {
+    sectionH1s.forEach((h1, i) => {
       const li = document.createElement('li');
       const a = document.createElement('a');
       a.href = `#${h1.id}`;
@@ -47,7 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       a.addEventListener('click', e => {
         e.preventDefault();
-        h1.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (i === 0) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          h1.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
         sectionIndex.classList.remove('is-open');
         if (toggle) toggle.setAttribute('aria-expanded', 'false');
       });
