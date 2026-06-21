@@ -4,6 +4,15 @@ title: Home
 pageType: projects
 ---
 
+<nav id="section-index" class="section-index" aria-label="Page sections" hidden>
+  <button class="section-index-toggle terminal-btn" aria-expanded="false">
+    <span class="terminal-btn-prefix">$</span>
+    <span class="terminal-btn-command">ls sections</span>
+    <span class="blink">█</span>
+  </button>
+  <ul class="section-index-list"></ul>
+</nav>
+
 # From The Blog
 
 <div class="texts-list texts-list--compact">

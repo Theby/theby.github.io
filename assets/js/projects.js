@@ -29,6 +29,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const sectionIndex = document.querySelector('#section-index');
+  if (sectionIndex && mainContent) {
+    const list = sectionIndex.querySelector('.section-index-list');
+    const toggle = sectionIndex.querySelector('.section-index-toggle');
+    const linkById = new Map();
+    const sectionH1s = Array.from(mainContent.querySelectorAll('h1')).filter(h1 => h1.id);
+
+    sectionH1s.forEach(h1 => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `#${h1.id}`;
+      a.textContent = h1.textContent.trim();
+      li.appendChild(a);
+      list.appendChild(li);
+      linkById.set(h1.id, a);
+
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        h1.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        sectionIndex.classList.remove('is-open');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    if (linkById.size > 0) {
+      sectionIndex.removeAttribute('hidden');
+
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          const open = sectionIndex.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+
+      // Scroll-spy: highlight the section currently near the top of the viewport.
+      const spyObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          linkById.forEach(link => link.classList.remove('active'));
+          const active = linkById.get(entry.target.id);
+          if (active) active.classList.add('active');
+        });
+      }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+      sectionH1s.forEach(h1 => spyObserver.observe(h1));
+    }
+  }
+
   const cardObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;

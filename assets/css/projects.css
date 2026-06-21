@@ -370,7 +370,6 @@
   position: relative;
 }
 
-/* Visible state (added by IntersectionObserver) */
 .smaller-project-card.visible {
   opacity: 1;
   transform: translateY(0);
@@ -632,3 +631,88 @@
   }
 }
 
+
+/* ------------------------------------------
+   SECTION INDEX
+------------------------------------------ */
+
+.section-index {
+  position: fixed;
+  bottom: 22px;
+  left: 22px;
+  z-index: 999;
+  font-family: var(--font-code);
+  font-size: 12px;
+}
+
+.section-index-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--green-alpha-35);
+  background: var(--black-alpha-70);
+  backdrop-filter: blur(2px);
+}
+
+.section-index-list li {
+  margin: 0;
+}
+
+.section-index-list a {
+  display: block;
+  padding: 3px 6px;
+  border-radius: 3px;
+  color: var(--text-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.section-index-list a::before {
+  content: "> ";
+  color: var(--green-alpha-45);
+}
+
+.section-index-list a:hover {
+  color: var(--text-light);
+  background: var(--green-alpha-05);
+}
+
+.section-index-list a.active {
+  color: var(--green);
+  background: var(--green-alpha-12);
+  box-shadow: 0 0 6px var(--green-alpha-35);
+}
+
+.section-index-list a.active::before {
+  color: var(--green);
+}
+
+/* Toggle button is desktop-hidden; only used on mobile */
+.section-index-toggle {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .section-index-toggle {
+    display: inline-flex;
+  }
+
+  .section-index-list {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    display: none;
+  }
+
+  .section-index.is-open .section-index-list {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-index-list a {
+    transition: none;
+  }
+}
