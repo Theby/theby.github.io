@@ -63,17 +63,31 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
 
-      // Scroll-spy: highlight the section currently near the top of the viewport.
-      const spyObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          linkById.forEach(link => link.classList.remove('active'));
-          const active = linkById.get(entry.target.id);
-          if (active) active.classList.add('active');
-        });
-      }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+      const setActive = id => {
+        linkById.forEach((link, key) => link.classList.toggle('active', key === id));
+      };
 
-      sectionH1s.forEach(h1 => spyObserver.observe(h1));
+      let spyTicking = false;
+      const updateSpy = () => {
+        spyTicking = false;
+        const line = window.innerHeight * 0.45;
+        let currentId = sectionH1s[0].id;
+        for (const h1 of sectionH1s) {
+          if (h1.getBoundingClientRect().top <= line) currentId = h1.id;
+          else break;
+        }
+        setActive(currentId);
+      };
+
+      const onSpyScroll = () => {
+        if (spyTicking) return;
+        spyTicking = true;
+        requestAnimationFrame(updateSpy);
+      };
+
+      window.addEventListener('scroll', onSpyScroll, { passive: true });
+      window.addEventListener('resize', onSpyScroll, { passive: true });
+      updateSpy();
     }
   }
 
