@@ -36,6 +36,54 @@ document.addEventListener("DOMContentLoaded", () => {
     const linkById = new Map();
     const sectionH1s = Array.from(mainContent.querySelectorAll('h1')).filter(h1 => h1.id);
 
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const scrollToTarget = getDest => {
+      const behavior = prefersReduced ? 'auto' : 'smooth';
+      const tolerance = 2;
+      const maxAttempts = 8;
+      let attempts = 0;
+      let cancelled = false;
+
+      const onUserInput = () => { cancelled = true; };
+      const inputEvents = ['wheel', 'touchstart', 'keydown'];
+      inputEvents.forEach(ev =>
+        window.addEventListener(ev, onUserInput, { passive: true, once: true })
+      );
+      const cleanup = () =>
+        inputEvents.forEach(ev => window.removeEventListener(ev, onUserInput));
+
+      const go = () => {
+        window.scrollTo({ top: getDest(), behavior });
+
+        let lastY = null;
+        let stableFrames = 0;
+        const watch = () => {
+          if (cancelled) { cleanup(); return; }
+          const y = window.scrollY;
+          if (y === lastY) {
+            stableFrames++;
+          } else {
+            stableFrames = 0;
+            lastY = y;
+          }
+          if (stableFrames < 3) {
+            requestAnimationFrame(watch);
+            return;
+          }
+
+          if (Math.abs(getDest() - window.scrollY) > tolerance && attempts < maxAttempts) {
+            attempts++;
+            go();
+          } else {
+            cleanup();
+          }
+        };
+        requestAnimationFrame(watch);
+      };
+      go();
+    };
+
     sectionH1s.forEach((h1, i) => {
       const li = document.createElement('li');
       const a = document.createElement('a');
@@ -48,9 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
       a.addEventListener('click', e => {
         e.preventDefault();
         if (i === 0 && window.matchMedia('(min-width: 801px)').matches) {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          scrollToTarget(() => 0);
         } else {
-          h1.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          scrollToTarget(() => Math.max(0, h1.getBoundingClientRect().top + window.scrollY));
         }
         if (!window.matchMedia('(min-width: 801px)').matches) {
           sectionIndex.classList.remove('is-open');
