@@ -290,11 +290,11 @@
     - id: itchio
       url: https://spoonmangames.itch.io/descendintoheaven
 
-- title: "Sunset Roboto: Eternal Rider"
+- title: "Sunset Roboto (SRER)"
   project_description: >
     Follow the sunset for eternity
   description: >
-    An endless runner following Roboto, a robot who wakes at sunset in a post-apocalyptic
+    Sunset Robot: Eternal Rider is an endless runner following Roboto, a robot who wakes at sunset in a post-apocalyptic
     Santiago and uses his last reserves of energy to chase the fading light, 
     running behind the sun so the sunset will never end. 
     Built during the Windows 10 Game Jam Santiago, the game took third place and an honorable
