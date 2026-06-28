@@ -98,12 +98,13 @@
       url: https://v3.globalgamejam.org/2019/games/them
 
 - title: Super Oso
-  hidden: true
   project_description: >
-    To do later
+    Stop Dr. Malware from infecting the computer!
   description: >
-    Advergame for Falabella’s 2018 Technology Fair. I directed the project,
-    programmed features, and implemented provided art.
+    Directed, led, and programmed an advergame built for Falabella's 2018 Technology Fair,
+    delivering the full project and its features on a one-week timeline. 
+    Art assets were supplied by the client. The game was decommissioned after the event, 
+    having served its intended promotional purpose.
   image: assets/images/p_superoso.gif
   url: https://apps.apple.com/us/app/agente-oso/id1434320450
   release: Jun 2018
