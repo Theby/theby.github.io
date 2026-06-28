@@ -133,6 +133,7 @@
 
 .project-row img {
   width: 100%;
+  aspect-ratio: 425 / 239;
   display: block;
   border-radius: 10px;
   object-fit: cover;
@@ -413,6 +414,7 @@
 .smaller-project-image-link img {
   width: 100%;
   height: auto;
+  aspect-ratio: 425 / 239;
   display: block;
   object-fit: cover;
 }
