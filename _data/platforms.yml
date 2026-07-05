@@ -18,12 +18,18 @@ youtube:
   name: YouTube
 linkedin:
   name: LinkedIn
+bluesky:
+  name: Bluesky
+discord:
+  name: Discord
 ggj:
   name: GGJ
 gamejolt:
   name: GameJolt
 github:
   name: GitHub
+bitbucket:
+  name: Bitbucket
 x:
   name: X
 unityassetstore:
