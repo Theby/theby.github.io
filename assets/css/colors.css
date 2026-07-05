@@ -12,6 +12,21 @@
   --green-alpha-12: rgba(181, 232, 83, 0.12);
   --green-alpha-05: rgba(181, 232, 83, 0.05);
 
+  --glow-link:
+    0 0 4px var(--green-alpha-45),
+    0 0 8px var(--green-alpha-30),
+    0 0 12px var(--green-alpha-12);
+  --glow-card:
+    0 0 8px var(--green-alpha-45),
+    0 0 16px var(--green-alpha-25),
+    0 0 24px var(--green-alpha-12);
+  --scanlines: repeating-linear-gradient(
+    to bottom,
+    var(--green-alpha-05) 0px,
+    var(--green-alpha-05) 1px,
+    transparent 2px
+  );
+
   --black-alpha-40: rgba(0, 0, 0, 0.4);
   --black-alpha-18: rgba(0, 0, 0, 0.18);
   --black-alpha-60: rgba(0, 0, 0, 0.6);

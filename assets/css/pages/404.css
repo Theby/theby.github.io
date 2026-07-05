@@ -1,15 +1,14 @@
-.container {
-  max-width: 1200px;
-}
-
 .terminal-window {
   position: relative;
+  display: block;
   background: #0a0a0a;
   border: 1px solid var(--green-alpha-35);
   border-radius: 6px;
   padding: 16px;
   font-family: var(--font-error-terminal);
   color: var(--text-light);
+  text-decoration: none;
+  text-shadow: none;
   max-width: 90%;
   margin: 40px auto;
   box-shadow: 0 0 15px var(--green-alpha-30);
@@ -24,10 +23,7 @@
   background: #0c0c0c;
   border-color: var(--green);
   transform: translateY(-4px) scale(1.03);
-  box-shadow:
-    0 0 8px var(--green-alpha-45),
-    0 0 16px var(--green-alpha-25),
-    0 0 24px var(--green-alpha-12);
+  box-shadow: var(--glow-card);
 }
 
 .terminal-window:hover::after {
@@ -35,12 +31,20 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: repeating-linear-gradient(
-    to bottom,
-    var(--green-alpha-05) 0px,
-    var(--green-alpha-05) 1px,
-    transparent 2px
-  );
+  background: var(--scanlines);
+}
+
+.terminal-error {
+  color: #ff4444;
+  margin-top: 12px;
+}
+
+.terminal-user {
+  color: var(--green);
+}
+
+.terminal-path {
+  color: #4da6ff;
 }
 
 pre {
@@ -51,8 +55,7 @@ pre {
   border-radius: 0px !important;
   padding: 0 !important;
   margin: 0 auto !important;
-  pointer-events:none !important;
-  color:var(--text-light) !important;
+  color: var(--text-light) !important;
   text-align: center !important;
   white-space: pre !important;
   overflow: auto !important;

@@ -69,10 +69,7 @@
 
 .closing-links a:hover {
   border-color: var(--green);
-  box-shadow:
-    0 0 4px var(--green-alpha-45),
-    0 0 8px var(--green-alpha-30),
-    0 0 12px var(--green-alpha-12);
+  box-shadow: var(--glow-link);
   transform: translateY(-1px);
   opacity: 0.9;
 }

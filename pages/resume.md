@@ -5,14 +5,6 @@ permalink: /resume
 pageCss: resume
 ---
 
-<div class="back-wrapper">
-  <a href="/" class="terminal-btn">
-    <span class="terminal-btn-prefix">$</span>
-    <span class="terminal-btn-command">cd ..</span>
-    <span class="blink">█</span>
-  </a>
-</div>
-
 # Resume
 
 <div class="download-wrapper">
