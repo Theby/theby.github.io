@@ -185,12 +185,12 @@
     Fully implemented an interactive application to see tourist information using your own hand
     navigating thorugh a digital enviroment, reading information and watching videos.
   image: assets/images/p_sernatur.gif
-  url: https://bitbucket.org/Theby/sernaturleapmotion2017/src/master/
+  url: https://bitbucket.org/Theby/sernaturleapmotion2017/src/master
   release: Feb 2017
   tags: [AR, LeapMotion]
   platforms:
     - id: bitbucket
-      url: https://bitbucket.org/Theby/sernaturleapmotion2017/src/master/
+      url: https://bitbucket.org/Theby/sernaturleapmotion2017/src/master
 
 - title: Father.IO
   project_description: >
