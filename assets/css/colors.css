@@ -26,6 +26,11 @@
     var(--green-alpha-05) 1px,
     transparent 2px
   );
+  --transition-glow:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
 
   --black-alpha-40: rgba(0, 0, 0, 0.4);
   --black-alpha-18: rgba(0, 0, 0, 0.18);

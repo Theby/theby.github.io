@@ -227,11 +227,7 @@
   margin-right: 2px;
   margin-bottom: 2px;
   text-decoration: none;
-  transition:
-    box-shadow 0.25s ease,
-    border-color 0.25s ease,
-    transform 0.25s ease,
-    opacity 0.25s ease;
+  transition: var(--transition-glow);
 }
 
 .platform-badge:hover {
@@ -560,36 +556,8 @@
   color: var(--text-muted);
 }
 
-.closing-links {
-  margin-top: 14px;
-  display: flex;
-  flex-wrap: wrap;
+.closing-section .closing-links {
   justify-content: center;
-  gap: 10px;
-}
-
-.closing-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 12px;
-  border-radius: 4px;
-  border: 1px solid var(--green);
-  color: var(--green);
-  text-decoration: none;
-  font-size: 0.85rem;
-  transition:
-    box-shadow 0.25s ease,
-    border-color 0.25s ease,
-    transform 0.25s ease,
-    opacity 0.25s ease;
-}
-
-.closing-links a:hover {
-  border-color: var(--green);
-  box-shadow: var(--glow-link);
-  transform: translateY(-1px);
-  opacity: 0.9;
 }
 
 @media (max-width: 700px) {
