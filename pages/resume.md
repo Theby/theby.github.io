@@ -2,74 +2,15 @@
 layout: default
 title: Resume
 permalink: /resume
+pageCss: resume
 ---
 
-<style>
-.page-content h1 {
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 25px;
-  position: relative;
-  padding-bottom: 5px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.page-content h1::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  background: currentColor;
-  transform: translateX(-50%);
-  transition: width 0.4s ease;
-}
-
-.page-content h1.in-view::after {
-  width: 120%;
-}
-
-.page-content h1:not(:first-of-type) {
-  margin-top: 60px;
-}
-
-.pdf-wrapper object {
-  width: 100%;
-}
-
-.pdf-text {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.download-wrapper {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.back-wrapper {
-  text-align: left;
-  margin-bottom: -20px;
-}
-
-.back-link {
-  color: var(--green);
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-</style>
-
 <div class="back-wrapper">
-  <a href="/" class="back-link">← Back</a>
+  <a href="/" class="terminal-btn">
+    <span class="terminal-btn-prefix">$</span>
+    <span class="terminal-btn-command">cd ..</span>
+    <span class="blink">█</span>
+  </a>
 </div>
 
 # Resume
