@@ -178,6 +178,20 @@
     - id: x
       url: https://x.com/caiampitercpmk
 
+- title: SERNATUR 2017
+  project_description: >
+    Interactive information for SERNATUR LeapMotion XR/AR 2017 event
+  description: >
+    Fully implemented an interactive application to see tourist information using your own hand
+    navigating thorugh a digital enviroment, reading information and watching videos.
+  image: assets/images/p_sernatur.gif
+  url: https://bitbucket.org/Theby/sernaturleapmotion2017/src/master/
+  release: Feb 2017
+  tags: [AR, LeapMotion]
+  platforms:
+    - id: bitbucket
+      url: https://bitbucket.org/Theby/sernaturleapmotion2017/src/master/
+
 - title: Father.IO
   project_description: >
     Experience the adrenaline, tactics and strategies of gaming in your everyday life.
