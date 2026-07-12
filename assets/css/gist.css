@@ -2,7 +2,7 @@
   filter: invert(100%) hue-rotate(180deg) brightness(110%) !important;
 }
 
-.gist .blob-code, 
+.gist .blob-code,
 .gist .blob-num {
   font-family: var(--font-code) !important;
   font-size: 16px !important;
@@ -16,61 +16,16 @@
   position: relative;
 }
 
+/* Gist-specific bits of the shared copy button (see code-block-copy.css) */
 .gist-copy-btn {
   filter: invert(100%) hue-rotate(180deg);
-
-  position: absolute;
-  top: 10px;
-  right: 10px;
   z-index: 20;
-
-  font-size: 12px;
-  line-height: 1;
-  padding: 6px 10px;
-
-  border: 1px solid var(--green);
-  border-radius: 4px;
-
-  background: rgba(0, 0, 0, 0.35);
-  color: var(--text-light);
-
-  cursor: pointer;
-  opacity: 0.75;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.gist-copy-btn:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-.gist-copy-btn:disabled {
-  cursor: default;
-  opacity: 0.6;
-  transform: none;
-}
-
-.gist .gist-copy-btn {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.gist:hover .gist-copy-btn {
-  opacity: 1;
-  pointer-events: auto;
 }
 
 @media (max-width: 600px) {
   .gist .blob-code,
   .gist .blob-num {
     font-size: 13px !important;
-  }
-
-  .gist-copy-btn {
-    padding: 4px 8px;
-    font-size: 11px;
-    top: 6px;
-    right: 6px;
   }
 }
 

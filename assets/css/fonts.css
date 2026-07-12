@@ -5,13 +5,13 @@
 :root {
   --font-prose: system-ui, "IBM Plex Sans", "Segoe UI", "Lucida Console", Terminal, monospace;
   --font-code: "IBM Plex Mono", "Fira Code", Consolas, "Lucida Console", monospace;
-  --font-error-terminal: "IBM Plex Mono", "Fira Code", Consolas, "Lucida Console", monospace;
+  --font-error-terminal: var(--font-code);
   --font-support-me-button: Arial;
 
   /* Theme overrides */
   --font-body: "JetBrains Mono", "Fira Mono", "Source Code Pro", "Lucida Console", Terminal, monospace;
-  --font-header-title: "JetBrains Mono", "Fira Mono", "Source Code Pro", "Lucida Console", Terminal, monospace;
-  --font-heading: "JetBrains Mono", "Fira Mono", "Source Code Pro", "Lucida Console", Terminal, monospace;
+  --font-header-title: var(--font-body);
+  --font-heading: var(--font-body);
 
   /* Lain fonts */
   --font-lain-logo-title: "Trixie-Plain", "IBM Plex Mono", Terminal, monospace;
