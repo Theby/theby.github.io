@@ -12,4 +12,12 @@
   --font-body: "JetBrains Mono", "Fira Mono", "Source Code Pro", "Lucida Console", Terminal, monospace;
   --font-header-title: "JetBrains Mono", "Fira Mono", "Source Code Pro", "Lucida Console", Terminal, monospace;
   --font-heading: "JetBrains Mono", "Fira Mono", "Source Code Pro", "Lucida Console", Terminal, monospace;
+
+  /* Lain fonts */
+  --font-lain-logo-title: "Trixie-Plain", "IBM Plex Mono", Terminal, monospace;
+  --font-lain-logo-subtitle: "Narrowband Prime ICG", "IBM Plex Mono", Terminal, monospace;
+  --font-lain-weird: "Loveletter", "IBM Plex Mono", Terminal, monospace;
+  --font-lain-psx-cover: "Chianti BT Roman", "IBM Plex Mono", Terminal, monospace;
+  --font-lain-psx-cover-alt: "Rotis Semi Sans Std 75 Extra Bold", "IBM Plex Mono", Terminal, monospace;
+  --font-lain-fan-game-title: "Moms Typewriter", "IBM Plex Mono", Terminal, monospace;
 }
