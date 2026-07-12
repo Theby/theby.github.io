@@ -167,7 +167,7 @@
 
                   {% assign cats_array = cats_with_counts | split: '@' | sort %}
 
-                  <ul class="blog-dropdown-list">
+                  <ul class="blog-dropdown-list list-reset">
                     {% for cat_entry in cats_array %}
                       {% if cat_entry == '' %}
                         {% continue %}
@@ -235,7 +235,7 @@
 
                   {% assign tags_array = tags_with_counts | split: '@' | sort %}
 
-                  <ul class="blog-dropdown-list">
+                  <ul class="blog-dropdown-list list-reset">
                     {% for tag_entry in tags_array %}
                       {% if tag_entry == '' %}
                         {% continue %}
@@ -287,7 +287,7 @@
                     | group_by_exp: 'post', 'post.date | date: "%Y-%m"'
                     | sort: 'name'
                     | reverse %}
-                  <ul class="blog-dropdown-list">
+                  <ul class="blog-dropdown-list list-reset">
                     {% for month in posts_by_month %}
                       {% assign first_post = month.items | first %}
                       <li class="blog-dropdown-item">

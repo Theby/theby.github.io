@@ -59,16 +59,8 @@
 }
 
 .site-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: inline-flex;
   gap: 24px;
-}
-
-.site-nav ul li {
-  list-style: none;
-  list-style-image: none;
 }
 
 .site-nav a {
@@ -270,4 +262,19 @@
     flex-direction: column;
     align-items: stretch;
   }
+}
+
+/* ------------------------------------------
+   LIST RESET UTILITY
+------------------------------------------ */
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-reset li {
+  list-style: none;
+  list-style-image: none;
 }

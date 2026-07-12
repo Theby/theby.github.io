@@ -10,7 +10,7 @@ pageType: projects
     <span class="terminal-btn-command">ls sections</span>
     <span class="blink">█</span>
   </button>
-  <ul class="section-index-list"></ul>
+  <ul class="section-index-list list-reset"></ul>
 </nav>
 
 # From The Blog

@@ -117,7 +117,7 @@ layout: blog
   {% if related_count > 0 %}
     <section class="post-related">
       <h2 class="post-related-title">Related Posts</h2>
-      <ul class="post-related-list">
+      <ul class="post-related-list list-reset">
         {% assign related_array = related_urls | split: "|" %}
 
         {% for url in related_array %}

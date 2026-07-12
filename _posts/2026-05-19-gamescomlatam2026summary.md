@@ -5,7 +5,7 @@ category: blog
 summary: "It has been a big event, full of amazing games, both local and from around the world, from indie to AAA. And the general public was really full of energy! This was my first time visiting and it was better than expected, and I cannot wait to go again next year."
 ---
 
-# A big motivation and inspiration
+## A big motivation and inspiration
 
 It has been a big event, full of amazing games, both local and from around the world, from indie to AAA. And the general public was really full of energy! This was my first time visiting and it was better than expected, and I cannot wait to go again next year.
 

@@ -47,7 +47,7 @@ pageCss: contact
     </p>
     <h2>Or maybe just a quick chat?</h2>
     <p>You can find me on:</p>
-    <ul class="contact-links">
+    <ul class="contact-links list-reset">
       {% for platform in site.chat_platforms %}
         <li>
           <span class="contact-links-icon">

@@ -154,18 +154,10 @@
   display: block;
 }
 
-.blog-dropdown-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .blog-dropdown-item {
   padding: 3px 0;
   font-size: 12px;
   line-height: 1.4;
-  list-style: none;
-  list-style-image: none;
 }
 
 .blog-dropdown-link {
@@ -654,9 +646,6 @@ pre code {
 }
 
 .post-related-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -666,8 +655,6 @@ pre code {
 .post-related-item {
   margin: 0;
   flex: 0 1 220px;
-  list-style: none;
-  list-style-image: none;
 }
 
 
