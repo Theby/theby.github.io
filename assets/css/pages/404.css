@@ -50,7 +50,7 @@
   position: relative;
   display: block;
   background-color: #0a0a0a;
-  background-image: url("/assets/images/bg-terminal.gif");
+  background-image: url("/assets/images/bg_terminal.gif");
   border: 1px solid var(--green-alpha-35);
   border-radius: 6px;
   padding: 16px;
@@ -99,7 +99,7 @@
 }
 
 .terminal-error {
-  color: #ff4444;
+  color: var(--red);
   margin-top: 12px;
   font-family: var(--font-lain-weird);
 }
@@ -109,7 +109,7 @@
 }
 
 .terminal-path {
-  color: #4da6ff;
+  color: var(--blue);
 }
 
 pre {

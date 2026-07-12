@@ -1,45 +1,12 @@
-.page-content h1 {
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 25px;
-  position: relative;
-  padding-bottom: 5px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.page-content h1::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 120%;
-  height: 2px;
-  background: currentColor;
-  transform: translateX(-50%);
-}
-
-.page-content h1:not(:first-of-type) {
-  margin-top: 60px;
-}
-
 .pdf-wrapper object {
   width: 100%;
 }
 
 .pdf-text {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .download-wrapper {
   text-align: center;
   margin-bottom: 20px;
-}
-
-.back-wrapper {
-  text-align: left;
-  margin-bottom: -20px;
 }
