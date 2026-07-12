@@ -82,9 +82,18 @@
   background: var(--scanlines);
 }
 
+.terminal-title {
+  font-family: var(--font-error-terminal);
+}
+
+.terminal-title-lain {
+  font-family: var(--font-error-terminal);
+}
+
 .terminal-error {
   color: #ff4444;
   margin-top: 12px;
+  font-family: var(--font-error-terminal);
 }
 
 .terminal-user {
