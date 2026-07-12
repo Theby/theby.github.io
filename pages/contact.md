@@ -7,11 +7,11 @@ pageCss: contact
 
 <h1>Contact me</h1>
 
-<div class="contact-layout">
+<div class="contact-layout page-columns">
   <form
     action="https://formspree.io/f/mkgdbnba"
     method="POST"
-    class="contact-form"
+    class="contact-form page-columns-main"
   >
     <label>
       Title
@@ -39,7 +39,7 @@ pageCss: contact
     </button>
   </form>
 
-  <aside class="contact-meta">
+  <aside class="contact-meta page-columns-aside">
     <h2>Prefer email?</h2>
     <p>
       You can also contact me directly at

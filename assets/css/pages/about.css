@@ -1,16 +1,8 @@
 .about-layout {
-  display: flex;
-  gap: 32px;
-  align-items: flex-start;
   margin-top: 20px;
 }
 
-.about-text {
-  flex: 2;
-}
-
 .about-photo {
-  flex: 1;
   display: flex;
   justify-content: center;
 }
@@ -25,11 +17,6 @@
 }
 
 @media (max-width: 800px) {
-  .about-layout {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
   .about-photo {
     margin-top: 16px;
     justify-content: center;

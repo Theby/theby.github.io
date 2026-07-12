@@ -204,3 +204,28 @@
   transform: translateY(-1px);
   opacity: 0.9;
 }
+
+/* ------------------------------------------
+   PAGE COLUMNS WIDGET
+------------------------------------------ */
+
+.page-columns {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.page-columns-main {
+  flex: 2;
+}
+
+.page-columns-aside {
+  flex: 1;
+}
+
+@media (max-width: 800px) {
+  .page-columns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

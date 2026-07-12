@@ -8,8 +8,8 @@ pageCss: about
 <section>
   <h1>About Me</h1>
 
-  <div class="about-layout">
-    <div class="about-text">
+  <div class="about-layout page-columns">
+    <div class="about-text page-columns-main">
       <p>
         I’m Esteban Gaete Flores, a senior Unity game developer with 10+ years of experience
         building games and tools for console, PC, and mobile. I specialize in
@@ -44,7 +44,7 @@ pageCss: about
         <a href="/contact">Contact me</a>
       </div>
     </div>
-    <div class="about-photo">
+    <div class="about-photo page-columns-aside">
       <img
         src="/assets/images/default-preview-image.png"
         alt="Portrait of Esteban Gaete Flores"
