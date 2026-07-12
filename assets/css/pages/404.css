@@ -49,7 +49,8 @@
 .terminal-window {
   position: relative;
   display: block;
-  background: #0a0a0a;
+  background-color: #0a0a0a;
+  background-image: url("/assets/images/bg-terminal.gif");
   border: 1px solid var(--green-alpha-35);
   border-radius: 6px;
   padding: 16px;
@@ -68,7 +69,7 @@
 }
 
 .terminal-window:hover {
-  background: #0c0c0c;
+  background-color: #0c0c0c;
   border-color: var(--green);
   transform: translateY(-4px) scale(1.03);
   box-shadow: var(--glow-card);
