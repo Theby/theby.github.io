@@ -82,18 +82,25 @@
   background: var(--scanlines);
 }
 
-.terminal-title {
-  font-family: var(--font-error-terminal);
+.terminal-header {
+  font-family: inherit;
 }
 
-.terminal-title-lain {
-  font-family: var(--font-error-terminal);
+.terminal-title {
+  font-family: var(--font-lain-logo-title);
+  font-size: 30px;
+}
+
+.terminal-subtitle {
+  font-family: var(--font-lain-logo-subtitle);
+  font-size: 20px;
+  letter-spacing: 10px;
 }
 
 .terminal-error {
   color: #ff4444;
   margin-top: 12px;
-  font-family: var(--font-error-terminal);
+  font-family: var(--font-lain-weird);
 }
 
 .terminal-user {
@@ -113,7 +120,9 @@ pre {
   padding: 0 !important;
   margin: 0 auto !important;
   color: var(--text-light) !important;
-  text-align: center !important;
+  width: fit-content;
+  max-width: 100%;
+  text-align: left !important;
   white-space: pre !important;
   overflow: auto !important;
   overflow-y: hidden !important;
