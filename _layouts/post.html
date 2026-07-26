@@ -193,9 +193,10 @@ layout: blog
   {% endif %}
 
   {% if site.giscus.enabled and site.giscus.repo and page.comments != false %}
-    <section class="post-comments">
+    <section class="post-comments" aria-label="Comments">
       <h2 class="post-comments-title">Comments</h2>
-      <div id="giscus_thread" aria-label="Comments section"></div>
+      {%- comment -%} Giscus mounts into `.giscus` if present, else after its own script tag {%- endcomment -%}
+      <div class="giscus"></div>
       {% include giscus.html %}
     </section>
   {% endif %}

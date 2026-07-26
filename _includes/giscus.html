@@ -1,8 +1,5 @@
 {%- comment -%}
   Giscus comments widget. All values come from the `giscus:` block in _config.yml.
-  The four identity keys (repo/repo_id/category/category_id) have no fallback on purpose:
-  a plausible-but-wrong default would point comments at the wrong repo. The caller guards
-  on `site.giscus.repo` so a half-configured site renders no widget at all.
 {%- endcomment -%}
 <script src="https://giscus.app/client.js"
         data-repo="{{ site.giscus.repo }}"
