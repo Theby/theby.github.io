@@ -31,6 +31,22 @@ feed:
   icon: /assets/images/favicons/website-icon-32x32.png
   logo: /assets/images/favicons/website-icon-32x32.png
 
+# Giscus - https://giscus.app
+giscus:
+  enabled: true
+  repo: "Theby/theby.github.io"
+  repo_id: "R_kgDOQYKm0A"
+  category: "General"
+  category_id: "DIC_kwDOQYKm0M4CzeYc"
+  mapping: url
+  strict: 0
+  reactions_enabled: 1
+  emit_metadata: 1
+  input_position: top
+  theme: dark
+  lang: en
+  loading: lazy
+
 
 # Profile
 author: 
@@ -46,6 +62,7 @@ socials:
     url: https://www.linkedin.com/in/estebangaeteflores
   - name: github
     url: https://github.com/Theby
+
 # jekyll-seo-tag
 social:
   name: Esteban Gaete Flores

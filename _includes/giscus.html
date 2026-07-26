@@ -1,0 +1,22 @@
+{%- comment -%}
+  Giscus comments widget. All values come from the `giscus:` block in _config.yml.
+  The four identity keys (repo/repo_id/category/category_id) have no fallback on purpose:
+  a plausible-but-wrong default would point comments at the wrong repo. The caller guards
+  on `site.giscus.repo` so a half-configured site renders no widget at all.
+{%- endcomment -%}
+<script src="https://giscus.app/client.js"
+        data-repo="{{ site.giscus.repo }}"
+        data-repo-id="{{ site.giscus.repo_id }}"
+        data-category="{{ site.giscus.category }}"
+        data-category-id="{{ site.giscus.category_id }}"
+        data-mapping="{{ site.giscus.mapping | default: 'url' }}"
+        data-strict="{{ site.giscus.strict | default: 0 }}"
+        data-reactions-enabled="{{ site.giscus.reactions_enabled | default: 1 }}"
+        data-emit-metadata="{{ site.giscus.emit_metadata | default: 1 }}"
+        data-input-position="{{ site.giscus.input_position | default: 'top' }}"
+        data-theme="{{ site.giscus.theme | default: 'dark' }}"
+        data-lang="{{ site.giscus.lang | default: 'en' }}"
+        data-loading="{{ site.giscus.loading | default: 'lazy' }}"
+        crossorigin="anonymous"
+        async>
+</script>

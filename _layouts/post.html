@@ -192,24 +192,11 @@ layout: blog
     </section>
   {% endif %}
 
-  <section class="post-comments">
+  {% if site.giscus.enabled and site.giscus.repo and page.comments != false %}
+    <section class="post-comments">
       <h2 class="post-comments-title">Comments</h2>
-      <div id="giscus_thread"></div>
-      <script src="https://giscus.app/client.js"
-              data-repo="Theby/theby.github.io"
-              data-repo-id="R_kgDOQYKm0A"
-              data-category="General"
-              data-category-id="DIC_kwDOQYKm0M4CzeYc"
-              data-mapping="url"
-              data-strict="0"
-              data-reactions-enabled="1"
-              data-emit-metadata="1"
-              data-input-position="top"
-              data-theme="dark"
-              data-lang="en"
-              data-loading="lazy"
-              crossorigin="anonymous"
-              async>
-      </script>
+      <div id="giscus_thread" aria-label="Comments section"></div>
+      {% include giscus.html %}
     </section>
+  {% endif %}
 </article>
