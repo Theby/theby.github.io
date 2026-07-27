@@ -36,7 +36,7 @@ pageType: projects
 
 # Published Games
 
-{% for item in site.data.projects %}
+{% for item in site.data.projects.games %}
 {% assign indexMod = forloop.index0 | modulo: 2 %}
 <div class="project-row {% if indexMod == 1 %}reverse{% endif %}">
   <div class="project-inner">
@@ -82,7 +82,7 @@ pageType: projects
 
 # Communities
 
-{% for item in site.data.projects-communities %}
+{% for item in site.data.projects.communities %}
 {% assign indexMod = forloop.index0 | modulo: 2 %}
 <div class="project-row {% if indexMod == 1 %}reverse{% endif %}">
   <div class="project-inner">
@@ -129,7 +129,7 @@ pageType: projects
 # Additional Projects
 
 <div class="smaller-projects-grid">
-  {% for item in site.data.projects-smaller-projects %}
+  {% for item in site.data.projects.additional %}
     {% if item.hidden %}
       {% continue %}
     {% endif %}
@@ -173,7 +173,7 @@ pageType: projects
 # Public Speaking & Interviews
 
 <div class="texts-list">
-  {% for item in site.data.projects-talks %}
+  {% for item in site.data.projects.talks %}
     {% if item.hidden %}
       {% continue %}
     {% endif %}
@@ -202,7 +202,7 @@ pageType: projects
 # Publications
 
 <div class="texts-list">
-  {% for item in site.data.projects-papers %}
+  {% for item in site.data.projects.publications %}
     {% if item.hidden %}
       {% continue %}
     {% endif %}

@@ -1,15 +1,10 @@
-{% comment %}
-  Schema.org JSON-LD for published games (homepage only).
-  Emitted as an ItemList of VideoGame entries from _data/projects.yml.
-  jekyll-seo-tag handles Person/WebPage/BlogPosting; this covers the games it can't.
-{% endcomment %}
 {% if page.pageType == "projects" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "itemListElement": [
-    {% for item in site.data.projects %}
+    {% for item in site.data.projects.games %}
     {
       "@type": "ListItem",
       "position": {{ forloop.index }},
