@@ -1,0 +1,51 @@
+{%- comment -%}
+Renders one "Explore" dropdown in the blog sidebar (Categories or Tags).
+
+Entries are sorted alphabetically to match the pages they link to.
+
+Params:
+  group  - the taxonomy hash, e.g. site.categories
+  id     - slug for data-dropdown and the dropdown element id
+  label  - button text
+  base   - page the entries link to; also auto-opens the dropdown on that page
+  anchor - anchor prefix on the target page (#category-foo / #tag-foo)
+  empty  - message shown when the taxonomy has no entries
+{%- endcomment -%}
+
+{%- assign is_current = false -%}
+{%- if page.url contains include.base -%}
+  {%- assign is_current = true -%}
+{%- endif -%}
+
+<div class="blog-tool-group {% if is_current %}is-open{% endif %}" data-dropdown="{{ include.id }}">
+  <button
+    class="blog-tool blog-tool-toggle"
+    type="button"
+    aria-expanded="{{ is_current }}"
+    aria-controls="blog-dropdown-{{ include.id }}"
+  >
+    {{ include.label }}
+    <span class="blog-tool-caret">▾</span>
+  </button>
+
+  <div class="blog-dropdown" id="blog-dropdown-{{ include.id }}">
+    {% if include.group and include.group != empty %}
+      {% assign sorted_entries = include.group | sort %}
+      <ul class="blog-dropdown-list list-reset">
+        {% for entry in sorted_entries %}
+          <li class="blog-dropdown-item">
+            <a
+              class="blog-dropdown-link"
+              href="{{ include.base | relative_url }}#{{ include.anchor }}-{{ entry[0] | slugify }}"
+            >
+              <span class="blog-label">{{ entry[0] }}</span>
+              <span class="blog-count">{{ entry[1] | size }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="blog-dropdown-empty">{{ include.empty }}</p>
+    {% endif %}
+  </div>
+</div>
