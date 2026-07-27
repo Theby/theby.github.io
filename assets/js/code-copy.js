@@ -54,7 +54,8 @@
           const text = normalizeTrailingNewline(codeEl.textContent || "");
           await copyText(text);
           btn.textContent = "Copied!";
-        } catch {
+        } catch (err) {
+          console.warn("Copy failed:", err);
           btn.textContent = "Failed";
         }
 
@@ -115,7 +116,8 @@
           if (!liveText) throw new Error("No gist text found");
           await copyText(liveText);
           btn.textContent = "Copied!";
-        } catch {
+        } catch (err) {
+          console.warn("Gist copy failed:", err);
           btn.textContent = "Failed";
         }
 
