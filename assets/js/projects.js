@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     };
 
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     const scrollToTarget = getDest => {
-      const behavior = prefersReduced ? 'auto' : 'smooth';
+      const behavior = reducedMotionQuery.matches ? 'auto' : 'smooth';
       let attempts = 0;
       let cancelled = false;
 
