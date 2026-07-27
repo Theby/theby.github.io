@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const HEADING_VISIBLE_RATIO = 0.1;
+  const SCROLL_TOP_REVEAL_PX = 300;
+
   // ==========================
   // Heading intersection effect
   // ==========================
@@ -14,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             });
           },
-          { threshold: 0.1 }
+          { threshold: HEADING_VISIBLE_RATIO }
         );
 
         const headings = document.querySelectorAll(".page-content h1");
@@ -34,21 +37,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================
   try {
     const btn = document.getElementById("scrollTopBtn");
-    if (!btn) {
-      return;
+    if (btn) {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > SCROLL_TOP_REVEAL_PX) {
+          btn.classList.add("visible");
+        } else {
+          btn.classList.remove("visible");
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
     }
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        btn.classList.add("visible");
-      } else {
-        btn.classList.remove("visible");
-      }
-    });
-
-    btn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
   } catch (err) {
     console.warn("Error setting up scroll-to-top button:", err);
   }

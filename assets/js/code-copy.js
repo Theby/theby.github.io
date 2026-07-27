@@ -1,4 +1,8 @@
 (() => {
+  const COPY_FEEDBACK_MS = 1200;
+  const OFFSCREEN_OFFSET = "-9999px";
+  const COPY_LABEL = "Copy";
+
   function normalizeTrailingNewline(text) {
     if (text.endsWith("\n")) return text.slice(0, -1);
     return text;
@@ -15,13 +19,42 @@
     ta.value = text;
     ta.setAttribute("readonly", "");
     ta.style.position = "fixed";
-    ta.style.top = "-9999px";
-    ta.style.left = "-9999px";
+    ta.style.top = OFFSCREEN_OFFSET;
+    ta.style.left = OFFSCREEN_OFFSET;
     document.body.appendChild(ta);
     ta.select();
     const ok = document.execCommand("copy");
     document.body.removeChild(ta);
     if (!ok) throw new Error("Copy failed");
+  }
+
+  function attachCopyButton(host, className, getText, failMessage) {
+    const style = window.getComputedStyle(host);
+    if (style.position === "static") host.style.position = "relative";
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = className;
+    btn.textContent = COPY_LABEL;
+
+    btn.addEventListener("click", async () => {
+      btn.disabled = true;
+
+      try {
+        await copyText(getText());
+        btn.textContent = "Copied!";
+      } catch (err) {
+        console.warn(failMessage, err);
+        btn.textContent = "Failed";
+      }
+
+      setTimeout(() => {
+        btn.textContent = COPY_LABEL;
+        btn.disabled = false;
+      }, COPY_FEEDBACK_MS);
+    });
+
+    host.appendChild(btn);
   }
 
   // -----------------------------
@@ -38,34 +71,12 @@
 
       block.dataset.copyButton = "true";
 
-      const style = window.getComputedStyle(block);
-      if (style.position === "static") block.style.position = "relative";
-
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "code-copy-btn";
-      btn.textContent = "Copy";
-
-      btn.addEventListener("click", async () => {
-        btn.disabled = true;
-        const old = btn.textContent;
-
-        try {
-          const text = normalizeTrailingNewline(codeEl.textContent || "");
-          await copyText(text);
-          btn.textContent = "Copied!";
-        } catch (err) {
-          console.warn("Copy failed:", err);
-          btn.textContent = "Failed";
-        }
-
-        setTimeout(() => {
-          btn.textContent = old;
-          btn.disabled = false;
-        }, 1200);
-      });
-
-      block.appendChild(btn);
+      attachCopyButton(
+        block,
+        "code-copy-btn",
+        () => normalizeTrailingNewline(codeEl.textContent || ""),
+        "Copy failed:"
+      );
     });
   }
 
@@ -93,41 +104,21 @@
     gistFiles.forEach((gistFile) => {
       if (gistFile.dataset.copyButton === "true") return;
 
-      const text = getGistText(gistFile);
-      if (!text) return;
+      if (!getGistText(gistFile)) return;
 
       gistFile.dataset.copyButton = "true";
 
-      const style = window.getComputedStyle(gistFile);
-      if (style.position === "static") gistFile.style.position = "relative";
-
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "gist-copy-btn";
-      btn.textContent = "Copy";
-
-      btn.addEventListener("click", async () => {
-        btn.disabled = true;
-        const old = btn.textContent;
-
-        try {
+      attachCopyButton(
+        gistFile,
+        "gist-copy-btn",
+        () => {
           // Re-read at click time in case something changed (tabs, etc.)
           const liveText = getGistText(gistFile);
           if (!liveText) throw new Error("No gist text found");
-          await copyText(liveText);
-          btn.textContent = "Copied!";
-        } catch (err) {
-          console.warn("Gist copy failed:", err);
-          btn.textContent = "Failed";
-        }
-
-        setTimeout(() => {
-          btn.textContent = old;
-          btn.disabled = false;
-        }, 1200);
-      });
-
-      gistFile.appendChild(btn);
+          return liveText;
+        },
+        "Gist copy failed:"
+      );
     });
   }
 
