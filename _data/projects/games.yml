@@ -12,7 +12,8 @@
     30+ UI screens at a stable 30 FPS on target devices.
   image: assets/images/p_skyoceans.gif
   url: https://store.steampowered.com/app/1691750/Sky_Oceans_Wings_for_Hire/
-  release: Octeto Studios - Jul 2026
+  studio: Octeto Studios
+  release: Jul 2026
   tags: [3D, Turn-Based, JRPG]
   platforms:
     - id: steam
@@ -35,7 +36,8 @@
     Refactor the cinematic and story flow systems to new designs for the demo implementation.
   image: assets/images/p_crosswinds.gif
   url: https://store.steampowered.com/app/4756820/Crosswinds/
-  release: Octeto Studios - In Development
+  studio: Octeto Studios
+  release: In Development
   tags: [3D, Story Rich, Romance]
   platforms:
     - id: steam
@@ -50,7 +52,8 @@
     to support the game's full branching narrative.
   image: assets/images/p_bubblegumgalaxy.gif
   url: https://store.steampowered.com/app/1989120/Bubblegum_Galaxy/
-  release: Smarto Club - Mar 2026
+  studio: Smarto Club
+  release: Mar 2026
   tags: [City Builder, Puzzle, Strategy]
   platforms:
     - id: steam
@@ -72,7 +75,8 @@
     time by ~80%. Implemented streaming for seamless world traversal.
   image: assets/images/p_eightfoldpath.gif
   url: https://store.steampowered.com/app/1736620/The_Eightfold_Path
-  release: Friendly Llama - Aug 2024
+  studio: Friendly Llama
+  release: Aug 2024
   tags: [2D, Open World, Puzzle Adventure]
   platforms:
     - id: steam
@@ -92,7 +96,8 @@
     cross-team workflows between Chile and US engineering groups.
   image: assets/images/p_nbaclash.gif
   url: https://www.youtube.com/watch?v=eKohkv9YPKY
-  release: Globant - Nov 2022
+  studio: Globant
+  release: Nov 2022
   tags: [F2P, Deck Builder, Online Multiplayer]
   platforms:
     - id: ios
@@ -110,7 +115,8 @@
     framework, and coordinated a 6–12 person team across disciplines.
   image: assets/images/p_linkedmask.gif
   url: https://store.steampowered.com/app/1111590/Linked_Mask/
-  release: Spoonman Games - Sep 2022
+  studio: Spoonman Games
+  release: Sep 2022
   tags: [2D, Action-Adventure, Platformer]
   platforms:
     - id: steam
@@ -126,7 +132,8 @@
     and cinematic tools, cutting implementation time by ~50%.
   image: assets/images/p_multiverse.gif
   url: https://store.steampowered.com/app/1721170/What_Lies_in_the_Multiverse/
-  release: IguanaBee - Mar 2022
+  studio: IguanaBee
+  release: Mar 2022
   tags: [2D, Puzzle-Platformer]
   platforms:
     - id: steam
@@ -148,7 +155,8 @@
     Supported a 20+ person team and a 4.8/5 App Store rating.
   image: assets/images/p_gardenjoy.gif
   url: https://www.gardenjoygame.com
-  release: Burlingames Studios - Jan 2022
+  studio: Burlingames Studios
+  release: Jan 2022
   tags: [F2P, Garden Design, Simulation Game]
   platforms:
     - id: ios

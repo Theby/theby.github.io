@@ -53,6 +53,9 @@ pageType: projects
         {% endif %}
       </div>
       <div class="project-tags">
+        {% if item.studio %}
+          <span class="project-tag project-tag--studio">{{ item.studio }}</span>
+        {% endif %}
         {% if item.tags %}
           {% for tag in item.tags %}
             <span class="project-tag">{{ tag }}</span>

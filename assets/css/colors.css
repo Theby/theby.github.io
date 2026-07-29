@@ -16,6 +16,9 @@
   --green-alpha-08: rgba(181, 232, 83, 0.08);
   --green-alpha-05: rgba(181, 232, 83, 0.05);
 
+  --blue-alpha-45: rgba(77, 166, 255, 0.45);
+  --blue-alpha-12: rgba(77, 166, 255, 0.12);
+
   --glow-link:
     0 0 4px var(--green-alpha-45),
     0 0 8px var(--green-alpha-30),
