@@ -1,3 +1,67 @@
+- title: "Sky Oceans: Wing for Hire"
+  project_description: >
+    This game is a homage to JRPG classics! Take the role of a captune and
+    unite a party of rag-tag sky prites setting upon an unforgettable,
+    touching journey.
+  description: >
+    Led the 6-month Android port of a Unity console RPG from Nintendo Switch.
+    Rebuilt the audio pipeline on mobile FMOD banks, converted 5,100+ textures
+    to ASTC with custom tooling, and compiled over 1,000 debug logs out of
+    release builds with a custom logger. The game landed inside a 1.5 GB
+    budget on 4 GB devices. Delivered a ground-up touch control layer across
+    30+ UI screens at a stable 30 FPS on target devices.
+  image: assets/images/p_skyoceans.gif
+  url: https://store.steampowered.com/app/1691750/Sky_Oceans_Wings_for_Hire/
+  release: Octeto Studios - Jul 2029
+  tags: [3D, Turn-Based, JRPG]
+  platforms:
+    - id: steam
+      url: https://store.steampowered.com/app/1691750/Sky_Oceans_Wings_for_Hire/
+    - id: playstation
+      url: https://store.playstation.com/en-us/concept/10005430
+    - id: xbox
+      url: https://www.xbox.com/en-us/games/store/sky-oceans-wings-for-hire/9mvzjt434xhw
+    - id: switch
+      url: https://www.nintendo.com/us/store/products/sky-oceans-wings-for-hire-switch/
+
+- title: Cross Winds
+  project_description: >
+    A romantic adventure set in the skies. Explore a wonderful archipielago,
+    meet new people and follow hidden letters to reunite with your beloved.
+  description: >
+    Rebuilt the quest system so designers author main and side quests entirely in the
+    inspector, with optional objectives, tasks that unlock order and conditions, and more.
+    Also added state-machine camera rig (spyglass, tagging, free/fixed) and responsive HUD framework.
+    Refactor the cinematic and story flow systems to new designs for the demo implementation.
+  image: assets/images/p_crosswinds.gif
+  url: https://store.steampowered.com/app/4756820/Crosswinds/
+  release: Octeto Studios - In Development
+  tags: [3D, Story Rich, Romance]
+  platforms:
+    - id: steam
+      url: https://store.steampowered.com/app/4756820/Crosswinds/
+
+- title: Bubblegum Galaxy
+  project_description: >
+    A cozy narrative building game about rebuilding the galaxy tile by tile.
+  description: >
+    Stabilized and cleaned up the codebase during early development. Migrated
+    the dialogue system to Yarn Spinner 2.4 and integrated Unity Localization
+    to support the game's full branching narrative.
+  image: assets/images/p_bubblegumgalaxy.gif
+  url: https://store.steampowered.com/app/1989120/Bubblegum_Galaxy/
+  release: Smarto Club - Mar 2026
+  tags: [City Builder, Puzzle, Strategy]
+  platforms:
+    - id: steam
+      url: https://store.steampowered.com/app/1989120/Bubblegum_Galaxy/
+    - id: playstation
+      url: https://store.playstation.com/concept/10015790/
+    - id: xbox
+      url: https://www.xbox.com/es-CL/games/store/bubblegum-galaxy/9PLGVLXXLXVB
+    - id: switch
+      url: https://www.nintendo.com/us/store/products/bubblegum-galaxy-switch/
+
 - title: The Eightfold Path
   project_description: >
     A serene open-world puzzle adventure where you explore a vibrant astral
