@@ -15,6 +15,7 @@ plugins:
 google_analytics: G-M7HRV5WG9L
 show_downloads: false
 show_navigation: true
+show_fromtheblog: false
 permalink: /blog/:title/
 defaults:
   - scope:
@@ -47,7 +48,6 @@ giscus:
   lang: en
   loading: lazy
 
-
 # Profile
 author: 
   name: Esteban Gaete Flores
@@ -71,6 +71,8 @@ social:
     - https://github.com/Theby
     - https://x.com/TebiFestival
     - https://bsky.app/profile/tebisight.bsky.social
+
+# Coffe
 support_me:
   name: Buy me a Coffe! ☕︎
   url: https://buymeacoffe.com

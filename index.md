@@ -13,6 +13,7 @@ pageType: projects
   <ul class="section-index-list list-reset"></ul>
 </nav>
 
+{% if site.show_fromtheblog %}
 # From The Blog
 
 <div class="texts-list texts-list--compact">
@@ -33,6 +34,7 @@ pageType: projects
     <span class="blink">█</span>
   </a>
 </div>
+{% endif %}
 
 # Published Games
 
@@ -154,8 +156,8 @@ pageType: projects
       {% if item.description %}
         <p class="project-description">{{ item.description }}</p>
       {% endif %}
-      <div class="project-badges">
       {% if item.platforms %}
+      <div class="project-badges">
         <div class="platform-badges">
           {% for plat in item.platforms %}
             <a class="platform-badge" href="{{ plat.url }}" target="_blank" rel="noopener noreferrer">
@@ -164,9 +166,9 @@ pageType: projects
             </a>
           {% endfor %}
         </div>
+      </div>
+      {% endif %}
     </div>
-    </div>
-  {% endif %}
   {% endfor %}
 </div>
 

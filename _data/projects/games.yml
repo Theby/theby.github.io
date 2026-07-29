@@ -1,4 +1,4 @@
-- title: "Sky Oceans: Wing for Hire"
+- title: "Sky Oceans: Wings for Hire"
   project_description: >
     This game is a homage to JRPG classics! Take the role of a captune and
     unite a party of rag-tag sky prites setting upon an unforgettable,
@@ -12,7 +12,7 @@
     30+ UI screens at a stable 30 FPS on target devices.
   image: assets/images/p_skyoceans.gif
   url: https://store.steampowered.com/app/1691750/Sky_Oceans_Wings_for_Hire/
-  release: Octeto Studios - Jul 2029
+  release: Octeto Studios - Jul 2026
   tags: [3D, Turn-Based, JRPG]
   platforms:
     - id: steam
