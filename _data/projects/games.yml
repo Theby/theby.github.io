@@ -28,6 +28,7 @@
       url: https://www.nintendo.com/us/store/products/sky-oceans-wings-for-hire-switch/
 
 - title: Cross Winds
+  hidden: true
   project_description: >
     A romantic adventure set in the skies. Explore a wonderful archipielago,
     meet new people and follow hidden letters to reunite with your beloved.

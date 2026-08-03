@@ -1,4 +1,19 @@
 /* ------------------------------------------
+   ICON SIZING
+   Every icon SVG in assets/icons/platforms/ has a viewBox tight to its
+   artwork, so `object-fit: contain` in a fixed box gives each glyph the same
+   optical extent. Circular glyphs (beepbox, xbox, steam, bennugd, linkedin)
+   carry a 4% outset inside their own viewBox so they do not read heavier than
+   the square ones.
+------------------------------------------ */
+:root {
+  --icon-size: 18px;
+  /* Wide wordmarks (xna 2.65:1, ggj 1.87:1) become illegible slivers when fitted
+     into a square box, so icon-only tech badges cap width instead of forcing one. */
+  --icon-max-width: 40px;
+}
+
+/* ------------------------------------------
    PROJECT ROW (outer wrapper)
 ------------------------------------------ */
 .project-row {
@@ -191,10 +206,13 @@
   opacity: 0.85;
 }
 
+/* Uniform square box - these badges carry a text label beside the icon, so a
+   wide logo can sit short without losing meaning. */
 .platform-badge img {
-  width: 18px;
-  height: 18px;
+  width: var(--icon-size);
+  height: var(--icon-size);
   display: block;
+  object-fit: contain;
   filter: brightness(1.2);
 }
 
@@ -231,9 +249,12 @@
   line-height: 0;
 }
 
+/* Icon-only (tooltip is the only label), so height is locked and width floats
+   up to the cap - keeps wide engine wordmarks legible. */
 .tech-badge img {
-  width: 18px;
-  height: 18px;
+  height: var(--icon-size);
+  width: auto;
+  max-width: var(--icon-max-width);
   display: block;
   object-fit: contain;
   filter: brightness(1.2);

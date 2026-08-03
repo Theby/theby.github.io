@@ -39,118 +39,124 @@ pageType: projects
 # Published Games
 
 {% for item in site.data.projects.games %}
-{% assign indexMod = forloop.index0 | modulo: 2 %}
-<div class="project-row {% if indexMod == 1 %}reverse{% endif %}">
-  <div class="project-inner">
-    <h2 class="project-title">{{ item.title }}</h2>
-    <div class="project-body">
-      <a class="project-image-link" href="{{ item.url }}" target="_blank">
-        <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
-      </a>
-      <div class="project-text">
-        {% if item.release %}
-          <span class="project-release"><span class="project-release-label">Release date:</span> {{ item.release }}</span>
-        {% endif %}
-        {% if item.studio or item.engines or item.languages %}
-          <div class="project-meta">
-            {% if item.studio %}
-              {% assign studio = site.data.studios[item.studio] %}
-              {% assign studio_name = studio.name | default: item.studio %}
-              {% if studio.url and studio.url != "" %}
-                <a class="project-tag project-tag--studio" href="{{ studio.url }}" target="_blank" rel="noopener noreferrer">{{ studio_name }}</a>
-              {% else %}
-                <span class="project-tag project-tag--studio">{{ studio_name }}</span>
+  {% if item.hidden %}
+    {% continue %}
+  {% endif %}
+  {% assign indexMod = forloop.index0 | modulo: 2 %}
+  <div class="project-row {% if indexMod == 1 %}reverse{% endif %}">
+    <div class="project-inner">
+      <h2 class="project-title">{{ item.title }}</h2>
+      <div class="project-body">
+        <a class="project-image-link" href="{{ item.url }}" target="_blank">
+          <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
+        </a>
+        <div class="project-text">
+          {% if item.release %}
+            <span class="project-release"><span class="project-release-label">Release date:</span> {{ item.release }}</span>
+          {% endif %}
+          {% if item.studio or item.engines or item.languages %}
+            <div class="project-meta">
+              {% if item.studio %}
+                {% assign studio = site.data.studios[item.studio] %}
+                {% assign studio_name = studio.name | default: item.studio %}
+                {% if studio.url and studio.url != "" %}
+                  <a class="project-tag project-tag--studio" href="{{ studio.url }}" target="_blank" rel="noopener noreferrer">{{ studio_name }}</a>
+                {% else %}
+                  <span class="project-tag project-tag--studio">{{ studio_name }}</span>
+                {% endif %}
               {% endif %}
-            {% endif %}
-            {% for eng in item.engines %}
-              {% assign eng_name = site.data.engines[eng].name | default: eng %}
-              <span class="tech-badge" title="{{ eng_name }}">
-                <img src="assets/icons/platforms/{{ eng }}.svg" alt="{{ eng_name }}" loading="lazy">
-              </span>
-            {% endfor %}
-            {% for lang in item.languages %}
-              {% assign lang_name = site.data.languages[lang].name | default: lang %}
-              <span class="tech-badge" title="{{ lang_name }}">
-                <img src="assets/icons/platforms/{{ lang }}.svg" alt="{{ lang_name }}" loading="lazy">
-              </span>
-            {% endfor %}
-          </div>
-        {% endif %}
-        {% if item.tags %}
-          <div class="project-tags">
-            {% for tag in item.tags %}
-              <span class="project-tag">{{ tag }}</span>
-            {% endfor %}
-          </div>
-        {% endif %}
-        {% if item.project_description %}
-          <p class="project-game-description">{{ item.project_description }}</p>
-        {% endif %}
-        {% if item.description %}
-          <p class="project-description">{{ item.description }}</p>
-        {% endif %}
-        <div class="project-badges">
-          {% if item.platforms %}
-            <div class="platform-badges">
-              {% for plat in item.platforms %}
-                <a class="platform-badge" href="{{ plat.url }}" target="_blank" rel="noopener noreferrer">
-                  <img src="assets/icons/platforms/{{ plat.id }}.svg" alt="{{ plat.id }} icon">
-                  {{ site.data.platforms[plat.id].name }}
-                </a>
+              {% for eng in item.engines %}
+                {% assign eng_name = site.data.engines[eng].name | default: eng %}
+                <span class="tech-badge" title="{{ eng_name }}">
+                  <img src="assets/icons/platforms/{{ eng }}.svg" alt="{{ eng_name }}" loading="lazy">
+                </span>
+              {% endfor %}
+              {% for lang in item.languages %}
+                {% assign lang_name = site.data.languages[lang].name | default: lang %}
+                <span class="tech-badge" title="{{ lang_name }}">
+                  <img src="assets/icons/platforms/{{ lang }}.svg" alt="{{ lang_name }}" loading="lazy">
+                </span>
               {% endfor %}
             </div>
           {% endif %}
+          {% if item.tags %}
+            <div class="project-tags">
+              {% for tag in item.tags %}
+                <span class="project-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% if item.project_description %}
+            <p class="project-game-description">{{ item.project_description }}</p>
+          {% endif %}
+          {% if item.description %}
+            <p class="project-description">{{ item.description }}</p>
+          {% endif %}
+          <div class="project-badges">
+            {% if item.platforms %}
+              <div class="platform-badges">
+                {% for plat in item.platforms %}
+                  <a class="platform-badge" href="{{ plat.url }}" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/icons/platforms/{{ plat.id }}.svg" alt="{{ plat.id }} icon">
+                    {{ site.data.platforms[plat.id].name }}
+                  </a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 {% endfor %}
 
 # Communities
 
 {% for item in site.data.projects.communities %}
-{% assign indexMod = forloop.index0 | modulo: 2 %}
-<div class="project-row {% if indexMod == 1 %}reverse{% endif %}">
-  <div class="project-inner">
-    <h2 class="project-title">{{ item.title }}</h2>
-    <div class="project-body">
-      <a class="project-image-link" href="{{ item.url }}" target="_blank">
-        <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
-      </a>
-      <div class="project-text">
-        {% if item.release %}
-          <span class="project-release">{{ item.release }}</span>
-        {% endif %}
-        {% if item.tags %}
-          <div class="project-tags">
-            {% for tag in item.tags %}
-              <span class="project-tag">{{ tag }}</span>
-            {% endfor %}
-          </div>
-        {% endif %}
-        {% if item.project_description %}
-          <p class="project-game-description">{{ item.project_description }}</p>
-        {% endif %}
-        {% if item.description %}
-          <p class="project-description">{{ item.description }}</p>
-        {% endif %}
-        <div class="project-badges">
-          {% if item.platforms %}
-            <div class="platform-badges">
-              {% for plat in item.platforms %}
-                <a class="platform-badge" href="{{ plat.url }}" target="_blank" rel="noopener noreferrer">
-                  <img src="assets/icons/platforms/{{ plat.id }}.svg" alt="{{ plat.id }} icon">
-                  {{ site.data.platforms[plat.id].name }}
-                </a>
+  {% if item.hidden %}
+    {% continue %}
+  {% endif %}
+  {% assign indexMod = forloop.index0 | modulo: 2 %}
+  <div class="project-row {% if indexMod == 1 %}reverse{% endif %}">
+    <div class="project-inner">
+      <h2 class="project-title">{{ item.title }}</h2>
+      <div class="project-body">
+        <a class="project-image-link" href="{{ item.url }}" target="_blank">
+          <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
+        </a>
+        <div class="project-text">
+          {% if item.release %}
+            <span class="project-release">{{ item.release }}</span>
+          {% endif %}
+          {% if item.tags %}
+            <div class="project-tags">
+              {% for tag in item.tags %}
+                <span class="project-tag">{{ tag }}</span>
               {% endfor %}
             </div>
           {% endif %}
+          {% if item.project_description %}
+            <p class="project-game-description">{{ item.project_description }}</p>
+          {% endif %}
+          {% if item.description %}
+            <p class="project-description">{{ item.description }}</p>
+          {% endif %}
+          <div class="project-badges">
+            {% if item.platforms %}
+              <div class="platform-badges">
+                {% for plat in item.platforms %}
+                  <a class="platform-badge" href="{{ plat.url }}" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/icons/platforms/{{ plat.id }}.svg" alt="{{ plat.id }} icon">
+                    {{ site.data.platforms[plat.id].name }}
+                  </a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 {% endfor %}
 
 # Additional Projects
