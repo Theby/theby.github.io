@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const H1_PEEK_ROOT_MARGIN = "0px 0px 50px 0px";
 
   // 801 = one past the `max-width: 800px` breakpoint used in general.css:260,
-  // projects.css:135, pages/about.css:19 and pages/contact.css:80
+  // projects.css:137, pages/about.css:19 and pages/contact.css:80
   const DESKTOP_MEDIA_QUERY = '(min-width: 801px)';
   const desktopQuery = window.matchMedia(DESKTOP_MEDIA_QUERY);
 

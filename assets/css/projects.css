@@ -15,7 +15,7 @@
   box-shadow: 0 12px 28px var(--black-alpha-18);
 }
 
-.project-row.reverse .project-inner {
+.project-row.reverse .project-body {
   flex-direction: row-reverse;
 }
 
@@ -65,6 +65,19 @@
    PROJECT INNER (card)
 ------------------------------------------ */
 .project-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.project-title {
+  margin: 0 0 16px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Two-column area below the title: image + text */
+.project-body {
   display: flex;
   align-items: flex-start;
   gap: 30px;
@@ -121,43 +134,14 @@
    RESPONSIVE RULES
 ------------------------------------------ */
 
-@media (max-width: 1000px) {
-  .project-title-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-
-  .project-title-row h2 {
-    margin-bottom: 0;
-  }
-}
-
 @media (max-width: 800px) {
-  .project-title-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .project-title-row h2,
-  .project-title-row .project-release {
-    display: block;
-    text-align: center;
-    width: 100%;
-  }
-
-  .project-title-row h2 {
-    margin-bottom: 0;
-  }
-
   .project-text {
     width: 100%;
     text-align: center;
   }
 
-  .project-inner,
-  .project-row.reverse .project-inner {
+  .project-body,
+  .project-row.reverse .project-body {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -247,19 +231,9 @@
   color: var(--blue);
 }
 
-.project-title-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  align-items: last baseline;
-  width: 100%;
-}
-
-.project-title-row h3 {
-  margin: 0;
-}
-
 .project-release {
+  display: block;
+  margin-bottom: 6px;
   color: var(--green);
   opacity: 0.9;
   font-size: 0.85rem;
@@ -329,7 +303,6 @@
 }
 
 .smaller-project-card .project-release {
-  display: block;
   text-align: center;
   margin: 4px 0 8px;
   white-space: nowrap;
