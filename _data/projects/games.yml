@@ -4,8 +4,8 @@
     unite a party of rag-tag sky prites setting upon an unforgettable,
     touching journey.
   description: >
-    Led the 6-month Android port of a Unity console RPG from Nintendo Switch.
-    Rebuilt the audio pipeline on mobile FMOD banks, converted 5,100+ textures
+    Led the 6-month port of a Unity RPG game from Nintendo Switch to Android.
+    Rebuilt the audio pipeline on mobile FMOD banks, converted 5100+ textures
     to ASTC with custom tooling, and compiled over 1,000 debug logs out of
     release builds with a custom logger. The game landed inside a 1.5 GB
     budget on 4 GB devices. Delivered a ground-up touch control layer across
@@ -32,10 +32,10 @@
     A romantic adventure set in the skies. Explore a wonderful archipielago,
     meet new people and follow hidden letters to reunite with your beloved.
   description: >
-    Rebuilt the quest system so designers author main and side quests entirely in the
-    inspector, with optional objectives, tasks that unlock order and conditions, and more.
+    Rebuilt the quest system for designers to author main and side quests entirely in the
+    inspector, with optional objectives, tasks, unlock order, conditions, and more.
     Also added state-machine camera rig (spyglass, tagging, free/fixed) and responsive HUD framework.
-    Refactor the cinematic and story flow systems to new designs for the demo implementation.
+    Refactor the cinematic and story flow systems for iteration on the integration of the game demo.
   image: assets/images/p_crosswinds.gif
   url: https://store.steampowered.com/app/4756820/Crosswinds/
   studio: octeto
