@@ -16,7 +16,6 @@
   position: relative;
 }
 
-/* Gist-specific bits of the shared copy button (see code-block-copy.css) */
 .gist-copy-btn {
   filter: invert(100%) hue-rotate(180deg);
   z-index: 20;

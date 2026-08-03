@@ -1,15 +1,5 @@
-/* ------------------------------------------
-   ICON SIZING
-   Every icon SVG in assets/icons/platforms/ has a viewBox tight to its
-   artwork, so `object-fit: contain` in a fixed box gives each glyph the same
-   optical extent. Circular glyphs (beepbox, xbox, steam, bennugd, linkedin)
-   carry a 4% outset inside their own viewBox so they do not read heavier than
-   the square ones.
------------------------------------------- */
 :root {
   --icon-size: 18px;
-  /* Wide wordmarks (xna 2.65:1, ggj 1.87:1) become illegible slivers when fitted
-     into a square box, so icon-only tech badges cap width instead of forcing one. */
   --icon-max-width: 40px;
 }
 
@@ -91,7 +81,6 @@
   width: 100%;
 }
 
-/* Two-column area below the title: image + text */
 .project-body {
   display: flex;
   align-items: flex-start;
@@ -206,8 +195,6 @@
   opacity: 0.85;
 }
 
-/* Uniform square box - these badges carry a text label beside the icon, so a
-   wide logo can sit short without losing meaning. */
 .platform-badge img {
   width: var(--icon-size);
   height: var(--icon-size);
@@ -232,8 +219,6 @@
   margin: 0 0 6px 0;
 }
 
-/* .project-tag ships its own margins for the inline-block tags row;
-   inside the flex meta row `gap` handles spacing instead. */
 .project-meta .project-tag {
   margin-right: 0;
   margin-bottom: 0;
@@ -249,8 +234,6 @@
   line-height: 0;
 }
 
-/* Icon-only (tooltip is the only label), so height is locked and width floats
-   up to the cap - keeps wide engine wordmarks legible. */
 .tech-badge img {
   height: var(--icon-size);
   width: auto;
@@ -519,21 +502,15 @@ a.project-tag--studio:visited {
   }
 }
 
-
-/* ------------------------------------------
-   CONSOLE DOCK
-   One box, anchored bottom-left, grows upward.
-   Each group is a `$ command` line with its
-   output listed directly beneath it.
------------------------------------------- */
+/* --------------------------------------------- */
+/* Console console-dock                          */
+/* --------------------------------------------- */
 
 .console-dock {
   position: fixed;
   bottom: 22px;
   left: 22px;
   z-index: 999;
-  /* Caps the wrap width of long post titles; the box still
-     shrinks to fit when the groups are collapsed. */
   max-width: 250px;
   padding: 8px 10px;
   border-radius: 4px;
@@ -544,8 +521,6 @@ a.project-tag--studio:visited {
   font-size: 12px;
 }
 
-/* Bare prompt line - deliberately not a .terminal-btn, so the
-   dock reads as a single console rather than stacked buttons. */
 .console-cmd {
   display: flex;
   align-items: center;
@@ -576,8 +551,6 @@ a.project-tag--studio:visited {
   display: block;
 }
 
-/* A prompt only shows its cursor while it is waiting - once the
-   group is expanded, its output is what follows the command. */
 .console-group.is-open .blink {
   display: none;
 }
@@ -589,8 +562,6 @@ a.project-tag--studio:visited {
 .console-out a {
   display: block;
   padding: 3px 6px;
-  /* Hanging indent: wrapped lines align under the title text
-     rather than under the "> " marker. */
   padding-left: calc(6px + 1.2em);
   text-indent: -1.2em;
   line-height: 1.35;

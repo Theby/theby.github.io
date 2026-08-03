@@ -147,6 +147,8 @@
   pointer-events: none;
   transform: translateY(6px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  background: var(--black-alpha-70);
+  backdrop-filter: blur(2px);
 }
 
 #scrollTopBtn.visible {

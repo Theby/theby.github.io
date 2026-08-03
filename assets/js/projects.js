@@ -127,8 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Without anchorable headings the sections command would list nothing,
-    // so drop the whole group rather than render a dead prompt.
     if (linkById.size === 0 && sectionsGroup) sectionsGroup.remove();
 
     const groups = Array.from(consoleDock.querySelectorAll('.console-group'));
@@ -142,7 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
       setGroupOpen(group, desktopQuery.matches);
     });
 
-    // The devlog group alone is enough to justify showing the dock.
     if (groups.length > 0) consoleDock.removeAttribute('hidden');
 
     if (linkById.size > 0) {
