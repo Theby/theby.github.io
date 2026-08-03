@@ -60,7 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+    let scrollJobId = 0;
+
     const scrollToTarget = getDest => {
+      const jobId = ++scrollJobId;
       const behavior = reducedMotionQuery.matches ? 'auto' : 'smooth';
       let attempts = 0;
       let cancelled = false;
@@ -79,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let lastY = null;
         let stableFrames = 0;
         const watch = () => {
-          if (cancelled) { cleanup(); return; }
+          if (cancelled || jobId !== scrollJobId) { cleanup(); return; }
           const y = window.scrollY;
           if (y === lastY) {
             stableFrames++;
