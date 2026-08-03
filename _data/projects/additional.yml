@@ -9,6 +9,8 @@
   image: assets/images/p_loopboxes.gif
   url: https://tebifestival.itch.io/loop-boxes
   release: Aug 2025
+  engines: [unity]
+  languages: [csharp]
   tags: [2D, Sokoban, Puzzle]
   platforms:
     - id: itchio
@@ -25,6 +27,8 @@
   image: assets/images/p_firstsightlove.gif
   url: https://globalgamejam.org/games/2024/amor-primera-vista-love-first-sight-7
   release: Jan 2024
+  engines: [unity]
+  languages: [csharp]
   tags: [Visual Novel, Dating, Narrative]
   platforms:
     - id: ggj
@@ -41,6 +45,8 @@
   image: assets/images/p_marianastrange.gif
   url: https://gamejolt.com/games/MarianaStrange/430773
   release: Aug 2019
+  engines: [unity]
+  languages: [csharp]
   tags: [Mystery, Exploration]
   platforms:
     - id: gamejolt
@@ -55,6 +61,7 @@
   image: assets/images/p_obssesive.gif
   url: https://klonoz.itch.io/obssesive
   release: Aug 2019
+  engines: [gamemaker, beepbox]
   tags: [2D, Adventure, Puzzle]
   platforms:
     - id: itchio
@@ -71,6 +78,8 @@
   image: assets/images/p_forthem.gif
   url: https://v3.globalgamejam.org/2019/games/them
   release: Jan 2019
+  engines: [unity]
+  languages: [csharp]
   tags: [Survival, Adventure]
   platforms:
     - id: ggj
@@ -87,6 +96,8 @@
   image: assets/images/p_superoso.gif
   url: https://apps.apple.com/us/app/agente-oso/id1434320450
   release: Jun 2018
+  engines: [unity]
+  languages: [csharp]
   tags: [Advergame, Arcade]
   platforms:
     - id: ios
@@ -103,6 +114,8 @@
   image: assets/images/p_bytednoise.gif
   url: https://v3.globalgamejam.org/2018/games/byted-noise
   release: Jan 2018
+  engines: [unity]
+  languages: [csharp]
   tags: [Arcade, Open-World]
   platforms:
     - id: ggj
@@ -118,6 +131,8 @@
   image: assets/images/p_touchdownchamp.gif
   url: https://play.google.com/store/apps/details?id=com.tapsense.touchdownchampion
   release: Jun 2017
+  engines: [unity]
+  languages: [csharp]
   tags: [Arcade, Autorunner]
   platforms:
     - id: android
@@ -133,6 +148,8 @@
   image: assets/images/p_sketchrally.gif
   url: https://play.google.com/store/apps/details?id=com.tapsense.sketchrally
   release: Jun 2017
+  engines: [unity]
+  languages: [csharp]
   tags: [Arcade, Autorunner]
   platforms:
     - id: android
@@ -152,6 +169,8 @@
   image: assets/images/p_caiampiter.gif
   url: https://x.com/caiampitercpmk
   release: May 2017
+  engines: [unity]
+  languages: [csharp]
   tags: [Roguelike, 2D, Pixel Art, Top-Down]
   platforms:
     - id: x
@@ -166,6 +185,8 @@
   image: assets/images/p_sernatur.gif
   url: https://bitbucket.org/Theby/sernaturleapmotion2017/src/master
   release: Feb 2017
+  engines: [unity]
+  languages: [csharp]
   tags: [AR, LeapMotion]
   platforms:
     - id: bitbucket
@@ -180,6 +201,8 @@
   image: assets/images/p_fatherio.gif
   url: https://father.io
   release: Jan 2017
+  engines: [unity]
+  languages: [csharp]
   tags: [RTS, AR, Mobile]
   platforms:
     - id: android
@@ -198,6 +221,8 @@
   image: assets/images/p_empathy.gif
   url: https://v3.globalgamejam.org/2017/games/empathy-game-about-depression
   release: Jan 2017
+  engines: [unity]
+  languages: [csharp]
   tags: [First-Person, Puzzle]
   platforms:
     - id: ggj
@@ -214,6 +239,8 @@
   image: assets/images/p_gridspro.gif
   url: https://assetstore.unity.com/packages/tools/utilities/grids-pro-66291
   release: Jul 2016
+  engines: [unity]
+  languages: [csharp]
   tags: [Tool, Utilities, Grids]
   platforms:
     - id: unityassetstore
@@ -230,6 +257,8 @@
   image: assets/images/p_abstractstrategy.gif
   url: https://assetstore.unity.com/packages/tools/game-toolkits/abstract-strategy-39377
   release: Jun 2016
+  engines: [unity]
+  languages: [csharp]
   tags: [Tool, Game Toolkit, AI]
   platforms:
     - id: unityassetstore
@@ -246,6 +275,8 @@
   image: assets/images/p_gamelogicextensions.gif
   url: https://assetstore.unity.com/packages/tools/utilities/gamelogic-extensions-19323
   release: May 2016
+  engines: [unity]
+  languages: [csharp]
   tags: [Tool, Utilities, Extension]
   platforms:
     - id: unityassetstore
@@ -262,6 +293,8 @@
   image: assets/images/p_newflame.gif
   url: https://v3.globalgamejam.org/2016/games/new-flame
   release: Feb 2016
+  engines: [unity]
+  languages: [csharp]
   tags: [Platformer, Adventure]
   platforms:
     - id: ggj
@@ -278,6 +311,8 @@
   image: assets/images/p_descendintoheaven.gif
   url: https://spoonmangames.itch.io/descendintoheaven
   release: Sep 2015
+  engines: [unity]
+  languages: [csharp]
   tags: [Platformer, Action-Adventure]
   platforms:
     - id: itchio
@@ -295,6 +330,8 @@
   image: assets/images/p_sunsetroboto.gif
   url: https://bitbucket.org/Theby/sunsetroboto/src/master
   release: Sept 2015
+  engines: [xna]
+  languages: [csharp]
   tags: [Auto runner]
   platforms:
     - id: bitbucket
@@ -309,6 +346,8 @@
   image: assets/images/p_kingk.gif
   url: https://gamejolt.com/games/king-k-a-goblin-defense-game/82821
   release: Aug 2015
+  engines: [xna]
+  languages: [csharp]
   tags: [Tower-Defense, RTS]
   platforms:
     - id: gamejolt
@@ -324,6 +363,7 @@
     faithful gameplay flow.
   image: assets/images/p_zelda.gif
   release: Jul 2011
+  engines: [bennugd]
   url: https://github.com/SpoonmanGames/ZeldaRemade
   tags: [Exploration, Action-Adventure]
   platforms:
@@ -340,6 +380,7 @@
   image: assets/images/p_bomberchan.gif
   url: https://github.com/SpoonmanGames/BomberChan
   release: May 2011
+  engines: [bennugd]
   tags: [Arcade, Retro]
   platforms:
     - id: github

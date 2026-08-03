@@ -206,6 +206,39 @@
   margin: 0px 0 6px 0;
 }
 
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  margin: 0 0 6px 0;
+}
+
+/* .project-tag ships its own margins for the inline-block tags row;
+   inside the flex meta row `gap` handles spacing instead. */
+.project-meta .project-tag {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 6px;
+  border: 1px solid var(--green-alpha-45);
+  border-radius: 4px;
+  background: transparent;
+  line-height: 0;
+}
+
+.tech-badge img {
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+  filter: brightness(1.2);
+}
+
 .project-badges {
   font-size: 0.85rem;
   color: var(--black-alpha-70);
@@ -325,6 +358,10 @@ a.project-tag--studio:visited {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.smaller-project-card .project-meta {
+  justify-content: center;
 }
 
 .smaller-project-card .project-game-description {

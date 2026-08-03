@@ -51,8 +51,8 @@ pageType: projects
         {% if item.release %}
           <span class="project-release"><span class="project-release-label">Release date:</span> {{ item.release }}</span>
         {% endif %}
-        {% if item.studio or item.tags %}
-          <div class="project-tags">
+        {% if item.studio or item.engines or item.languages %}
+          <div class="project-meta">
             {% if item.studio %}
               {% assign studio = site.data.studios[item.studio] %}
               {% assign studio_name = studio.name | default: item.studio %}
@@ -62,11 +62,25 @@ pageType: projects
                 <span class="project-tag project-tag--studio">{{ studio_name }}</span>
               {% endif %}
             {% endif %}
-            {% if item.tags %}
-              {% for tag in item.tags %}
-                <span class="project-tag">{{ tag }}</span>
-              {% endfor %}
-            {% endif %}
+            {% for eng in item.engines %}
+              {% assign eng_name = site.data.engines[eng].name | default: eng %}
+              <span class="tech-badge" title="{{ eng_name }}">
+                <img src="assets/icons/platforms/{{ eng }}.svg" alt="{{ eng_name }}" loading="lazy">
+              </span>
+            {% endfor %}
+            {% for lang in item.languages %}
+              {% assign lang_name = site.data.languages[lang].name | default: lang %}
+              <span class="tech-badge" title="{{ lang_name }}">
+                <img src="assets/icons/platforms/{{ lang }}.svg" alt="{{ lang_name }}" loading="lazy">
+              </span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if item.tags %}
+          <div class="project-tags">
+            {% for tag in item.tags %}
+              <span class="project-tag">{{ tag }}</span>
+            {% endfor %}
           </div>
         {% endif %}
         {% if item.project_description %}
@@ -153,6 +167,31 @@ pageType: projects
       </a>
       {% if item.release %}
         <span class="project-release"><span class="project-release-label">Release date:</span> {{ item.release }}</span>
+      {% endif %}
+      {% if item.studio or item.engines or item.languages %}
+        <div class="project-meta">
+          {% if item.studio %}
+            {% assign studio = site.data.studios[item.studio] %}
+            {% assign studio_name = studio.name | default: item.studio %}
+            {% if studio.url and studio.url != "" %}
+              <a class="project-tag project-tag--studio" href="{{ studio.url }}" target="_blank" rel="noopener noreferrer">{{ studio_name }}</a>
+            {% else %}
+              <span class="project-tag project-tag--studio">{{ studio_name }}</span>
+            {% endif %}
+          {% endif %}
+          {% for eng in item.engines %}
+            {% assign eng_name = site.data.engines[eng].name | default: eng %}
+            <span class="tech-badge" title="{{ eng_name }}">
+              <img src="assets/icons/platforms/{{ eng }}.svg" alt="{{ eng_name }}" loading="lazy">
+            </span>
+          {% endfor %}
+          {% for lang in item.languages %}
+            {% assign lang_name = site.data.languages[lang].name | default: lang %}
+            <span class="tech-badge" title="{{ lang_name }}">
+              <img src="assets/icons/platforms/{{ lang }}.svg" alt="{{ lang_name }}" loading="lazy">
+            </span>
+          {% endfor %}
+        </div>
       {% endif %}
       {% if item.tags %}
         <div class="project-tags">

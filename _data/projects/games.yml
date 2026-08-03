@@ -14,6 +14,8 @@
   url: https://store.steampowered.com/app/1691750/Sky_Oceans_Wings_for_Hire/
   studio: octeto
   release: Jul 2026
+  engines: [unity]
+  languages: [csharp]
   tags: [3D, Turn-Based, JRPG]
   platforms:
     - id: steam
@@ -38,6 +40,8 @@
   url: https://store.steampowered.com/app/4756820/Crosswinds/
   studio: octeto
   release: TBA
+  engines: [unity]
+  languages: [csharp]
   tags: [3D, Story Rich, Romance]
   platforms:
     - id: steam
@@ -54,6 +58,8 @@
   url: https://store.steampowered.com/app/1989120/Bubblegum_Galaxy/
   studio: smarto
   release: Mar 2026
+  engines: [unity]
+  languages: [csharp]
   tags: [City Builder, Puzzle, Strategy]
   platforms:
     - id: steam
@@ -77,6 +83,8 @@
   url: https://store.steampowered.com/app/1736620/The_Eightfold_Path
   studio: friendlyllama
   release: Aug 2024
+  engines: [construct3, unity]
+  languages: [csharp]
   tags: [2D, Open World, Puzzle Adventure]
   platforms:
     - id: steam
@@ -98,6 +106,8 @@
   url: https://www.youtube.com/watch?v=eKohkv9YPKY
   studio: globant
   release: Nov 2022
+  engines: [unity]
+  languages: [csharp]
   tags: [F2P, Deck Builder, Online Multiplayer]
   platforms:
     - id: ios
@@ -117,6 +127,8 @@
   url: https://store.steampowered.com/app/1111590/Linked_Mask/
   studio: spoonman
   release: Sep 2022
+  engines: [unity]
+  languages: [csharp]
   tags: [2D, Action-Adventure, Platformer]
   platforms:
     - id: steam
@@ -134,6 +146,7 @@
   url: https://store.steampowered.com/app/1721170/What_Lies_in_the_Multiverse/
   studio: iguanabee
   release: Mar 2022
+  engines: [gamemaker]
   tags: [2D, Puzzle-Platformer]
   platforms:
     - id: steam
@@ -157,6 +170,8 @@
   url: https://www.gardenjoygame.com
   studio: burlingame
   release: Jan 2022
+  engines: [unity]
+  languages: [csharp]
   tags: [F2P, Garden Design, Simulation Game]
   platforms:
     - id: ios
