@@ -410,10 +410,6 @@ a.project-tag--studio:visited {
   margin-right: auto;
 }
 
-.texts-list--compact {
-  gap: 0px;
-}
-
 .text-entry {
   padding: 4px 0;
 }
@@ -429,23 +425,6 @@ a.project-tag--studio:visited {
   min-width: 0;
 }
 
-
-.texts-list--compact .text-entry {
-  padding: 2px 0;
-}
-
-.texts-list--compact .text-header a {
-  flex: 1;
-  min-width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.blog-more-wrapper {
-  text-align: center;
-  margin-top: 16px;
-}
 
 .text-header {
   display: flex;
@@ -511,10 +490,6 @@ a.project-tag--studio:visited {
   .text-release {
     font-size: 0.85rem;
   }
-
-  .texts-list--compact .text-header a {
-    width: 100%;
-  }
 }
 
 /* --------------------------------------------- */
@@ -546,74 +521,107 @@ a.project-tag--studio:visited {
 
 
 /* ------------------------------------------
-   SECTION INDEX
+   CONSOLE DOCK
+   One box, anchored bottom-left, grows upward.
+   Each group is a `$ command` line with its
+   output listed directly beneath it.
 ------------------------------------------ */
 
-.section-index {
+.console-dock {
   position: fixed;
   bottom: 22px;
   left: 22px;
   z-index: 999;
-  font-family: var(--font-code);
-  font-size: 12px;
-}
-
-.section-index-list {
+  /* Caps the wrap width of long post titles; the box still
+     shrinks to fit when the groups are collapsed. */
+  max-width: 250px;
   padding: 8px 10px;
   border-radius: 4px;
   border: 1px solid var(--green-alpha-35);
   background: var(--black-alpha-70);
   backdrop-filter: blur(2px);
-  position: absolute;
-  bottom: calc(100% + 8px);
-  left: 0;
+  font-family: var(--font-code);
+  font-size: 12px;
+}
+
+/* Bare prompt line - deliberately not a .terminal-btn, so the
+   dock reads as a single console rather than stacked buttons. */
+.console-cmd {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 2px 0;
+  background: none;
+  border: 0;
+  font: inherit;
+  color: var(--text-light);
+  text-align: left;
+  cursor: pointer;
+}
+
+.console-cmd-prefix {
+  color: var(--green);
+}
+
+.console-cmd:hover .console-cmd-text {
+  color: var(--green);
+}
+
+.console-out {
   display: none;
 }
 
-.section-index.is-open .section-index-list {
+.console-group.is-open .console-out {
   display: block;
 }
 
-.section-index-list li {
+/* A prompt only shows its cursor while it is waiting - once the
+   group is expanded, its output is what follows the command. */
+.console-group.is-open .blink {
+  display: none;
+}
+
+.console-out li {
   margin: 0;
 }
 
-.section-index-list a {
+.console-out a {
   display: block;
   padding: 3px 6px;
+  /* Hanging indent: wrapped lines align under the title text
+     rather than under the "> " marker. */
+  padding-left: calc(6px + 1.2em);
+  text-indent: -1.2em;
+  line-height: 1.35;
   border-radius: 3px;
   color: var(--text-muted);
   text-decoration: none;
-  white-space: nowrap;
   transition: color 0.2s ease, background 0.2s ease;
 }
 
-.section-index-list a::before {
+.console-out a::before {
   content: "> ";
   color: var(--green-alpha-45);
 }
 
-.section-index-list a:hover {
+.console-out a:hover {
   color: var(--text-light);
   background: var(--green-alpha-05);
 }
 
-.section-index-list a.active {
+.console-out a.active {
   color: var(--green);
   background: var(--green-alpha-12);
   box-shadow: 0 0 6px var(--green-alpha-35);
 }
 
-.section-index-list a.active::before {
+.console-out a.active::before {
   color: var(--green);
 }
 
-.section-index-toggle {
-  display: inline-flex;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .section-index-list a {
+  .console-out a {
     transition: none;
   }
 }

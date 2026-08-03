@@ -15,7 +15,6 @@ plugins:
 google_analytics: G-M7HRV5WG9L
 show_downloads: false
 show_navigation: true
-show_fromtheblog: false
 permalink: /blog/:title/
 defaults:
   - scope:

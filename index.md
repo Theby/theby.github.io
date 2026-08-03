@@ -4,37 +4,31 @@ title: Home
 pageType: projects
 ---
 
-<nav id="section-index" class="section-index" aria-label="Page sections" hidden>
-  <button class="section-index-toggle terminal-btn" aria-expanded="false">
-    <span class="terminal-btn-prefix">$</span>
-    <span class="terminal-btn-command">ls sections</span>
-    <span class="blink">█</span>
-  </button>
-  <ul class="section-index-list list-reset"></ul>
-</nav>
-
-{% if site.show_fromtheblog %}
-# From The Blog
-
-<div class="texts-list texts-list--compact">
-  {% for post in site.posts limit:3 %}
-    <div class="text-entry">
-      <div class="text-header">
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <span class="text-release">{{ post.date | date: "%b %Y" }}</span>
-      </div>
+<nav id="console-dock" class="console-dock" aria-label="Devlog and page sections" hidden>
+  {% if site.posts.size > 0 %}
+    <div class="console-group" data-group="devlog">
+      <button class="console-cmd" type="button" aria-expanded="false" aria-controls="console-out-devlog">
+        <span class="console-cmd-prefix">$</span>
+        <span class="console-cmd-text">cat devlog</span>
+        <span class="blink" aria-hidden="true">█</span>
+      </button>
+      <ul class="console-out list-reset" id="console-out-devlog">
+        {% for post in site.posts limit:3 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
     </div>
-  {% endfor %}
-</div>
+  {% endif %}
 
-<div class="blog-more-wrapper">
-  <a class="terminal-btn" href="/blog">
-    <span class="terminal-btn-prefix">$</span>
-    <span class="terminal-btn-command">open devlog</span>
-    <span class="blink">█</span>
-  </a>
-</div>
-{% endif %}
+  <div class="console-group" data-group="sections">
+    <button class="console-cmd" type="button" aria-expanded="false" aria-controls="console-out-sections">
+      <span class="console-cmd-prefix">$</span>
+      <span class="console-cmd-text">ls sections</span>
+      <span class="blink" aria-hidden="true">█</span>
+    </button>
+    <ul class="console-out list-reset" id="console-out-sections"></ul>
+  </div>
+</nav>
 
 # Published Games
 

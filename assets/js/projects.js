@@ -45,16 +45,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const sectionIndex = document.querySelector('#section-index');
-  if (sectionIndex && mainContent) {
-    const list = sectionIndex.querySelector('.section-index-list');
-    const toggle = sectionIndex.querySelector('.section-index-toggle');
+  const consoleDock = document.querySelector('#console-dock');
+  if (consoleDock && mainContent) {
+    const sectionsGroup = consoleDock.querySelector('[data-group="sections"]');
+    const sectionsList = consoleDock.querySelector('#console-out-sections');
     const linkById = new Map();
     const sectionH1s = Array.from(mainContent.querySelectorAll('h1')).filter(h1 => h1.id);
 
-    const setIndexOpen = open => {
-      sectionIndex.classList.toggle('is-open', open);
-      if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    const setGroupOpen = (group, open) => {
+      group.classList.toggle('is-open', open);
+      const cmd = group.querySelector('.console-cmd');
+      if (cmd) cmd.setAttribute('aria-expanded', open ? 'true' : 'false');
     };
 
     const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -112,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       a.href = `#${h1.id}`;
       a.textContent = h1.textContent.trim();
       li.appendChild(a);
-      list.appendChild(li);
+      sectionsList.appendChild(li);
       linkById.set(h1.id, a);
 
       a.addEventListener('click', e => {
@@ -122,21 +123,29 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           scrollToTarget(() => Math.max(0, h1.getBoundingClientRect().top + window.scrollY));
         }
-        if (!desktopQuery.matches) setIndexOpen(false);
+        if (!desktopQuery.matches) setGroupOpen(sectionsGroup, false);
       });
     });
 
-    if (linkById.size > 0) {
-      sectionIndex.removeAttribute('hidden');
+    // Without anchorable headings the sections command would list nothing,
+    // so drop the whole group rather than render a dead prompt.
+    if (linkById.size === 0 && sectionsGroup) sectionsGroup.remove();
 
-      if (toggle) {
-        toggle.addEventListener('click', () => {
-          setIndexOpen(!sectionIndex.classList.contains('is-open'));
+    const groups = Array.from(consoleDock.querySelectorAll('.console-group'));
+    groups.forEach(group => {
+      const cmd = group.querySelector('.console-cmd');
+      if (cmd) {
+        cmd.addEventListener('click', () => {
+          setGroupOpen(group, !group.classList.contains('is-open'));
         });
       }
+      setGroupOpen(group, desktopQuery.matches);
+    });
 
-      if (desktopQuery.matches) setIndexOpen(true);
+    // The devlog group alone is enough to justify showing the dock.
+    if (groups.length > 0) consoleDock.removeAttribute('hidden');
 
+    if (linkById.size > 0) {
       const setActive = id => {
         linkById.forEach((link, key) => link.classList.toggle('active', key === id));
       };
