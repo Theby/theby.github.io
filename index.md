@@ -49,7 +49,7 @@ pageType: projects
       </a>
       <div class="project-text">
         {% if item.release %}
-          <span class="project-release">{{ item.release }}</span>
+          <span class="project-release"><span class="project-release-label">Release date:</span> {{ item.release }}</span>
         {% endif %}
         {% if item.studio or item.tags %}
           <div class="project-tags">
@@ -141,20 +141,20 @@ pageType: projects
       {% continue %}
     {% endif %}
     <div class="smaller-project-card">
-        <a class="smaller-project-image-link" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
-          <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
-        </a>
-      <h2>{{ item.title }}</h2>
+      <h2 class="project-title">{{ item.title }}</h2>
+      <a class="smaller-project-image-link" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+        <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
+      </a>
       {% if item.release %}
-        <span class="project-release">{{ item.release }}</span>
+        <span class="project-release"><span class="project-release-label">Release date:</span> {{ item.release }}</span>
       {% endif %}
-      <div class="project-tags">
-        {% if item.tags %}
+      {% if item.tags %}
+        <div class="project-tags">
           {% for tag in item.tags %}
             <span class="project-tag">{{ tag }}</span>
           {% endfor %}
-        {% endif %}
-      </div>
+        </div>
+      {% endif %}
       {% if item.project_description %}
         <p class="project-game-description">{{ item.project_description }}</p>
       {% endif %}

@@ -240,6 +240,10 @@
   white-space: nowrap;
 }
 
+.project-release-label {
+  color: var(--text-muted);
+}
+
 /* --------------------------------------------- */
 /* Smaller Projects Section                      */
 /* --------------------------------------------- */
@@ -295,11 +299,8 @@
   object-fit: cover;
 }
 
-.smaller-project-card h2 {
-  margin: 6px 0 4px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+.smaller-project-card .project-title {
+  margin-bottom: 10px;
 }
 
 .smaller-project-card .project-release {
