@@ -12,7 +12,7 @@
     30+ UI screens at a stable 30 FPS on target devices.
   image: assets/images/p_skyoceans.gif
   url: https://store.steampowered.com/app/1691750/Sky_Oceans_Wings_for_Hire/
-  studio: Octeto Studios
+  studio: octeto
   release: Jul 2026
   tags: [3D, Turn-Based, JRPG]
   platforms:
@@ -36,7 +36,7 @@
     Refactor the cinematic and story flow systems to new designs for the demo implementation.
   image: assets/images/p_crosswinds.gif
   url: https://store.steampowered.com/app/4756820/Crosswinds/
-  studio: Octeto Studios
+  studio: octeto
   release: TBA
   tags: [3D, Story Rich, Romance]
   platforms:
@@ -52,7 +52,7 @@
     to support the game's full branching narrative.
   image: assets/images/p_bubblegumgalaxy.gif
   url: https://store.steampowered.com/app/1989120/Bubblegum_Galaxy/
-  studio: Smarto Club
+  studio: smarto
   release: Mar 2026
   tags: [City Builder, Puzzle, Strategy]
   platforms:
@@ -75,7 +75,7 @@
     time by ~80%. Implemented streaming for seamless world traversal.
   image: assets/images/p_eightfoldpath.gif
   url: https://store.steampowered.com/app/1736620/The_Eightfold_Path
-  studio: Friendly Llama
+  studio: friendlyllama
   release: Aug 2024
   tags: [2D, Open World, Puzzle Adventure]
   platforms:
@@ -96,7 +96,7 @@
     cross-team workflows between Chile and US engineering groups.
   image: assets/images/p_nbaclash.gif
   url: https://www.youtube.com/watch?v=eKohkv9YPKY
-  studio: Globant
+  studio: globant
   release: Nov 2022
   tags: [F2P, Deck Builder, Online Multiplayer]
   platforms:
@@ -115,7 +115,7 @@
     framework, and coordinated a 6–12 person team across disciplines.
   image: assets/images/p_linkedmask.gif
   url: https://store.steampowered.com/app/1111590/Linked_Mask/
-  studio: Spoonman Games
+  studio: spoonman
   release: Sep 2022
   tags: [2D, Action-Adventure, Platformer]
   platforms:
@@ -132,7 +132,7 @@
     and cinematic tools, cutting implementation time by ~50%.
   image: assets/images/p_multiverse.gif
   url: https://store.steampowered.com/app/1721170/What_Lies_in_the_Multiverse/
-  studio: IguanaBee
+  studio: iguanabee
   release: Mar 2022
   tags: [2D, Puzzle-Platformer]
   platforms:
@@ -155,7 +155,7 @@
     Supported a 20+ person team and a 4.8/5 App Store rating.
   image: assets/images/p_gardenjoy.gif
   url: https://www.gardenjoygame.com
-  studio: Burlingames Studios
+  studio: burlingame
   release: Jan 2022
   tags: [F2P, Garden Design, Simulation Game]
   platforms:

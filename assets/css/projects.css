@@ -231,6 +231,14 @@
   color: var(--blue);
 }
 
+a.project-tag--studio,
+a.project-tag--studio:hover,
+a.project-tag--studio:focus,
+a.project-tag--studio:visited {
+  color: var(--blue);
+  text-decoration: none;
+}
+
 .project-release {
   display: block;
   margin-bottom: 6px;

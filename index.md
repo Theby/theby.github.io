@@ -54,7 +54,13 @@ pageType: projects
         {% if item.studio or item.tags %}
           <div class="project-tags">
             {% if item.studio %}
-              <span class="project-tag project-tag--studio">{{ item.studio }}</span>
+              {% assign studio = site.data.studios[item.studio] %}
+              {% assign studio_name = studio.name | default: item.studio %}
+              {% if studio.url and studio.url != "" %}
+                <a class="project-tag project-tag--studio" href="{{ studio.url }}" target="_blank" rel="noopener noreferrer">{{ studio_name }}</a>
+              {% else %}
+                <span class="project-tag project-tag--studio">{{ studio_name }}</span>
+              {% endif %}
             {% endif %}
             {% if item.tags %}
               {% for tag in item.tags %}
