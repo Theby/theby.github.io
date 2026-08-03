@@ -68,7 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
       let attempts = 0;
       let cancelled = false;
 
-      const onUserInput = () => { cancelled = true; };
+      const onUserInput = () => {
+        cancelled = true;
+        window.scrollTo({ top: window.scrollY, left: window.scrollX, behavior: 'auto' });
+      };
       const inputEvents = ['wheel', 'touchstart', 'keydown'];
       inputEvents.forEach(ev =>
         window.addEventListener(ev, onUserInput, { passive: true, once: true })
@@ -109,6 +112,11 @@ document.addEventListener("DOMContentLoaded", () => {
       };
       go();
     };
+
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (scrollTopBtn) {
+      scrollTopBtn.addEventListener('click', () => { scrollJobId++; });
+    }
 
     sectionH1s.forEach((h1, i) => {
       const li = document.createElement('li');

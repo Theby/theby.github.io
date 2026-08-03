@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const HEADING_VISIBLE_RATIO = 0.1;
   const SCROLL_TOP_REVEAL_PX = 300;
+  const SCROLL_INTERRUPT_EVENTS = ["wheel", "touchstart", "keydown"];
 
   // ==========================
   // Heading intersection effect
@@ -46,8 +47,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
+      const stopScrollAnimation = () => {
+        window.scrollTo({ top: window.scrollY, left: window.scrollX, behavior: "auto" });
+        SCROLL_INTERRUPT_EVENTS.forEach((ev) =>
+          window.removeEventListener(ev, stopScrollAnimation)
+        );
+      };
+
       btn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
+        SCROLL_INTERRUPT_EVENTS.forEach((ev) =>
+          window.addEventListener(ev, stopScrollAnimation, { passive: true, once: true })
+        );
       });
     }
   } catch (err) {
