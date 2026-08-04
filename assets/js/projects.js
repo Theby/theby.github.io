@@ -153,6 +153,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (groups.length > 0) consoleDock.removeAttribute('hidden');
 
+    const devlogGroup = consoleDock.querySelector('[data-group="devlog"]');
+    if (devlogGroup && desktopQuery.matches) {
+      const dockRight = consoleDock.getBoundingClientRect().right;
+      const contentLeft = mainContent.getBoundingClientRect().left;
+      if (dockRight > contentLeft) setGroupOpen(devlogGroup, false);
+    }
+
     if (linkById.size > 0) {
       const setActive = id => {
         linkById.forEach((link, key) => link.classList.toggle('active', key === id));
