@@ -11,7 +11,7 @@ pageCss: about
   <div class="about-layout page-columns">
     <div class="about-text page-columns-main">
       <p>
-        I’m Esteban Gaete Flores, a senior Unity game developer with 10+ years of experience
+        I’m Esteban Gaete Flores, a Senior Unity Engineer with 10+ years of experience
         building games and tools for console, PC, and mobile. I specialize in
         gameplay programming, performance optimization, and editor tooling that
         help teams ship smoother, more responsive experiences.
