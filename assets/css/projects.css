@@ -397,18 +397,6 @@ a.project-tag--studio:visited {
   padding: 4px 0;
 }
 
-.blog-entry-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.blog-entry-row .text-entry {
-  flex: 1;
-  min-width: 0;
-}
-
-
 .text-header {
   display: flex;
   justify-content: space-between;

@@ -1,4 +1,21 @@
 /* ------------------------------------------
+   SKIP LINK
+------------------------------------------ */
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 1000;
+  transform: translateY(-200%);
+  transition: transform 0.15s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ------------------------------------------
    CONTAINER
 ------------------------------------------ */
 .container {
@@ -279,4 +296,18 @@
 .list-reset li {
   list-style: none;
   list-style-image: none;
+}
+
+/* ------------------------------------------
+   REDUCED MOTION
+------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .blink {
+    animation: none;
+  }
+
+  .skip-link {
+    transition: none;
+  }
 }

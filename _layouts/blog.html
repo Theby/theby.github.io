@@ -20,6 +20,11 @@
   </head>
 
   <body>
+    <a class="skip-link terminal-btn" href="#main_content">
+      <span class="terminal-btn-prefix">$</span>
+      <span class="terminal-btn-command">skip to content</span>
+    </a>
+
     <div class="blog-shell">
 
       <!-- Left column -->
@@ -39,7 +44,7 @@
               <div class="intro-links">
                 {% for social in site.socials %}
                   <a href="{{ social.url }}" {% unless social.inTab %} target="_blank" {% endunless %} class="intro-icon {{ social.name }}">
-                    <img src="/assets/icons/socials/s_{{ social.name }}.svg">
+                    <img src="/assets/icons/socials/s_{{ social.name }}.svg" alt="{{ social.label | default: social.name }}">
                   </a>
                 {% endfor %}
               </div>
@@ -63,7 +68,7 @@
                 SUBSCRIBE BY RSS
                 <img
                   src="{{ '/assets/icons/rss.png' | relative_url }}"
-                  alt="RSS icon"
+                  alt=""
                   class="blog-rss-icon"
                 >
               </a>
@@ -191,7 +196,7 @@
 
       <!-- Right column -->
       <div class="container page-content">
-        <section id="main_content">
+        <section id="main_content" tabindex="-1">
           {{ content }}
         </section>
       </div>

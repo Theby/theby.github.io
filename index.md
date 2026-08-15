@@ -91,7 +91,7 @@ pageType: projects
               <div class="platform-badges">
                 {% for plat in item.platforms %}
                   <a class="platform-badge" href="{{ plat.url }}" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/icons/platforms/{{ plat.id }}.svg" alt="{{ plat.id }} icon">
+                    <img src="assets/icons/platforms/{{ plat.id }}.svg" alt="">
                     {{ site.data.platforms[plat.id].name }}
                   </a>
                 {% endfor %}
@@ -140,7 +140,7 @@ pageType: projects
               <div class="platform-badges">
                 {% for plat in item.platforms %}
                   <a class="platform-badge" href="{{ plat.url }}" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/icons/platforms/{{ plat.id }}.svg" alt="{{ plat.id }} icon">
+                    <img src="assets/icons/platforms/{{ plat.id }}.svg" alt="">
                     {{ site.data.platforms[plat.id].name }}
                   </a>
                 {% endfor %}
@@ -211,7 +211,7 @@ pageType: projects
         <div class="platform-badges">
           {% for plat in item.platforms %}
             <a class="platform-badge" href="{{ plat.url }}" target="_blank" rel="noopener noreferrer">
-              <img src="assets/icons/platforms/{{ plat.id }}.svg" alt="{{ plat.id }} icon">
+              <img src="assets/icons/platforms/{{ plat.id }}.svg" alt="">
               {{ site.data.platforms[plat.id].name }}
             </a>
           {% endfor %}

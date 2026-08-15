@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const SCROLL_TOP_REVEAL_PX = 300;
   const SCROLL_INTERRUPT_EVENTS = ["wheel", "touchstart", "keydown"];
 
+  const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
   // ==========================
   // Heading intersection effect
   // ==========================
@@ -55,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       btn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({ top: 0, behavior: reducedMotionQuery.matches ? "auto" : "smooth" });
         SCROLL_INTERRUPT_EVENTS.forEach((ev) =>
           window.addEventListener(ev, stopScrollAnimation, { passive: true, once: true })
         );
