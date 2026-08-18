@@ -353,6 +353,18 @@
     - id: gamejolt
       url: https://gamejolt.com/games/king-k-a-goblin-defense-game/82821
 
+- title: Go AI Match Platform
+  project_description: >
+    Make different AI implementations fight each other in a game of GO.
+  description: >
+    A university project where users submit AI agents that
+    play Go. Agents are matched against each other in online
+    tournaments, ranking implementations by head-to-head results.
+  image: assets/images/p_goai.gif
+  release: Jun 2015
+  engines: [xna]
+  tags: [Game AI, Search Algorithms, Backend]
+
 - title: Zelda Remade
   project_description: >
     Explore a classic adventure with a new look in this exploration-only demo.
@@ -370,7 +382,7 @@
     - id: github
       url: https://github.com/SpoonmanGames/ZeldaRemade
 
-- title: Bomber-Chan
+- title: "Bomber-Chan"
   project_description: >
     Classic explosive fun! A BennuGD tech demo showing expanded capabilities.
   description: >
