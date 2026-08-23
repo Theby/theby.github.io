@@ -75,3 +75,13 @@
     transform: translateY(0) rotate(0deg);
   }
 }
+
+/* ------------------------------------------
+   REDUCED MOTION
+------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-icon.cv img {
+    animation: none;
+  }
+}

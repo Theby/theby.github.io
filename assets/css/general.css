@@ -310,4 +310,20 @@
   .skip-link {
     transition: none;
   }
+
+  .page-content h1:not(.post-title) {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .page-content h1:not(.post-title)::after {
+    width: 120%;
+    transition: none;
+  }
+
+  #scrollTopBtn {
+    transition: none;
+    transform: none;
+  }
 }
