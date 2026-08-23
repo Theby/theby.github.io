@@ -35,3 +35,43 @@ footer {
   transform: translateY(-2px);
   filter: brightness(1.1);
 }
+
+/* ------------------------------------------
+   MADE WITH LOVE / SUPPORT BUTTON
+------------------------------------------ */
+
+.made-with-love {
+  font-size: 12px;
+  margin: 0;
+}
+
+.heart {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--purple);
+}
+
+.support-me {
+  background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+  background-color: #ffec64;
+  border-radius: 4px;
+  border: 1px solid #ffaa22;
+  display: inline-block;
+  cursor: pointer;
+  color: #333333 !important;
+  font-family: var(--font-support-me-button);
+  font-size: 12px;
+  line-height: 1em;
+  font-weight: bold;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffee66;
+}
+
+.support-me:hover {
+  text-decoration: none;
+}
+
+.support-me:active {
+  opacity: 0.8;
+}
