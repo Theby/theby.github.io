@@ -161,17 +161,20 @@
 
 #scrollTopBtn {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   transform: translateY(6px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
   background: var(--black-alpha-70);
   backdrop-filter: blur(2px);
 }
 
 #scrollTopBtn.visible {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
   transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
 }
 
 #scrollTopBtn:hover {
@@ -322,7 +325,8 @@
     transition: none;
   }
 
-  #scrollTopBtn {
+  #scrollTopBtn,
+  #scrollTopBtn.visible {
     transition: none;
     transform: none;
   }
