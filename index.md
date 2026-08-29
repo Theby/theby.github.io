@@ -41,7 +41,7 @@ pageType: projects
     <div class="project-inner">
       <h2 class="project-title">{{ item.title }}</h2>
       <div class="project-body">
-        <a class="project-image-link" href="{{ item.url }}" target="_blank">
+        <a class="project-image-link" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
           <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
         </a>
         <div class="project-text">
@@ -115,7 +115,7 @@ pageType: projects
     <div class="project-inner">
       <h2 class="project-title">{{ item.title }}</h2>
       <div class="project-body">
-        <a class="project-image-link" href="{{ item.url }}" target="_blank">
+        <a class="project-image-link" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
           <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
         </a>
         <div class="project-text">

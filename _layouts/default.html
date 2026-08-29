@@ -35,7 +35,7 @@
         </p>
         <div class="intro-links">
           {% for social in site.socials %}
-            <a href="{{ social.url }}" {% unless social.inTab %} target="_blank" {% endunless %} class="intro-icon {{ social.name }}">
+            <a href="{{ social.url }}" {% unless social.inTab %} target="_blank" rel="noopener noreferrer" {% endunless %} class="intro-icon {{ social.name }}">
               <img src="/assets/icons/socials/s_{{ social.name }}.svg" alt="{{ social.label | default: social.name }}">
             </a>
           {% endfor %}
