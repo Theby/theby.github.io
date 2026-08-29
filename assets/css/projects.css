@@ -34,6 +34,13 @@
   border-radius: 6px;
   background: var(--black-alpha-40);
 
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.js-reveal .project-inner,
+.js-reveal .smaller-project-card {
   opacity: 0;
   transform: translateY(20px);
   transition:
@@ -43,8 +50,8 @@
     border-color 0.25s ease;
 }
 
-.project-inner.visible,
-.smaller-project-card.visible {
+.js-reveal .project-inner.visible,
+.js-reveal .smaller-project-card.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -584,8 +591,8 @@ a.project-tag--studio:visited {
     transition: none;
   }
 
-  .project-inner,
-  .smaller-project-card {
+  .js-reveal .project-inner,
+  .js-reveal .smaller-project-card {
     opacity: 1;
     transform: none;
     transition: none;

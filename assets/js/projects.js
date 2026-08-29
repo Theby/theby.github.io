@@ -193,6 +193,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  let cardObserver;
+
   const applyStagger = card => {
     if (!card.classList.contains("smaller-project-card")) return;
     const index = smallCardOrder.indexOf(card);
@@ -207,25 +209,30 @@ document.addEventListener("DOMContentLoaded", () => {
     cardObserver.unobserve(card);
   };
 
-  const cardObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) revealCard(entry.target);
-    });
-  }, { threshold: CARD_VISIBLE_RATIO });
+  try {
+    cardObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) revealCard(entry.target);
+      });
+    }, { threshold: CARD_VISIBLE_RATIO });
 
-  bigCards.forEach(el => cardObserver.observe(el));
-  smallCards.forEach(el => cardObserver.observe(el));
+    bigCards.forEach(el => cardObserver.observe(el));
+    smallCards.forEach(el => cardObserver.observe(el));
 
-  const h1Observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("in-view");
-      h1Observer.unobserve(entry.target);
+    const h1Observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("in-view");
+        h1Observer.unobserve(entry.target);
 
-      const anchors = h1AnchorMap.get(entry.target) || [];
-      anchors.forEach(revealCard);
-    });
-  }, { threshold: 0, rootMargin: H1_PEEK_ROOT_MARGIN });
+        const anchors = h1AnchorMap.get(entry.target) || [];
+        anchors.forEach(revealCard);
+      });
+    }, { threshold: 0, rootMargin: H1_PEEK_ROOT_MARGIN });
 
-  document.querySelectorAll('#main_content h1').forEach(h1 => h1Observer.observe(h1));
+    document.querySelectorAll('#main_content h1').forEach(h1 => h1Observer.observe(h1));
+  } catch (err) {
+    document.documentElement.classList.remove("js-reveal");
+    console.warn("Error setting up reveal IntersectionObservers:", err);
+  }
 });

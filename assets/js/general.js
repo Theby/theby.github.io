@@ -28,9 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
           headings.forEach((h1) => observer.observe(h1));
         }
       } else {
+        document.documentElement.classList.remove("js-reveal");
         console.warn("IntersectionObserver not supported; skipping heading animations.");
       }
     } catch (err) {
+      document.documentElement.classList.remove("js-reveal");
       console.warn("Error setting up heading IntersectionObserver:", err);
     }
   }
